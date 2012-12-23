@@ -1,0 +1,128 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acceleration 3</title>
+  </head>
+
+  <body style="background-color:black;margin:0">
+    <canvas id="canvas" style="background-color:black;display:block"></canvas>
+    
+    <img src="images/fireball.png" id = "obstacle" style="display:none"/>
+    <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
+    <img src="images/player.png" id = "player" style="display:none"/>
+    <img src="images/brick_wall.png" id = "wall" style="display:none"/>
+    <img src="images/cake.png" id ="cake" style="display:none"/>
+    <img src="images/player2.png" id ="player2" style="display:none"/>
+    
+    <script src="./js/utils.js"></script>
+    <script src="./js/classes/player.js"></script>
+    <script src="./js/classes/enemy.js"></script>
+    <script src="./js/classes/wall.js"></script>
+    <script src="./js/classes/draw_wall.js"></script>
+    <script src="./js/classes/map.js"></script>
+        
+     <script>
+
+         var vx = 0;
+         var vy = 0;
+         var ax = 0;
+         var ay = 0;
+
+         var isRight1 = false;
+         var isLeft1 = false;
+         var isUp1 = false;
+         var isDown1 = false;
+
+         var isRight2 = false;
+         var isLeft2 = false;
+         var isUp2 = false;
+         var isDown2 = false;
+
+         var scalePercentageX = 0;
+         window.onload = function () {
+             var canvas = document.getElementById('canvas');
+             context = canvas.getContext('2d');
+
+             scalePercentageX = window.innerWidth / 1600;
+             scalePercentageY = window.innerHeight / 900;
+
+             canvas.width = 1600 * scalePercentageX;
+             canvas.height = 900 * scalePercentageY;
+
+             player1 = new Player(1,"player", 30, 30, 50, 50);
+             player2 = new Player(2, "player2", 30, 30, 50,800);
+             var enemy = init_enemy();
+             init_map(canvas);
+             window.addEventListener('keydown', function (event) {
+                 if (event.keyCode == 39) {
+                     isRight1 = true;
+                 }
+                 if (event.keyCode == 37) {
+                     isLeft1 = true;
+                 }
+                 if (event.keyCode == 38) {
+                     isUp1 = true;
+                 }
+                 if (event.keyCode == 40) {
+                     isDown1 = true;
+                 }
+              
+                 if (event.keyCode == 68) {
+                     isRight2 = true;
+                 }
+                 if (event.keyCode == 65) {
+                     isLeft2 = true;
+                 }
+                 if (event.keyCode == 87) {
+                     isUp2 = true;
+                 }
+                 if (event.keyCode == 83) {
+                     isDown2 = true;
+                 }
+             }
+            , false);
+             window.addEventListener('keyup', function (event) {
+                 if (event.keyCode == 39) {
+                     isRight1 = false;
+                 }
+                 if (event.keyCode == 37) {
+                     isLeft1 = false;
+                 }
+                 if (event.keyCode == 38) {
+                     isUp1 = false;
+                 }
+                 if (event.keyCode == 40) {
+                     isDown1 = false;
+                 }
+
+                 if (event.keyCode == 68) {
+                     isRight2 = false;
+                 }
+                 if (event.keyCode == 65) {
+                     isLeft2 = false;
+                 }
+                 if (event.keyCode == 87) {
+                     isUp2 = false;
+                 }
+                 if (event.keyCode == 83) {
+                     isDown2 = false;
+                 }
+             }, false);
+
+             (function drawFrame() {
+
+                 window.requestAnimationFrame(drawFrame, canvas);
+                 player1.move();
+                 player2.move();
+
+                 for (var i = 1; i < enemy.length; i++) {
+                     enemy[i].move();
+                     enemy[i].draw();
+                 }
+
+             }());
+         };
+    </script>
+  </body>
+</html>
