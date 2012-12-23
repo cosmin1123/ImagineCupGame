@@ -72,6 +72,7 @@
     <Content Include="js\classes\wall.js" />
     <Content Include="js\utils.js" />
     <Content Include="index.html" />
+    <Content Include="socket.io.js" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
