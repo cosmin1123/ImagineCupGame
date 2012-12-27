@@ -25,7 +25,7 @@
     <script src="socket.io.js"></script>
         
      <script>
-     
+         "use strict";
 		var vx = 0;
 		var vy = 0;
 		var ax = 0;
@@ -39,12 +39,13 @@
 		var beforeReceiveX = 0;
 		var beforeReceiveY = 0;
 		var canvas = document.getElementById('canvas'); 
-	   var player2Img = document.getElementById('player2');
-      var context = canvas.getContext('2d');
+	    var player2Img = document.getElementById('player2');
+        var context = canvas.getContext('2d');
 		var socket = io.connect("78.97.50.245:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
+		var player;
 		var scalePercentageX = window.innerWidth / 1600;
 		var scalePercentageY = window.innerHeight / 900;
 		var currentPlayer = 'player' + Math.round(Math.random() * 1000);
@@ -118,11 +119,11 @@
 
   			    context.font = "30px Arial";
   			    context.strokeText(coords.x, 100, 200);
-  			//    resizeClear(beforeReceiveX, beforeReceiveY, 30, 30);
-  			 /*   context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),//eroare aici. Comenteaza ca sa mearga
+  			    resizeClear(beforeReceiveX, beforeReceiveY, 30, 30);
+  			    context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),//eroare aici. Comenteaza ca sa mearga
                 Math.round(scalePercentageY * coords.y),
                 Math.round(scalePercentageX * 30),
-                Math.round(scalePercentageY * 30));*/
+                Math.round(scalePercentageY * 30));
     			 beforeReceiveX = coords.x;
     			 beforeReceiveY = coords.y;
     		}		

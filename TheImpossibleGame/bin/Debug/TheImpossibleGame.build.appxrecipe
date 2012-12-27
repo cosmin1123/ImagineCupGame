@@ -29,6 +29,9 @@
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player.png">
       <PackagePath>images\player.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2.png">
+      <PackagePath>images\player2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
       <PackagePath>images\shuriken.png</PackagePath>
     </AppxPackagedFile>
