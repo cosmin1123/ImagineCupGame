@@ -12,7 +12,7 @@ images\storelogo.png
 images\traktor.gif
 images\zombie.png
 index.html
-js\classes\draw_wall.js
+js\classes\drawWall.js
 js\classes\enemy.js
 js\classes\map.js
 js\classes\player.js

@@ -66,9 +66,9 @@
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="js\classes\drawWall.js" />
     <Content Include="js\classes\enemy.js" />
     <Content Include="js\classes\player.js" />
-    <Content Include="js\classes\draw_wall.js" />
     <Content Include="js\classes\map.js" />
     <Content Include="js\classes\wall.js" />
     <Content Include="js\utils.js" />

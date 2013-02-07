@@ -8,7 +8,7 @@
   <body style="background-color:black;margin:0">
 
     
-    <canvas id="canvas" style="background-color:azure;display:block"></canvas>
+    <canvas id="canvas" style="background-color:black;display:block"></canvas>
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player.png" id = "player" style="display:none"/>
@@ -116,9 +116,6 @@
 		
 		socket.on('XY', function (coords) {
   			if (coords.playerName !== currentPlayer) {
-
-  			    context.font = "30px Arial";
-  			    context.strokeText(coords.x, 100, 200);
   			    resizeClear(beforeReceiveX, beforeReceiveY, 30, 30);
   			    context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
                 Math.round(scalePercentageY * coords.y),

@@ -5,10 +5,10 @@
     <title>The Impossible Game</title>
   </head>
 
-  <body style="background-color:azure;margin:0">
+  <body style="background-color:black;margin:0">
 
     
-    <canvas id="canvas" style="background-color:azure;display:block"></canvas>
+    <canvas id="canvas" style="background-color:black;display:block"></canvas>
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player.png" id = "player" style="display:none"/>
@@ -20,7 +20,7 @@
     <script src="./js/classes/player.js"></script>
     <script src="./js/classes/enemy.js"></script>
     <script src="./js/classes/wall.js"></script>
-    <script src="./js/classes/draw_wall.js"></script>
+    <script src="./js/classes/drawWall.js"></script>
     <script src="./js/classes/map.js"></script>
     <script src="socket.io.js"></script>
         
@@ -41,7 +41,7 @@
 		var canvas = document.getElementById('canvas'); 
 	    var player2Img = document.getElementById('player2');
         var context = canvas.getContext('2d');
-		var socket = io.connect("78.97.50.245:3000/");//replace this with server ip and port
+		var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
@@ -59,14 +59,14 @@
       		
             canvas.width = 1600 * scalePercentageX;
             canvas.height = 900 * scalePercentageY;
-            init_map(canvas); 
+            initMap(canvas); 
         		socket.on('ready', function (co) {
             	console.log(co);
            
         
         	   // init
             player = new Player("player", 30, 30, 50, 50);
-            var enemy = init_enemy();
+            var enemy = initEnemy();
             
 
             window.addEventListener('keydown', function (event) {
@@ -93,7 +93,7 @@
                    
            }, false);
            
-           setTimeout( function () { init_map(canvas); }, 100);	
+           setTimeout( function () { initMap(canvas); }, 100);	
            
            (function drawFrame() {
                
@@ -116,11 +116,8 @@
 		
 		socket.on('XY', function (coords) {
   			if (coords.playerName !== currentPlayer) {
-
-  			    context.font = "30px Arial";
-  			    context.strokeText(coords.x, 100, 200);
   			    resizeClear(beforeReceiveX, beforeReceiveY, 30, 30);
-  			    context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),//eroare aici. Comenteaza ca sa mearga
+  			    context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
                 Math.round(scalePercentageY * coords.y),
                 Math.round(scalePercentageX * 30),
                 Math.round(scalePercentageY * 30));
@@ -133,3 +130,4 @@
     </script>
   </body>
 </html>
+

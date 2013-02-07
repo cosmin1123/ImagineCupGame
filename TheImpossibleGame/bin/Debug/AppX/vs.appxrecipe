@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-27T15:53:53.026</Modified>
+      <Modified>2013-02-07T16:51:06.244</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -76,21 +76,21 @@
       <PackagePath>images\traktor.gif</PackagePath>
       <Modified>2012-12-22T19:00:09.286</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\drawWall.js">
+      <PackagePath>js\classes\drawWall.js</PackagePath>
+      <Modified>2013-02-07T16:48:45.563</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\enemy.js">
       <PackagePath>js\classes\enemy.js</PackagePath>
-      <Modified>2012-12-22T19:11:16.054</Modified>
+      <Modified>2013-02-07T15:51:54.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
-      <Modified>2012-12-22T19:11:13.045</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\draw_wall.js">
-      <PackagePath>js\classes\draw_wall.js</PackagePath>
-      <Modified>2012-12-22T19:11:18.580</Modified>
+      <Modified>2013-02-07T15:51:54.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\map.js">
       <PackagePath>js\classes\map.js</PackagePath>
-      <Modified>2012-12-23T12:58:48.150</Modified>
+      <Modified>2013-02-07T15:51:54.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\wall.js">
       <PackagePath>js\classes\wall.js</PackagePath>
@@ -106,11 +106,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2012-12-27T16:06:32.418</Modified>
+      <Modified>2013-02-07T16:54:09.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-12-27T15:53:50.433</Modified>
+      <Modified>2013-02-07T16:51:05.838</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
