@@ -1,4 +1,4 @@
-﻿function init_enemy() {
+﻿function initEnemy() {
  enemy = new Array;
 
 
@@ -67,7 +67,7 @@
 
     return enemy;
 }
-function init_map(canvas) {
+function initMap(canvas) {
     var context = canvas.getContext('2d');
 
     context.drawImage(document.getElementById("cake"), Math.round(scalePercentageX * 1520),
@@ -78,43 +78,43 @@ function init_map(canvas) {
 
 
     //border walls
-    wall_horizontal(context, 0, 0, 1600, 20);
-    wall_vertical(context, 0, 0, 900, 20);
-    wall_horizontal(context, 0, 880, 1600, 20);
-    wall_vertical(context, 1580, 0, 880, 20);
+    wallHorizontal(context, 0, 0, 1600, 20);
+    wallVertical(context, 0, 0, 900, 20);
+    wallHorizontal(context, 0, 880, 1600, 20);
+    wallVertical(context, 1580, 0, 880, 20);
 
     //map walls
-    wall_vertical(context, 100, 0, 380, 20);
-    wall_vertical(context, 100, 460, 880, 20);
-    wall_horizontal(context, 120, 340, 700, 20);
-    wall_horizontal(context, 120, 500, 700, 20);
-    wall_vertical(context, 840, 160, 660, 20);
-    wall_horizontal(context, 180, 230, 820, 20);
-    wall_horizontal(context, 180, 620, 820, 20);
+    wallVertical(context, 100, 0, 380, 20);
+    wallVertical(context, 100, 460, 880, 20);
+    wallHorizontal(context, 120, 340, 700, 20);
+    wallHorizontal(context, 120, 500, 700, 20);
+    wallVertical(context, 840, 160, 660, 20);
+    wallHorizontal(context, 180, 230, 820, 20);
+    wallHorizontal(context, 180, 620, 820, 20);
 
-    wall_vertical(context, 412, 640, 830, 20);
-    wall_vertical(context, 160, 690, 880, 20);
-    wall_vertical(context, 470, 740, 880, 20);
-    wall_vertical(context, 520, 740, 880, 20);
-    wall_vertical(context, 630, 680, 880, 20);
+    wallVertical(context, 412, 640, 830, 20);
+    wallVertical(context, 160, 690, 880, 20);
+    wallVertical(context, 470, 740, 880, 20);
+    wallVertical(context, 520, 740, 880, 20);
+    wallVertical(context, 630, 680, 880, 20);
 
-    wall_vertical(context, 740, 780, 880, 20);
-    wall_vertical(context, 830, 780, 880, 20);
-    wall_vertical(context, 920, 780, 880, 20);
-    wall_vertical(context, 1010, 780, 880, 20);
+    wallVertical(context, 740, 780, 880, 20);
+    wallVertical(context, 830, 780, 880, 20);
+    wallVertical(context, 920, 780, 880, 20);
+    wallVertical(context, 1010, 780, 880, 20);
 
-    wall_vertical(context, 1030, 780, 880, 20);
-    wall_vertical(context, 1120, 780, 880, 20);
-    wall_vertical(context, 1210, 780, 880, 20);
-    wall_vertical(context, 1300, 780, 880, 20);
+    wallVertical(context, 1030, 780, 880, 20);
+    wallVertical(context, 1120, 780, 880, 20);
+    wallVertical(context, 1210, 780, 880, 20);
+    wallVertical(context, 1300, 780, 880, 20);
 
-    wall_horizontal(context, 830, 780, 920, 20);
-    wall_horizontal(context, 1120, 780, 1210, 20);
-    wall_horizontal(context, 740, 660, 1200, 20);
+    wallHorizontal(context, 830, 780, 920, 20);
+    wallHorizontal(context, 1120, 780, 1210, 20);
+    wallHorizontal(context, 740, 660, 1200, 20);
 
-    wall_vertical(context, 380, 20, 100, 20);
+    wallVertical(context, 380, 20, 100, 20);
 
-    wall_horizontal(context, 100, 700, 100, 20);
+    wallHorizontal(context, 100, 700, 100, 20);
 
 }
 
@@ -133,7 +133,7 @@ function resizeClear(x, y, width, height){
 }
 
 function resizeDrawWall(img, x, y, width, height){
-  	context.drawImage(img, scalePercentageX * x, 		             
-  	scalePercentageY * y, scalePercentageX * width,
-   scalePercentageY * height);
+    context.drawImage(img, scalePercentageX * x, 		             
+    	scalePercentageY * y, scalePercentageX * width,
+    	scalePercentageY * height);
 }

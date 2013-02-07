@@ -3,6 +3,7 @@
 // radius ( for circle enemies)  PS: Not implemented yet
 // length of a side (for square enemies)
 var context = document.getElementById('canvas').getContext;
+
 function Enemy(id, type, startX, startY, value, speed, height, width) {
     this.img = document.getElementById(id);
     this.type = type;
@@ -119,7 +120,6 @@ Enemy.prototype.move = function () {
         if (this.x == this.startX && this.y == this.startY)
             this.side = 1;
     }
-    //Not implemented yet
 
     if (this.type == "sinus") {
     resizeClear(this.x, this.y, this.width, this.height);
@@ -156,9 +156,9 @@ function playerDies(){
 }
 
 function collision(c1, c2) {
-  var dx = c1.x + c1.width/2 - (c2.x + c2.width/2);
-  var dy = c1.y + c1.height/2- (c2.y + c2.height/2);
-  var dist = c1.width/2 + c2.width/2;
+	var dx = c1.x + c1.width/2 - (c2.x + c2.width/2);
+	var dy = c1.y + c1.height/2- (c2.y + c2.height/2);
+	var dist = c1.width/2 + c2.width/2;
  
-  return Math.sqrt(dx*dx + dy*dy) <= dist 
+	return Math.sqrt(dx*dx + dy*dy) <= dist 
 }
