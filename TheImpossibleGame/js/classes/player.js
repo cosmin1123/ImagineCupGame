@@ -10,10 +10,7 @@ function Player (id,width, height,posX,posY) {
 }
 
 Player.prototype.move = function () {
-	
-	resizeClear(this.x, this.y, this.width, this.height);
- 
-    
+	  
 	this.XBefore = this.x;
 	this.YBefore = this.y;
 	if (isRight == true)
@@ -29,10 +26,10 @@ Player.prototype.move = function () {
 		sendingCoords();
     
 	wallCollision();
- 	context.save();
+ 	contextForeground.save();
  	resizeDraw(this.img, this.x, this.y, this.width, this.height);
 
-	context.restore();
+	contextForeground.restore();
 
 }
 

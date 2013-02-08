@@ -6,9 +6,17 @@
   </head>
 
   <body style="background-color:black;margin:0">
-
     
-    <canvas id="canvas" style="background-color:azure;display:block"></canvas>
+    <canvas id="canvasBackground" 
+   style="position: absolute; left: 0; top: 0; z-index: 0;
+   background-color:black;display:block">
+   </canvas>
+
+    <canvas id="canvasForeground" 
+   style="position: absolute; left: 0; top: 0; z-index: 0;display:block">
+   </canvas>
+    
+     
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player.png" id = "player" style="display:none"/>
@@ -38,9 +46,11 @@
 		var isDown = false;
 		var beforeReceiveX = 0;
 		var beforeReceiveY = 0;
-		var canvas = document.getElementById('canvas'); 
-	    var player2Img = document.getElementById('player2');
-        var context = canvas.getContext('2d');
+		var canvasForeground = document.getElementById('canvasForeground'); 
+		var canvasBackground = document.getElementById('canvasBackground'); 
+	  var player2Img = document.getElementById('player2');
+    var contextForeground = canvasForeground.getContext('2d');
+    var contextBackground = canvasBackground.getContext('2d');
 		var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
@@ -57,9 +67,12 @@
 		};
       var onLoad = function () {
       		
-            canvas.width = 1600 * scalePercentageX;
-            canvas.height = 900 * scalePercentageY;
-            initMap(canvas); 
+            canvasBackground.width = 1600 * scalePercentageX;
+            canvasBackground.height = 900 * scalePercentageY;
+            canvasForeground.width = 1600 * scalePercentageX;
+            canvasForeground.height = 900 * scalePercentageY;
+            
+            initMap(canvasBackground); 
         		socket.on('ready', function (co) {
             	console.log(co);
            
@@ -93,11 +106,16 @@
                    
            }, false);
            
-           setTimeout( function () { initMap(canvas); }, 100);	
+           setTimeout( function () { initMap(canvasBackground); }, 100);	
            
            (function drawFrame() {
                
-               window.requestAnimationFrame(drawFrame, canvas);
+               window.requestAnimationFrame(drawFrame, canvasForeground);
+               
+               contextForeground.save()
+               contextForeground.clearRect(0, 0, canvas.width, canvas.height);
+               contextForeground.restore();
+               
                player.move();
                for (var i = 1; i < enemy.length; i++) {
                    enemy[i].move();
@@ -116,11 +134,7 @@
 		
 		socket.on('XY', function (coords) {
   			if (coords.playerName !== currentPlayer) {
-
-  			    context.font = "30px Arial";
-  			    context.strokeText(coords.x, 100, 200);
-  			    resizeClear(beforeReceiveX, beforeReceiveY, 30, 30);
-  			    context.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
+  			    contextForeground.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
                 Math.round(scalePercentageY * coords.y),
                 Math.round(scalePercentageX * 30),
                 Math.round(scalePercentageY * 30));

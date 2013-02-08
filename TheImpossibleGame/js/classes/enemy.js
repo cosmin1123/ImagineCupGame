@@ -2,7 +2,7 @@
 // distance ( for vertical/horizontal/diagonal enemies)
 // radius ( for circle enemies)  PS: Not implemented yet
 // length of a side (for square enemies)
-var context = document.getElementById('canvas').getContext;
+var contextForeground = document.getElementById('canvasForeground').getcontext;
 
 function Enemy(id, type, startX, startY, value, speed, height, width) {
     this.img = document.getElementById(id);
@@ -27,15 +27,14 @@ function Enemy(id, type, startX, startY, value, speed, height, width) {
     if (type == "sinus") {
         this.sector = 1;
     }
-    context.save();
+    contextForeground.save();
     resizeDraw(this.img, this.x, this.y, this.width, this.height);
-    context.restore();
+    contextForeground.restore();
 }
 
 Enemy.prototype.move = function () {
 
     if (this.type == "horizontal") {
-    	  resizeClear(this.x, this.y, this.width, this.height);
 
         if (this.startX <= this.endX)
             this.direction = 1;
@@ -47,7 +46,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "vertical") {
- 	 	  resizeClear(this.x, this.y, this.width, this.height);
  	 
         if (this.startY <= this.endY)
             this.direction = 1;
@@ -59,7 +57,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "diagonal") {
-	 	  resizeClear(this.x, this.y, this.width, this.height);
 	 
         if (this.startX <= this.endX)
             this.direction = 1;
@@ -72,7 +69,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "square") {
-	 	  resizeClear(this.x, this.y, this.width, this.height);
     	  
         if (this.side == 1)
             this.x += this.speed;
@@ -122,7 +118,7 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "sinus") {
-    resizeClear(this.x, this.y, this.width, this.height);
+    
         this.x += this.speed;
         this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100 ;
         if( this.x > this.startX + this.value){
@@ -137,7 +133,7 @@ Enemy.prototype.move = function () {
 }
 
 Enemy.prototype.draw = function () {
-    context.save();
+    contextForeground.save();
 	resizeDraw(this.img, this.x, this.y, this.width, this.height);
 
 	
@@ -146,11 +142,10 @@ Enemy.prototype.draw = function () {
     		playerDies();
     	}         
              
-    context.restore();
+    contextForeground.restore();
 };
 
 function playerDies(){
- 	resizeClear(player.x, player.y, player.width, player.height);
 	player.x = 40;
 	player.y = 40;
 }
