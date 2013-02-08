@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows 8
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TheImpossibleGame", "TheImpossibleGame\TheImpossibleGame.jsproj", "{0B430622-5AE2-42FB-9FEA-BBAE508BFACD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Performance Reports", "Performance Reports", "{943BE383-61E0-403B-83FD-32C5A43A983E}"
+	ProjectSection(SolutionItems) = preProject
+		Report130208.vspx = Report130208.vspx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

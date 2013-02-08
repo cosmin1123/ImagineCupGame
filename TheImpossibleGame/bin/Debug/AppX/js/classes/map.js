@@ -119,21 +119,14 @@ function initMap(canvas) {
 }
 
 function resizeDraw(img, x, y, width, height){
-	context.drawImage(img, Math.round(scalePercentageX * x), 		             
+	contextForeground.drawImage(img, Math.round(scalePercentageX * x),    
    Math.round(scalePercentageY * y),
    Math.round(scalePercentageX * width),
    Math.round(scalePercentageY * height));
 }
 
-function resizeClear(x, y, width, height){
-    context.clearRect(Math.round(x * scalePercentageX), 
-    Math.round(scalePercentageY * y),
-    Math.round(scalePercentageX * width),
-    Math.round(scalePercentageY *  height)); 
-}
-
 function resizeDrawWall(img, x, y, width, height){
-    context.drawImage(img, scalePercentageX * x, 		             
+    contextBackground.drawImage(img, scalePercentageX * x, 		             
     	scalePercentageY * y, scalePercentageX * width,
     	scalePercentageY * height);
 }

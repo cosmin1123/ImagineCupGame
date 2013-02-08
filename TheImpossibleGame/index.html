@@ -38,14 +38,12 @@
 		var vy = 0;
 		var ax = 0;
 		var ay = 0;
-		var recievedX;
-		var recievedY
 		var isRight = false;
 		var isLeft = false;
 		var isUp = false;
 		var isDown = false;
-		var beforeReceiveX = 0;
-		var beforeReceiveY = 0;
+		var receiveX = 50;
+		var receiveY = 50;
 		var canvasForeground = document.getElementById('canvasForeground'); 
 		var canvasBackground = document.getElementById('canvasBackground'); 
 	  var player2Img = document.getElementById('player2');
@@ -119,6 +117,7 @@
                
                contextForeground.restore();
                
+               resizeDraw(player2Img, receiveX, receiveY, 30, 30);
                player.move();
                for (var i = 1; i < enemy.length; i++) {
                    enemy[i].move();
@@ -137,12 +136,8 @@
 		
 		socket.on('XY', function (coords) {
   			if (coords.playerName !== currentPlayer) {
-  			    contextForeground.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
-                Math.round(scalePercentageY * coords.y),
-                Math.round(scalePercentageX * 30),
-                Math.round(scalePercentageY * 30));
-    			 beforeReceiveX = coords.x;
-    			 beforeReceiveY = coords.y;
+    			 receiveX = coords.x;
+    			 receiveY = coords.y;
     		}		
 		});
 	 	
