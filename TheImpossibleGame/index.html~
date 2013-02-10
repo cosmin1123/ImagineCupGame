@@ -161,7 +161,7 @@
 		    });
 
 		    setInterval(function () {
-		        socket.emit('lvl', { level: 1 })
+		        socket.emit('lvl', { level: 1 })}
 		    , 30);
 
 		    setInterval(function () {
