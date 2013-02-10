@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-10T16:07:48.673</Modified>
+      <Modified>2013-02-10T17:26:10.666</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -45,8 +45,12 @@
       <PackagePath>images\player2.png</PackagePath>
       <Modified>2013-02-10T16:04:18.443</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player_set.png">
-      <PackagePath>images\player_set.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2_set.png">
+      <PackagePath>images\player2_set.png</PackagePath>
+      <Modified>2013-02-10T17:20:12.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player1_set.png">
+      <PackagePath>images\player1_set.png</PackagePath>
       <Modified>2013-02-10T13:16:02.264</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
@@ -90,7 +94,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
-      <Modified>2013-02-10T16:06:19.762</Modified>
+      <Modified>2013-02-10T17:25:01.042</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\map.js">
       <PackagePath>js\classes\map.js</PackagePath>
@@ -110,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2013-02-10T16:08:30.569</Modified>
+      <Modified>2013-02-10T17:26:48.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-10T16:07:48.426</Modified>
+      <Modified>2013-02-10T17:26:10.489</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

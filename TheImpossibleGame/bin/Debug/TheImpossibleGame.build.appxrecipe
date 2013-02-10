@@ -32,8 +32,11 @@
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2.png">
       <PackagePath>images\player2.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player_set.png">
-      <PackagePath>images\player_set.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2_set.png">
+      <PackagePath>images\player2_set.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player1_set.png">
+      <PackagePath>images\player1_set.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
       <PackagePath>images\shuriken.png</PackagePath>

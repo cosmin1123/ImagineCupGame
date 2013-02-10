@@ -59,7 +59,8 @@
     <Content Include="images\logo.png" />
     <Content Include="images\player.png" />
     <Content Include="images\player2.png" />
-    <Content Include="images\player_set.png" />
+    <Content Include="images\player2_set.png" />
+    <Content Include="images\player1_set.png" />
     <Content Include="images\potato.jpg" />
     <Content Include="images\shuriken.png" />
     <Content Include="images\traktor.gif" />
