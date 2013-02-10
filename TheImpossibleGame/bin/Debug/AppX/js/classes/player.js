@@ -140,19 +140,19 @@ Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
             sx = 25;
             sy = 275;
             swidth = 260;
-            sheight = 260;
+            sheight = 235;
             break;
         case 'E1':
             sx = 289;
             sy = 275;
             swidth = 257;
-            sheight = 260;
+            sheight = 235;
             break;
         case 'E2':
             sx = 545;
             sy = 275;
             swidth = 257;
-            sheight = 260;
+            sheight = 235;
             break;
         case 'S0':
             sx = 35;
@@ -173,7 +173,7 @@ Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
             sheight = 260;
             break;
         case 'V0':
-            sx = 510;
+            sx = 512;
             sy = 800;
             swidth = 255;
             sheight = 240;
