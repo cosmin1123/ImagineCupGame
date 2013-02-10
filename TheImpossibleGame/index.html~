@@ -72,8 +72,8 @@
             canvasForeground.height = 900 * scalePercentageY;
             
             initMap(canvasBackground); 
-        		socket.on('ready', function (co) {
-            	console.log(co);
+        	//	socket.on('ready', function (co) {
+            //	console.log(co);
            
         
         	   // init
@@ -119,11 +119,11 @@
                contextForeground.restore();
                
                resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-               player.move();
-               for (var i = 1; i < enemy.length; i++) {
-                   enemy[i].move();
+               
+               for (var i = 1; i < enemy.length; i++) 
                    enemy[i].draw();
-               }
+                   
+               player.move();
 
            }());
 
@@ -131,7 +131,7 @@
            sendingCoords();
 
            
-            });
+        //    });
         };
       
 		
@@ -141,21 +141,27 @@
     			 receiveY = coords.y;
     		}		
 		});
-	 	
+
+
 	 	setInterval(function(){
 	 		socket.emit('lvl', {level:1})
-	 		}, 100);
-	 	
+	 												 }, 50);
+ 	
 	 	socket.on('map', function (map) {
 			for (var i = 1; i < enemy.length; i++) {
 				enemy[i].x = map[i].x;
 				enemy[i].y = map[i].y;
 			}
-				console.log(map[1].x);
-				console.log(map[1].y);
 		});
-	 	
+ 	
 		window.onload = onLoad();
+		
+		setInterval(function(){
+	 	 	for (var i = 1; i < enemy.length; i++) {
+                   enemy[i].move();
+               }
+	 		}, 15);
+	 		
     </script>
   </body>
 </html>

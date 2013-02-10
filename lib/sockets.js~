@@ -38,5 +38,6 @@ var onNewPlayerConnected = function (socket) {
 
 exports.bind = function (io) {
     // Socket.io configuration.
+    sync.initialise();
     io.sockets.on('connection', onNewPlayerConnected);
 };
