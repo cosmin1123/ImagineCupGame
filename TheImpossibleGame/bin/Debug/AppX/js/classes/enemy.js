@@ -33,7 +33,6 @@ function Enemy(id, type, startX, startY, value, speed, height, width) {
 }
 
 Enemy.prototype.move = function () {
-
     if (this.type == "horizontal") {
 
         if (this.startX <= this.endX)

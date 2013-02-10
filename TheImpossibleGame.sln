@@ -6,6 +6,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Performance Reports", "Performance Reports", "{943BE383-61E0-403B-83FD-32C5A43A983E}"
 	ProjectSection(SolutionItems) = preProject
 		Report130208.vspx = Report130208.vspx
+		Report130210.vspx = Report130210.vspx
 	EndProjectSection
 EndProject
 Global

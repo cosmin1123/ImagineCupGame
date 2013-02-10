@@ -54,6 +54,7 @@
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
 		var player;
+		var enemy;
 		var scalePercentageX = window.innerWidth / 1600;
 		var scalePercentageY = window.innerHeight / 900;
 		var currentPlayer = 'player' + Math.round(Math.random() * 1000);
@@ -71,13 +72,14 @@
             canvasForeground.height = 900 * scalePercentageY;
             
             initMap(canvasBackground); 
-        	//	socket.on('ready', function (co) {
-            //	console.log(co);
+            socket.on('ready', function (co) {
+            	console.log(co);
            
         
         	   // init
             player = new Player("player", 100, 100, 50, 50);
-            var enemy = initEnemy();
+            enemy = initEnemy();
+            startEnemy();
             
 
             window.addEventListener('keydown', function (event) {
@@ -118,11 +120,11 @@
                contextForeground.restore();
                
                resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-               player.move();
-               for (var i = 1; i < enemy.length; i++) {
-                   enemy[i].move();
+               
+               for (var i = 1; i < enemy.length; i++) 
                    enemy[i].draw();
-               }
+                   
+               player.move();
 
            }());
 
@@ -130,7 +132,7 @@
            sendingCoords();
 
            
-           // });
+           });
         };
       
 		
@@ -140,8 +142,34 @@
     			 receiveY = coords.y;
     		}		
 		});
-	 	
+
+
+
+ 	
+
+ 	
 		window.onload = onLoad();
+		
+		var startEnemy = function () {
+
+		    socket.on('map', function (map) {
+		        for (var i = 1; i < enemy.length; i++) {
+		            enemy[i].x = map[i].x;
+		            enemy[i].y = map[i].y;
+		        }
+		    });
+
+		    setInterval(function () {
+		        socket.emit('lvl', { level: 1 })
+		    }, 100);
+
+		    setInterval(function () {
+		        for (var i = 1; i < enemy.length; i++) {
+		            enemy[i].move();
+		        }
+		    }, 15);
+		}
+	 		
     </script>
   </body>
 </html>
