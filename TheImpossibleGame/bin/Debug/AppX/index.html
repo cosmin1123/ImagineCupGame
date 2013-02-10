@@ -19,7 +19,7 @@
      
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
-    <img src="images/player.png" id = "player" style="display:none"/>
+    <img src="images/player_set.png" id = "player" style="display:none"/>
     <img src="images/player2.png" id = "player2" style="display:none"/>
     <img src="images/brick_wall.png" id = "wall" style="display:none"/>
      <img src="images/cake.png" id ="cake" style="display:none"/>
@@ -71,12 +71,12 @@
             canvasForeground.height = 900 * scalePercentageY;
             
             initMap(canvasBackground); 
-        		socket.on('ready', function (co) {
-            	console.log(co);
+        	//	socket.on('ready', function (co) {
+            //	console.log(co);
            
         
         	   // init
-            player = new Player("player", 30, 30, 50, 50);
+            player = new Player("player", 100, 100, 50, 50);
             var enemy = initEnemy();
             
 
@@ -130,7 +130,7 @@
            sendingCoords();
 
            
-            });
+           // });
         };
       
 		

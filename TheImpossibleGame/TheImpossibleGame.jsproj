@@ -59,6 +59,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\player.png" />
     <Content Include="images\player2.png" />
+    <Content Include="images\player_set.png" />
     <Content Include="images\potato.jpg" />
     <Content Include="images\shuriken.png" />
     <Content Include="images\traktor.gif" />
@@ -75,9 +76,6 @@
     <Content Include="index.html" />
     <Content Include="socket.io.js" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
