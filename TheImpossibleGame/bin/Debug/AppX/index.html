@@ -77,7 +77,7 @@
            
         
         	   // init
-            player = new Player("player", 100, 100, 50, 50);
+            player = new Player("player", 30, 30, 50, 50);
             enemy = initEnemy();
             startEnemy();
             
@@ -152,16 +152,16 @@
 		
 		var startEnemy = function () {
 
-		    socket.on('map', function (map) {
-		        for (var i = 1; i < enemy.length; i++) {
-		            enemy[i].x = map[i].x;
-		            enemy[i].y = map[i].y;
-		        }
-		    });
+		    //socket.on('map', function (map) {
+		    //    for (var i = 1; i < enemy.length; i++) {
+		    //        enemy[i].x = map[i].x;
+		    //        enemy[i].y = map[i].y;
+		    //    }
+		    //});
 
-		    setInterval(function () {
-		        socket.emit('lvl', { level: 1 })
-		    }, 100);
+		    //setInterval(function () {
+		    //    socket.emit('lvl', { level: 1 })
+		    //}, 30);
 
 		    setInterval(function () {
 		        for (var i = 1; i < enemy.length; i++) {

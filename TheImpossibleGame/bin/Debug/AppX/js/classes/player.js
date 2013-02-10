@@ -92,7 +92,7 @@ Player.prototype.move = function () {
         this.step = 0;
 
     }
-    //wallCollision();
+    wallCollision();
     contextForeground.save();
     this.img.style.transform = 'rotate(15deg)';
     this.resizeDraw(this.img, this.x, this.y, this.width, this.height, this.direction + this.state);
