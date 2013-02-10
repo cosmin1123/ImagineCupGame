@@ -49,7 +49,7 @@
 	  var player2Img = document.getElementById('player2');
     var contextForeground = canvasForeground.getContext('2d');
     var contextBackground = canvasBackground.getContext('2d');
-		var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port
+		var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
@@ -72,8 +72,8 @@
             canvasForeground.height = 900 * scalePercentageY;
             
             initMap(canvasBackground); 
-        	//	socket.on('ready', function (co) {
-            //	console.log(co);
+        		socket.on('ready', function (co) {
+            	console.log(co);
            
         
         	   // init
@@ -131,7 +131,7 @@
            sendingCoords();
 
            
-        //    });
+           });
         };
       
 		
