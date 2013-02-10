@@ -17,10 +17,13 @@ images\zombie.png
 index.html
 js\classes\drawWall.js
 js\classes\enemy.js
-js\classes\map.js
 js\classes\player.js
 js\classes\wall.js
-js\utils.js
-map.html
+js\maps\map1.js
+js\utils\addKeyListener.js
+js\utils\clientSide.js
+js\utils\drawing.js
+js\utils\selectLevel.js
+js\utils\startGame.js
+js\utils\utils.js
 socket.io.js
-start.html

@@ -25,7 +25,7 @@
             canvasForeground.width = 1600 * scalePercentageX;
             canvasForeground.height = 900 * scalePercentageY;
             
-						selectLevel(level);//function is in selectLevel.js
+		    selectLevel(level);//function is in selectLevel.js
           	
             var twoPlayersHaveConnected = function (co) {
         			console.log(co);
@@ -89,7 +89,7 @@
 		}	
 	
 
-		window.onload = onLoad();
+
 
 		
 

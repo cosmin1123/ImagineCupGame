@@ -72,12 +72,15 @@
     <Content Include="js\classes\drawWall.js" />
     <Content Include="js\classes\enemy.js" />
     <Content Include="js\classes\player.js" />
-    <Content Include="js\classes\map.js" />
     <Content Include="js\classes\wall.js" />
-    <Content Include="js\utils.js" />
     <Content Include="index.html" />
-    <Content Include="map.html" />
-    <Content Include="start.html" />
+    <Content Include="js\maps\map1.js" />
+    <Content Include="js\utils\addKeyListener.js" />
+    <Content Include="js\utils\clientSide.js" />
+    <Content Include="js\utils\drawing.js" />
+    <Content Include="js\utils\selectLevel.js" />
+    <Content Include="js\utils\startGame.js" />
+    <Content Include="js\utils\utils.js" />
     <Content Include="socket.io.js" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
   </ItemGroup>
