@@ -1,9 +1,9 @@
 var map1 = require('./map1.js');
 var obj = require('./enemy.js');
 var enemyMap1 = map1.init();
-exports.initialise = initEnemy;
 
-var initEnemy = function(){
+
+exports.initEnemy = function(){
 
 	setInterval(function(){
 	
@@ -14,8 +14,16 @@ var initEnemy = function(){
 }
 
 var getEnemyMap = function(level){
+		var j = 1;
+		var returnMap = new Array();
 		if(level == '1')
-			return enemyMap1
+			for(i = 1; i < enemyMap1.length; i++){
+				returnMap[j++] = enemyMap1[i].x;
+				returnMap[j++] = enemyMap1[i].y;
+				console.log(returnMap[1]);
+				}
+				
+			return returnMap;
 }
 
 var startMoving = function(enemyMap){
@@ -29,7 +37,6 @@ exports.synchronize = function(socket){
 
 	socket.on('lvl', function (lvl) {
 		var enemyMap = getEnemyMap(lvl.level);
-		console.log(enemyMap[1].y);
 		socket.broadcast.to(roomNumber).emit('map', enemyMap);
     socket.emit('map', enemyMap);
   });

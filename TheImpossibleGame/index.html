@@ -49,7 +49,7 @@
 	  var player2Img = document.getElementById('player2');
     var contextForeground = canvasForeground.getContext('2d');
     var contextBackground = canvasBackground.getContext('2d');
-		var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port
+		var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
@@ -152,16 +152,17 @@
 		
 		var startEnemy = function () {
 
-		    //socket.on('map', function (map) {
-		    //    for (var i = 1; i < enemy.length; i++) {
-		    //        enemy[i].x = map[i].x;
-		    //        enemy[i].y = map[i].y;
-		    //    }
-		    //});
+		    socket.on('map', function (map) {
+		    		var j = 1;
+		        for (var i = 1; i < enemy.length; i++) {
+		            enemy[i].x = map[j++];
+		            enemy[i].y = map[j++];
+		        }
+		    });
 
-		    //setInterval(function () {
-		    //    socket.emit('lvl', { level: 1 })
-		    //}, 30);
+		    setInterval(function () {
+		        socket.emit('lvl', { level: 1 })}
+		    , 30);
 
 		    setInterval(function () {
 		        for (var i = 1; i < enemy.length; i++) {

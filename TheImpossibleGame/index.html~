@@ -72,13 +72,14 @@
             canvasForeground.height = 900 * scalePercentageY;
             
             initMap(canvasBackground); 
-        	//	socket.on('ready', function (co) {
-            //	console.log(co);
+            socket.on('ready', function (co) {
+            	console.log(co);
            
         
         	   // init
-            player = new Player("player", 100, 100, 50, 50);
+            player = new Player("player", 30, 30, 50, 50);
             enemy = initEnemy();
+            startEnemy();
             
 
             window.addEventListener('keydown', function (event) {
@@ -131,7 +132,7 @@
            sendingCoords();
 
            
-        //    });
+           });
         };
       
 		
@@ -143,24 +144,32 @@
 		});
 
 
-	 	setInterval(function(){
-	 		socket.emit('lvl', {level:1})
-	 												 }, 100);
+
  	
-	 	socket.on('map', function (map) {
-			for (var i = 1; i < enemy.length; i++) {
-				enemy[i].x = map[i].x;
-				enemy[i].y = map[i].y;
-			}
-		});
+
  	
 		window.onload = onLoad();
 		
-		setInterval(function(){
-	 	 	for (var i = 1; i < enemy.length; i++) {
-                   enemy[i].move();
-               }
-	 		}, 15);
+		var startEnemy = function () {
+
+		    socket.on('map', function (map) {
+		    		var j = 1;
+		        for (var i = 1; i < enemy.length; i++) {
+		            enemy[i].x = map[j++];
+		            enemy[i].y = map[j++];
+		        }
+		    });
+
+		    setInterval(function () {
+		        socket.emit('lvl', { level: 1 })
+		    , 30);
+
+		    setInterval(function () {
+		        for (var i = 1; i < enemy.length; i++) {
+		            enemy[i].move();
+		        }
+		    }, 15);
+		}
 	 		
     </script>
   </body>
