@@ -112,10 +112,10 @@ wallCollision = function(){
        }
 }
 Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
-    x = Math.round(scalePercentageX * x);
-    y = Math.round(scalePercentageY * y);
-    width = Math.round(scalePercentageX * width);
-    height = Math.round(scalePercentageY * height);
+    xa = Math.round(scalePercentageX * x);
+    ya = Math.round(scalePercentageY * y);
+    widtha = Math.round(scalePercentageX * width);
+    heighta = Math.round(scalePercentageY * height);
     switch (direction) {
 
         case 'N0':

@@ -33,9 +33,8 @@ function Enemy(id, type, startX, startY, value, speed, height, width) {
 }
 
 Enemy.prototype.move = function () {
-
+		console.log("moooove");
     if (this.type == "horizontal") {
-    	  resizeClear(this.x, this.y, this.width, this.height);
 
         if (this.startX <= this.endX)
             this.direction = 1;
@@ -47,7 +46,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "vertical") {
- 	 	  resizeClear(this.x, this.y, this.width, this.height);
  	 
         if (this.startY <= this.endY)
             this.direction = 1;
@@ -59,7 +57,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "diagonal") {
-	 	  resizeClear(this.x, this.y, this.width, this.height);
 	 
         if (this.startX <= this.endX)
             this.direction = 1;
@@ -72,7 +69,6 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "square") {
-	 	  resizeClear(this.x, this.y, this.width, this.height);
     	  
         if (this.side == 1)
             this.x += this.speed;
@@ -122,7 +118,7 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "sinus") {
-    resizeClear(this.x, this.y, this.width, this.height);
+    
         this.x += this.speed;
         this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100 ;
         if( this.x > this.startX + this.value){
@@ -150,7 +146,6 @@ Enemy.prototype.draw = function () {
 };
 
 function playerDies(){
- 	resizeClear(player.x, player.y, player.width, player.height);
 	player.x = 40;
 	player.y = 40;
 }

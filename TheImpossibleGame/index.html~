@@ -19,7 +19,7 @@
      
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
-    <img src="images/player.png" id = "player" style="display:none"/>
+    <img src="images/player_set.png" id = "player" style="display:none"/>
     <img src="images/player2.png" id = "player2" style="display:none"/>
     <img src="images/brick_wall.png" id = "wall" style="display:none"/>
      <img src="images/cake.png" id ="cake" style="display:none"/>
@@ -38,24 +38,23 @@
 		var vy = 0;
 		var ax = 0;
 		var ay = 0;
-		var recievedX;
-		var recievedY
 		var isRight = false;
 		var isLeft = false;
 		var isUp = false;
 		var isDown = false;
-		var beforeReceiveX = 0;
-		var beforeReceiveY = 0;
+		var receiveX = 50;
+		var receiveY = 50;
 		var canvasForeground = document.getElementById('canvasForeground'); 
 		var canvasBackground = document.getElementById('canvasBackground'); 
 	  var player2Img = document.getElementById('player2');
     var contextForeground = canvasForeground.getContext('2d');
     var contextBackground = canvasBackground.getContext('2d');
-		var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port
+		var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port
 		var playerArray = new Array;
 		var playerBeforeArray = new Array;
 		var playerIndex = 0;
 		var player;
+		var enemy;
 		var scalePercentageX = window.innerWidth / 1600;
 		var scalePercentageY = window.innerHeight / 900;
 		var currentPlayer = 'player' + Math.round(Math.random() * 1000);
@@ -78,8 +77,8 @@
            
         
         	   // init
-            player = new Player("player", 30, 30, 50, 50);
-            var enemy = initEnemy();
+            player = new Player("player", 100, 100, 50, 50);
+            enemy = initEnemy();
             
 
             window.addEventListener('keydown', function (event) {
@@ -113,9 +112,13 @@
                window.requestAnimationFrame(drawFrame, canvasForeground);
                
                contextForeground.save()
-               contextForeground.clearRect(0, 0, canvas.width, canvas.height);
+               
+               contextForeground.clearRect(0, 0, 
+               canvasForeground.width, canvasForeground.height);
+               
                contextForeground.restore();
                
+               resizeDraw(player2Img, receiveX, receiveY, 30, 30);
                player.move();
                for (var i = 1; i < enemy.length; i++) {
                    enemy[i].move();
@@ -134,13 +137,22 @@
 		
 		socket.on('XY', function (coords) {
   			if (coords.playerName !== currentPlayer) {
-  			    contextForeground.drawImage(player2Img, Math.round(scalePercentageX * coords.x),
-                Math.round(scalePercentageY * coords.y),
-                Math.round(scalePercentageX * 30),
-                Math.round(scalePercentageY * 30));
-    			 beforeReceiveX = coords.x;
-    			 beforeReceiveY = coords.y;
+    			 receiveX = coords.x;
+    			 receiveY = coords.y;
     		}		
+		});
+	 	
+	 	setInterval(function(){
+	 		socket.emit('lvl', {level:1})
+	 		}, 50);
+	 	
+	 	socket.on('map', function (map) {
+			for (var i = 1; i < enemy.length; i++) {
+				enemy[i].x = map[i].x;
+				enemy[i].y = map[i].y;
+			}
+				console.log(map[1].x);
+				console.log(map[1].y);
 		});
 	 	
 		window.onload = onLoad();
