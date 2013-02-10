@@ -94,7 +94,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
-      <Modified>2013-02-10T17:25:01.042</Modified>
+      <Modified>2013-02-10T17:38:03.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\map.js">
       <PackagePath>js\classes\map.js</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2013-02-10T17:26:48.372</Modified>
+      <Modified>2013-02-10T17:38:16.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
