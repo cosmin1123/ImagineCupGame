@@ -1,0 +1,70 @@
+var enemyObject.EnemyObject = require('./enemyObject.Enemy.js');
+exports.init = function () {
+		
+		enemyObject.Enemy = new Array;
+		
+    enemyObject.Enemy[1] = new enemyObject.Enemy("vertical", 140, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[2] = new enemyObject.Enemy("vertical", 180, 480, -120, 2, 20, 20);
+    enemyObject.Enemy[3] = new enemyObject.Enemy("vertical", 220, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[4] = new enemyObject.Enemy("vertical", 260, 480, -120, 2, 20, 20);
+    enemyObject.Enemy[5] = new enemyObject.Enemy("vertical", 300, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[6] = new enemyObject.Enemy("vertical", 340, 480, -120, 2, 20, 20);
+    enemyObject.Enemy[7] = new enemyObject.Enemy("vertical", 380, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[8] = new enemyObject.Enemy("vertical", 420, 480, -120, 2, 20, 20);
+    enemyObject.Enemy[9] = new enemyObject.Enemy("vertical", 460, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[10] = new enemyObject.Enemy("vertical", 500, 480, -120, 2, 20, 20);
+
+    enemyObject.Enemy[11] = new enemyObject.Enemy("square", 590, 360, 120, 2, 20, 20);
+    enemyObject.Enemy[12] = new enemyObject.Enemy("square", 610, 360, 100, 2, 20, 20);
+    enemyObject.Enemy[13] = new enemyObject.Enemy("square", 630, 360, 80, 2, 20, 20);
+    enemyObject.Enemy[14] = new enemyObject.Enemy("square", 650, 360, 60, 2, 20, 20);
+
+    enemyObject.Enemy[15] = new enemyObject.Enemy("horizontal", 180, 250, 620, 5, 20, 20);
+    enemyObject.Enemy[16] = new enemyObject.Enemy("horizontal", 180, 320, 620, 5, 20, 20);
+    enemyObject.Enemy[17] = new enemyObject.Enemy("horizontal", 800, 285, -620, 5, 20, 20);
+    enemyObject.Enemy[18] = new enemyObject.Enemy("horizontal", 180, 520, 620, 5, 20, 20);
+    enemyObject.Enemy[19] = new enemyObject.Enemy("horizontal", 180, 600, 620, 5, 20, 20);
+    enemyObject.Enemy[20] = new enemyObject.Enemy("horizontal", 800, 565, -620, 5, 20, 20);
+
+
+    enemyObject.Enemy[21] = new enemyObject.Enemy("diagonal", 390, 210, -190, 2, 20, 20);
+    enemyObject.Enemy[22] = new enemyObject.Enemy("diagonal", 200, 20, 190, 2, 20, 20);
+    enemyObject.Enemy[23] = new enemyObject.Enemy("diagonal", 430, 210, -190, 2.5, 20, 20);
+    enemyObject.Enemy[24] = new enemyObject.Enemy("diagonal", 240, 20, 190, 2.5, 20, 20);
+
+    enemyObject.Enemy[25] = new enemyObject.Enemy("sinus", 180, 750, 210, 1, 20, 20);
+
+    enemyObject.Enemy[26] = new enemyObject.Enemy("vertical", 440, 860, -220, 2, 20, 20);
+
+    enemyObject.Enemy[27] = new enemyObject.Enemy("square", 520, 640, 80, 2, 20, 20);
+    enemyObject.Enemy[28] = new enemyObject.Enemy("vertical", 500, 860, -220, 0.5, 20, 20);
+    enemyObject.Enemy[29] = new enemyObject.Enemy("vertical", 550, 860, -220, 0.5, 20, 20);
+    enemyObject.Enemy[30] = new enemyObject.Enemy("vertical", 575, 860, -220, 0.5, 20, 20);
+    enemyObject.Enemy[31] = new enemyObject.Enemy("vertical", 600, 860, -220, 0.5, 20, 20);
+
+    enemyObject.Enemy[32] = new enemyObject.Enemy("horizontal", 740, 750, 560, 5, 20, 20);
+    enemyObject.Enemy[33] = new enemyObject.Enemy("horizontal", 740, 720, 560, 2, 20, 20);
+    enemyObject.Enemy[34] = new enemyObject.Enemy("horizontal", 740, 690, 560, 5, 20, 20);
+
+    enemyObject.Enemy[35] = new enemyObject.Enemy("vertical", 740, 20, 180, 5, 20, 20);
+    enemyObject.Enemy[36] = new enemyObject.Enemy("vertical", 740, 100, 100, 5, 20, 20);
+    enemyObject.Enemy[37] = new enemyObject.Enemy("vertical", 640, 20, 180, 5, 20, 20);
+    enemyObject.Enemy[38] = new enemyObject.Enemy("vertical", 640, 100, 100, 5, 20, 20);
+    enemyObject.Enemy[39] = new enemyObject.Enemy("vertical", 540, 20, 180, 5, 20, 20);
+    enemyObject.Enemy[40] = new enemyObject.Enemy("vertical", 540, 100, 100, 5, 20, 20);
+
+    enemyObject.Enemy[41] = new enemyObject.Enemy("horizontal", 860, 200, 700, 5, 20, 20);
+    enemyObject.Enemy[42] = new enemyObject.Enemy("horizontal", 860, 250, 700, 10, 20, 20);
+    enemyObject.Enemy[43] = new enemyObject.Enemy("horizontal", 860, 300, 700, 2, 20, 20);
+    enemyObject.Enemy[44] = new enemyObject.Enemy("horizontal", 860, 350, 700, 2, 20, 20);
+    enemyObject.Enemy[45] = new enemyObject.Enemy("horizontal", 860, 400, 700, 10, 20, 20);
+    enemyObject.Enemy[46] = new enemyObject.Enemy("horizontal", 860, 450, 700, 5, 20, 20);
+
+    enemyObject.Enemy[47] = new enemyObject.Enemy("diagonal", 860, 200, 400, 5, 20, 20);
+    enemyObject.Enemy[48] = new enemyObject.Enemy("diagonal", 1160, 200, 400, 5, 20, 20);
+
+    enemyObject.Enemy[49] = new enemyObject.Enemy("horizontal", 1220, 640, 320, 10, 20, 20);
+    enemyObject.Enemy[50] = new enemyObject.Enemy("horizontal", 1560, 660, -340, 10, 20, 20);
+
+    return enemyObject.Enemy;
+}
