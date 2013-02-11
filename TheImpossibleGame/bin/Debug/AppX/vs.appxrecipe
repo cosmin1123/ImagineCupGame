@@ -5,7 +5,7 @@
     <WindowsUser>theod_000</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>46B4D4A5F6B28775BFCE2CFD93AA6B8BE270EBB440F1F9528411856A029B8E9E</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>BB5EF4A4B546F953EE081F9E32B458D7C8DC17B4F257CC84FDDAF30A73AB4824</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0b430622-5ae2-42fb-9fea-bbae508bfacd_1.0.0.0_neutral__3jswjf6s6fzr4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0b430622-5ae2-42fb-9fea-bbae508bfacd_3jswjf6s6fzr4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0b430622-5ae2-42fb-9fea-bbae508bfacd</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-10T21:14:32.435</Modified>
+      <Modified>2013-02-11T18:30:48.908</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -90,11 +90,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\drawWall.js">
       <PackagePath>js\classes\drawWall.js</PackagePath>
-      <Modified>2013-02-08T20:09:02.462</Modified>
+      <Modified>2013-02-11T18:30:20.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\enemy.js">
       <PackagePath>js\classes\enemy.js</PackagePath>
-      <Modified>2013-02-10T19:32:22.327</Modified>
+      <Modified>2013-02-11T18:30:20.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
@@ -126,7 +126,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\startGame.js">
       <PackagePath>js\utils\startGame.js</PackagePath>
-      <Modified>2013-02-10T21:17:53.242</Modified>
+      <Modified>2013-02-11T18:30:20.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\utils.js">
       <PackagePath>js\utils\utils.js</PackagePath>
@@ -138,11 +138,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2013-02-10T21:16:59.788</Modified>
+      <Modified>2013-02-11T18:30:20.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-10T21:14:32.356</Modified>
+      <Modified>2013-02-11T18:30:48.800</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

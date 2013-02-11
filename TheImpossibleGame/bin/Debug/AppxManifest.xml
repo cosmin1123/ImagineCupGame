@@ -21,7 +21,7 @@
     <Resource Language="EN-US" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="start.html">
+    <Application Id="App" StartPage="index.html">
       <VisualElements DisplayName="TheImpossibleGame" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="TheImpossibleGame" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="images\splashscreen.png" />
