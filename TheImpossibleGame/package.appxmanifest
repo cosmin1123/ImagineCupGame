@@ -14,7 +14,7 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="index.html">
+    <Application Id="App" StartPage="start.html">
       <VisualElements DisplayName="TheImpossibleGame" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="TheImpossibleGame" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="images\splashscreen.png" />

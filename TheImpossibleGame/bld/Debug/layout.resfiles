@@ -2,6 +2,7 @@ images\brick_wall.png
 images\cake.png
 images\fireball.png
 images\logo.png
+images\map.png
 images\player.png
 images\player1_set.png
 images\player2.png
@@ -20,4 +21,6 @@ js\classes\map.js
 js\classes\player.js
 js\classes\wall.js
 js\utils.js
+map.html
 socket.io.js
+start.html

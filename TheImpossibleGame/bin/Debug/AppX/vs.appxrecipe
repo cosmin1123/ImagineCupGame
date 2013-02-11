@@ -5,7 +5,7 @@
     <WindowsUser>Cataaa</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>BB5EF4A4B546F953EE081F9E32B458D7C8DC17B4F257CC84FDDAF30A73AB4824</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>46B4D4A5F6B28775BFCE2CFD93AA6B8BE270EBB440F1F9528411856A029B8E9E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0b430622-5ae2-42fb-9fea-bbae508bfacd_1.0.0.0_neutral__3jswjf6s6fzr4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0b430622-5ae2-42fb-9fea-bbae508bfacd_3jswjf6s6fzr4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0b430622-5ae2-42fb-9fea-bbae508bfacd</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-10T17:26:10.666</Modified>
+      <Modified>2013-02-11T13:17:10.378</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +36,10 @@
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-02-10T16:04:18.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map.png">
+      <PackagePath>images\map.png</PackagePath>
+      <Modified>2013-02-11T14:48:01.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player.png">
       <PackagePath>images\player.png</PackagePath>
@@ -94,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
-      <Modified>2013-02-10T20:17:07.204</Modified>
+      <Modified>2013-02-11T13:42:13.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\map.js">
       <PackagePath>js\classes\map.js</PackagePath>
@@ -114,11 +118,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2013-02-10T20:14:13.759</Modified>
+      <Modified>2013-02-11T14:49:43.384</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\map.html">
+      <PackagePath>map.html</PackagePath>
+      <Modified>2013-02-11T14:48:53.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\start.html">
+      <PackagePath>start.html</PackagePath>
+      <Modified>2013-02-11T13:17:08.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-10T17:26:10.489</Modified>
+      <Modified>2013-02-11T13:17:10.307</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

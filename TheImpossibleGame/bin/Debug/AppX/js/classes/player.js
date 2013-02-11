@@ -84,8 +84,8 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-    if (isRight || isLeft || isUp || isDown)
-        sendingCoords();
+  //  if (isRight || isLeft || isUp || isDown)
+  //      sendingCoords();
 
     if (!(isRight || isLeft || isUp || isDown)) {
         this.state = 0;

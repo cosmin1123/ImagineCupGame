@@ -57,6 +57,7 @@
     <Content Include="images\cake.png" />
     <Content Include="images\fireball.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\map.png" />
     <Content Include="images\player.png" />
     <Content Include="images\player2.png" />
     <Content Include="images\player2_set.png" />
@@ -75,6 +76,8 @@
     <Content Include="js\classes\wall.js" />
     <Content Include="js\utils.js" />
     <Content Include="index.html" />
+    <Content Include="map.html" />
+    <Content Include="start.html" />
     <Content Include="socket.io.js" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
   </ItemGroup>
