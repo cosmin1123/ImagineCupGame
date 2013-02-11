@@ -22,156 +22,22 @@
     <img src="images/player1_set.png" id = "player" style="display:none"/>
     <img src="images/player2.png" id = "player2" style="display:none"/>
     <img src="images/brick_wall.png" id = "wall" style="display:none"/>
-     <img src="images/cake.png" id ="cake" style="display:none"/>
-    
-    <script src="js/utils.js"></script>
+    <img src="images/cake.png" id ="cake" style="display:none"/>
+    <img src="images/map.png" id ="map" style="display:none" />
+    <script src="js/utils/utils.js"></script>
     <script src="./js/classes/player.js"></script>
     <script src="./js/classes/enemy.js"></script>
     <script src="./js/classes/wall.js"></script>
     <script src="./js/classes/drawWall.js"></script>
-    <script src="./js/classes/map.js"></script>
-    <script src="socket.io.js"></script>
-        
-     <script>
-         "use strict";
-		var vx = 0;
-		var vy = 0;
-		var ax = 0;
-		var ay = 0;
-		var isRight = false;
-		var isLeft = false;
-		var isUp = false;
-		var isDown = false;
-		var receiveX = 50;
-		var receiveY = 50;
-		var canvasForeground = document.getElementById('canvasForeground'); 
-		var canvasBackground = document.getElementById('canvasBackground'); 
-	  var player2Img = document.getElementById('player2');
-    var contextForeground = canvasForeground.getContext('2d');
-    var contextBackground = canvasBackground.getContext('2d');
-		var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port
-		var playerArray = new Array;
-		var playerBeforeArray = new Array;
-		var playerIndex = 0;
-		var player;
-		var enemy;
-		var scalePercentageX = window.innerWidth / 1600;
-		var scalePercentageY = window.innerHeight / 900;
-		var currentPlayer = 'player' + Math.round(Math.random() * 1000);
-		var sendLocation = function (x, y, playerName) {
-  			socket.emit('XY', {x:x, y:y, playerName:playerName});
-		};
-		var sendingCoords = function(){
-			sendLocation(player.x, player.y, currentPlayer);
-		};
-      var onLoad = function () {
-      		
-            canvasBackground.width = 1600 * scalePercentageX;
-            canvasBackground.height = 900 * scalePercentageY;
-            canvasForeground.width = 1600 * scalePercentageX;
-            canvasForeground.height = 900 * scalePercentageY;
-            
-            initMap(canvasBackground); 
-            socket.on('ready', function (co) {
-            	console.log(co);
-           
-        
-        	   // init
-            player = new Player("player", 30, 30, 50, 50);
-            enemy = initEnemy();
-            startEnemy();
-            
-
-            window.addEventListener('keydown', function (event) {
-                if(event.keyCode==39){
-                    isRight=true;}
-                if(event.keyCode==37){
-                    isLeft=true;}
-                if(event.keyCode==38){
-                    isUp=true;}
-                if(event.keyCode==40){
-                    isDown=true;}
-               }
-           , false);
-           
-            window.addEventListener('keyup', function (event) {
-               if(event.keyCode==39){
-                   isRight=false;}
-               if(event.keyCode==37){
-                   isLeft=false;}
-               if(event.keyCode==38){
-                   isUp=false;}
-               if(event.keyCode==40){
-                   isDown=false;}
-                   
-           }, false);
-           
-           setTimeout( function () { initMap(canvasBackground); }, 100);	
-           
-           (function drawFrame() {
-               
-               window.requestAnimationFrame(drawFrame, canvasForeground);
-               
-               contextForeground.save()
-               
-               contextForeground.clearRect(0, 0, 
-               canvasForeground.width, canvasForeground.height);
-               
-               contextForeground.restore();
-               
-               resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-               
-               for (var i = 1; i < enemy.length; i++) 
-                   enemy[i].draw();
-                   
-               player.move();
-
-           }());
-
-
-           sendingCoords();
-
-           
-           });
-        };
-      
-		
-		socket.on('XY', function (coords) {
-  			if (coords.playerName !== currentPlayer) {
-    			 receiveX = coords.x;
-    			 receiveY = coords.y;
-    		}		
-		});
-
-
-
- 	
-
- 	
-		window.onload = onLoad();
-		
-		var startEnemy = function () {
-
-		    socket.on('map', function (map) {
-		    		var j = 1;
-		        for (var i = 1; i < enemy.length; i++) {
-		            enemy[i].x = map[j++];
-		            enemy[i].y = map[j++];
-		        }
-		    });
-
-		    setInterval(function () {
-		        socket.emit('lvl', { level: 1 })}
-		    , 30);
-
-		    setInterval(function () {
-		        for (var i = 1; i < enemy.length; i++) {
-		            enemy[i].move();
-		        }
-		    }, 15);
-		}
-	 		
-    </script>
+    <script src="./js/maps/map1.js"></script>
+    <script src="socket.io.js"></script>   
+    <script src="./js/utils/selectLevel.js"></script>
+    <script src="./js/utils/addKeyListener.js"></script>  
+    <script src="./js/utils/drawing.js"></script>
+    <script src="./js/utils/startGame.js"></script> 
+    <script src="./js/utils/clientSide.js"></script> 
+   
+     
   </body>
 </html>
 
