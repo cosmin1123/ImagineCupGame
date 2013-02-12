@@ -67,26 +67,8 @@
 					});
         };
       
-				var startEnemy = function () {
 
-		    //socket.on('map', function (map) {
-		    //		var j = 1;
-		    //    for (var i = 1; i < enemy.length; i++) {
-		    //        enemy[i].x = map[j++];
-		    //        enemy[i].y = map[j++];
-		    //    }
-		    //});
 
-		    //setInterval(function () {
-		    //    socket.emit('lvl', { level: 1 })}
-		    //, 30);
-
-		    setInterval(function () {
-		        for (var i = 1; i < enemy.length; i++) {
-		            enemy[i].move();
-		        }
-		    }, 15);
-		}	
 	
 
 
