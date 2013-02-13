@@ -52,7 +52,7 @@ Bullet.prototype.fire = function () {
 	this.resizeDraw();
 
 	if(this.speedX == 0 && this.speedY == 0){
-
+		console.log(lastPressed);
 		if(lastPressed == "down")
 			this.speedY = 8;
 		if(lastPressed == "up")
@@ -60,7 +60,7 @@ Bullet.prototype.fire = function () {
 		if(lastPressed == "right")
 			this.speedX = +8;
 		if(lastPressed == "left")
-			this.speedY = -8;
+			this.speedx = -8;
 	}
 
 	this.x += this.speedX;

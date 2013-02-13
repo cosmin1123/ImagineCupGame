@@ -7,6 +7,7 @@ var lastPressed = "down";
 
 var keyListener = function(){
 	window.addEventListener('keydown', function (event) {
+		console.log(lastPressed);
 		if(event.keyCode==39){
 			isRight=true;
 			lastPressed="right";}
