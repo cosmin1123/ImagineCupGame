@@ -13,12 +13,11 @@ ActionArea.prototype.resizeDraw = function () {
 }
 
 ActionArea.prototype.areaCollision = function (){
-	 console.log("I'm in");
+
 	 if (!(player.x + player.width < this.x ||
      this.x + this.width < player.x ||
      player.y + player.height < this.y ||
      this.y + this.height < player.y)) {
-			console.log("aaaaa");
 			this.selectAction();
 						
 		} 
@@ -26,7 +25,6 @@ ActionArea.prototype.areaCollision = function (){
 
 ActionArea.prototype.selectAction = function (){
 	if(this.actionType == "lvl"){
-		console.log(level);
 		selectLevel(++level);	
 	}
 	

@@ -7,6 +7,7 @@ var ay = 0;
 var level = 1;
 var player;
 var enemy;
+var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -54,7 +55,7 @@ var onLoad = function () {
 
             resizeDraw(player2Img, receiveX, receiveY, 30, 30);
 
-
+						bullet.testFired();
 
             for (var i = 1; i < enemy.length; i++)
                 enemy[i].draw();

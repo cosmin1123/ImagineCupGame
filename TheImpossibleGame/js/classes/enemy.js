@@ -139,8 +139,11 @@ Enemy.prototype.draw = function () {
     if(collision(this, player))
     	{    		
     		playerDies();
-    	}         
-             
+    	} 
+    
+    if(collision(this, bullet)){
+    	this.speed = 0;        
+     }
     contextForeground.restore();
 };
 
