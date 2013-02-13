@@ -31,7 +31,10 @@
         			console.log(co);
 		      	   // init
 		          player = new Player("player", 30, 30, 50, 50);
-		          
+		          //test
+		          var areaAction = new ActionArea(player2Img, 50, 300,50,50,"lvl");
+		          areaAction.resizeDraw();
+		          //test
 		          startEnemy();
 		          
 							keyListener();
@@ -52,10 +55,13 @@
 		             
 		             resizeDraw(player2Img, receiveX, receiveY, 30, 30);
 		             
+
+		             
 		             for (var i = 1; i < enemy.length; i++) 
 		                 enemy[i].draw();
 		                 
 		             player.move();
+		             areaAction.areaCollision();
 
            }());
            
