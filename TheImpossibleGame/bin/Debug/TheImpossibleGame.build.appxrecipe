@@ -65,6 +65,9 @@
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\traktor.gif">
       <PackagePath>images\traktor.gif</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\actionArea.js">
+      <PackagePath>js\classes\actionArea.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\drawWall.js">
       <PackagePath>js\classes\drawWall.js</PackagePath>
     </AppxPackagedFile>
