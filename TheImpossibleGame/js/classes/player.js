@@ -1,17 +1,17 @@
-function Player (id,width, height,posX,posY) {
-	this.img = document.getElementById(id);
-	this.x = posX;
-	this.y = posY;
-	this.width = width;
-	this.height = height;
-	this.startX = posX;
-	this.startY = posY;
-	this.state = 0;
-	this.step = 0;
-	this.direction = 'N';
+function Player(id, width, height, posX, posY) {
+    this.img = document.getElementById(id);
+    this.x = posX;
+    this.y = posY;
+    this.width = width;
+    this.height = height;
+    this.startX = posX;
+    this.startY = posY;
+    this.state = 0;
+    this.step = 0;
+    this.direction = 'N';
 }
 Player.prototype.move = function () {
-	  
+
     this.XBefore = this.x;
     this.YBefore = this.y;
 
@@ -84,8 +84,8 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-  //  if (isRight || isLeft || isUp || isDown)
-  //      sendingCoords();
+    //  if (isRight || isLeft || isUp || isDown)
+    //      sendingCoords();
 
     if (!(isRight || isLeft || isUp || isDown)) {
         this.state = 0;
@@ -100,29 +100,29 @@ Player.prototype.move = function () {
 
 }
 
-wallCollision = function(object, type){
-	
-	for( var i = 0; i < index; i++)	
-         if (!(object.x + object.width < walls[i].x ||
-            walls[i].x + walls[i].width < object.x ||
-			object.y + object.height < walls[i].y ||
-			walls[i].y + walls[i].height  < object.y)) {
-				
-				if(type == "player"){
- 			 			object.x = player.XBefore;
-            object.y = player.YBefore;
+wallCollision = function (object, type) {
+
+    for (var i = 0; i < index; i++)
+        if (!(object.x + object.width < walls[i].x ||
+           walls[i].x + walls[i].width < object.x ||
+           object.y + object.height < walls[i].y ||
+           walls[i].y + walls[i].height < object.y)) {
+
+            if (type == "player") {
+                object.x = player.XBefore;
+                object.y = player.YBefore;
+            }
+
+            if (type == "bullet") {
+                object.fired = false;
+                object.speedX = 0;
+                object.speedY = 0;
+            }
+
+
+
+
         }
-        
-        if(type == "bullet"){
- 			 			object.fired = false;
- 			 			object.speedX = 0;
- 			 			object.speedY = 0;
-        }
-        
-        
-        
-        
-       }
 }
 Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
     xa = Math.round(scalePercentageX * x);

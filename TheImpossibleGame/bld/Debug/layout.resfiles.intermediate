@@ -16,6 +16,7 @@ images\traktor.gif
 images\zombie.png
 index.html
 js\classes\actionArea.js
+js\classes\Bullet.js
 js\classes\drawWall.js
 js\classes\enemy.js
 js\classes\player.js
