@@ -37,7 +37,7 @@ exports.synchronize = function(socket){
 	
 		socket.broadcast.to(roomNumber).emit('moveEnemy', 1);
 		
-		}, 30);
+		}, 100);
 	/*socket.on('lvl', function (lvl) {
 		var enemyMap = getEnemyMap(lvl.level);
 		socket.broadcast.to(roomNumber).emit('map', enemyMap);
