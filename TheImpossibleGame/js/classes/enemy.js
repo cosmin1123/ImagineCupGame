@@ -138,7 +138,8 @@ Enemy.prototype.draw = function () {
 	
     if(collision(this, player))
     	{    		
-    		playerDies();
+    		playerDies(player);
+    		 socket.emit('playerDied', { dead: true});
     	} 
     
     if(collision(this, bullet)){
@@ -148,9 +149,9 @@ Enemy.prototype.draw = function () {
     contextForeground.restore();
 };
 
-function playerDies(){
-	player.x = 40;
-	player.y = 40;
+function playerDies(object){
+	object.x = object.startX;
+	object.y = object.startY;
 }
 
 function collision(c1, c2) {

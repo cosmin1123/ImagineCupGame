@@ -32,5 +32,6 @@ var keyListener = function () {
         if (event.keyCode == 40) {
             player.isDown = false;
         }
+        sendingCoords();
     }, false);
 }

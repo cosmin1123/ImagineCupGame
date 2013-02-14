@@ -2,6 +2,7 @@
 
 var level = 1;
 var player;
+var player2;
 var enemy;
  var areaAction = new Array();
 var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
@@ -28,7 +29,7 @@ var onLoad = function () {
     var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
-        player = new Player("player", 30, 30, 50, 50);
+        player = new Player("player", 30, 30, 50, 50, currentPlayer);
         startEnemy();
 
         keyListener();
@@ -48,8 +49,6 @@ var onLoad = function () {
 
             contextForeground.restore();
 
-            resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-
 
 						bullet.testFired();
 
@@ -57,6 +56,7 @@ var onLoad = function () {
                 enemy[i].draw();
 
             player.move();
+            player2.move();
             for(var i = 0; i < areaAction.length; i++)
             	areaAction[i].areaCollision();
 
