@@ -1,6 +1,7 @@
 
 	var receiveX = 50;
 	var receiveY = 50;
+	var gameStarted = false;
 	var socket = io.connect("78.97.50.9:3000/");//replace this with server ip and port	
 	
 
@@ -42,8 +43,12 @@ socket.on('XY', function (coords) {
 });
 
  socket.on('moveEnemy', function (co) {
- 	console.log(co);
- 	for (var i = 1; i < enemy.length; i++) {
-					enemy[i].move();
-				}
+ 	
+ 	if(gameStarted){
+	 	console.log(co);
+	 	for (var i = 1; i < enemy.length; i++) {
+						enemy[i].move();
+					}
+					
+		}
  });

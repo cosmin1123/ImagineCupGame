@@ -9,7 +9,7 @@ var selectLevel = function(level){
 	if(level == 1){
     
 		player = new Player("player", 30, 30, 50, 50);
-		initAreaAction1();
+	//	initAreaAction1();
 		initMap1(canvasBackground);
 		enemy = initEnemy1();	
 	} 

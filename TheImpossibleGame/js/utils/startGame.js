@@ -26,6 +26,7 @@ var onLoad = function () {
 
 
     var twoPlayersHaveConnected = function (co) {
+    		gameStarted = true;
         // init
         player = new Player("player", 30, 30, 50, 50);
         startEnemy();
