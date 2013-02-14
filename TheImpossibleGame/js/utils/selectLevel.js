@@ -16,7 +16,7 @@ var selectLevel = function(level){
 	
 	if(level == 2){
 		player = new Player("player", 30, 30, 50, 50);
-		initMap1(canvasBackground);
+		initMap2(canvasBackground);
 		enemy = initEnemy1();	
 	} 
 	
@@ -27,3 +27,4 @@ var selectLevel = function(level){
 	} 
 	
 }
+

@@ -29,13 +29,13 @@ ActionArea.prototype.selectAction = function (){
 	}
 	
 	if(this.actionType == "slow"){
-	    if (isRight == true) 
+	    if (player.isRight == true) 
 	        player.x -= 3;
-	    if (isLeft == true)
+	    if (player.isLeft == true)
 	        player.x += 3;
-	    if (isUp == true)
+	    if (player.isUp == true)
 	        player.y += 3;
-	    if (isDown == true)
+	    if (player.isDown == true)
 	        player.y -= 3;
 
 

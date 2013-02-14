@@ -25,7 +25,6 @@ ActionArea.prototype.areaCollision = function (){
 
 ActionArea.prototype.selectAction = function (){
 	if(this.actionType == "lvl"){
-		console.log(level);
 		selectLevel(++level);	
 	}
 	

@@ -6,6 +6,7 @@ function Bullet(id, height, width, cooldown) {
 	this.width = width;
 	this.fired = false;
 	this.firedTime = 0;
+	this.isFired = false;
 	this.cooldown = cooldown;
 	this.speedX = 0;
 	this.speedY = 0;
@@ -13,7 +14,7 @@ function Bullet(id, height, width, cooldown) {
 
 Bullet.prototype.testFired = function () {
 
-	if(isFired && this.cooldownEnded()){
+	if(this.isFired && this.cooldownEnded()){
 
 		this.fired = true;
 		this.startBulletCooldown();
@@ -50,7 +51,6 @@ Bullet.prototype.fire = function () {
 		this.y += 8;
 	*/
 	this.resizeDraw();
-	console.log(player.direction);
 	if(this.speedX == 0 && this.speedY == 0){
 		if(player.direction.indexOf("N")  !== -1)
 			this.speedY = -8;

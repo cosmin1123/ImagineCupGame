@@ -6,7 +6,7 @@ function resizeDraw(img, x, y, width, height){
 }
 
 function resizeDrawWall(img, x, y, width, height){
-    contextBackground.drawImage(img, scalePercentageX * x, 		             
+        contextBackground.drawImage(img, scalePercentageX * x, 		             
     	scalePercentageY * y, scalePercentageX * width,
     	scalePercentageY * height);
 }

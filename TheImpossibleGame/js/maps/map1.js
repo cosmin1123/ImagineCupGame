@@ -1,5 +1,5 @@
-﻿function initEnemy1() {
- enemy = new Array;
+function initEnemy1() {
+    enemy = new Array;
 
 
     enemy[1] = new Enemy("obstacle", "vertical", 140, 360, 120, 2, 20, 20);
@@ -87,7 +87,7 @@ function initMap1(canvas) {
     wallVertical(context, 100, 0, 380, 20);
     wallVertical(context, 100, 460, 880, 20);
     wallHorizontal(context, 120, 340, 700, 20);
-    wallHorizontal(context, 120, 500, 700, 20);http://stackoverflow.com/questions/2763006/change-the-current-branch-to-master-in-git
+    wallHorizontal(context, 120, 500, 700, 20);
     wallVertical(context, 840, 160, 660, 20);
     wallHorizontal(context, 180, 230, 820, 20);
     wallHorizontal(context, 180, 620, 820, 20);

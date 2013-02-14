@@ -1,5 +1,5 @@
-
 "use strict";
+
 var level = 1;
 var player;
 var enemy;
@@ -24,10 +24,10 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
+
     var twoPlayersHaveConnected = function (co) {
         // init
         player = new Player("player", 30, 30, 50, 50);
-        
         startEnemy();
 
         keyListener();
@@ -41,12 +41,14 @@ var onLoad = function () {
 
             contextForeground.save()
 
+
             contextForeground.clearRect(0, 0,
             canvasForeground.width, canvasForeground.height);
 
             contextForeground.restore();
 
             resizeDraw(player2Img, receiveX, receiveY, 30, 30);
+
 
 						bullet.testFired();
 
@@ -66,12 +68,4 @@ var onLoad = function () {
         twoPlayersHaveConnected(co)
     });
 };
-
-
-
-
-
-
-
-
 

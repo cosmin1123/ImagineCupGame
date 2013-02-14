@@ -9,13 +9,20 @@ function Player(id, width, height, posX, posY) {
     this.state = 0;
     this.step = 0;
     this.direction = 'N';
+<<<<<<< HEAD
+    this.isRight = false;
+    this.isLeft = false;
+    this.isUp = false;
+    this.isDown = false;
+=======
+>>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
 }
 Player.prototype.move = function () {
 
     this.XBefore = this.x;
     this.YBefore = this.y;
 
-    if (isRight == true) {
+    if (this.isRight == true) {
         this.x += 4;
         this.direction = 'E';
         if (this.state == 0)
@@ -32,7 +39,7 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-    if (isLeft == true) {
+    if (this.isLeft == true) {
         this.x -= 4;
         this.direction = 'V';
         if (this.state == 0)
@@ -49,7 +56,7 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-    if (isUp == true) {
+    if (this.isUp == true) {
         this.y -= 4;
         this.direction = 'N';
         if (this.state == 0)
@@ -66,7 +73,7 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-    if (isDown == true) {
+    if (this.isDown == true) {
         this.y += 4;
 
         this.direction = 'S';
@@ -84,22 +91,36 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
+<<<<<<< HEAD
+    if (!(this.isRight || this.isLeft || this.isUp || this.isDown)) {
+=======
     //  if (isRight || isLeft || isUp || isDown)
     //      sendingCoords();
 
     if (!(isRight || isLeft || isUp || isDown)) {
+>>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
         this.state = 0;
         this.step = 0;
 
     }
     wallCollision(player, "player");
     contextForeground.save();
-    this.img.style.transform = 'rotate(15deg)';
     this.resizeDraw(this.img, this.x, this.y, this.width, this.height, this.direction + this.state);
     contextForeground.restore();
 
 }
 
+<<<<<<< HEAD
+wallCollision = function () {
+
+    for (var i = 0; i < index; i++)
+        if (!(player.x + player.width < walls[i].x ||
+           walls[i].x + walls[i].width < player.x ||
+           player.y + player.height < walls[i].y ||
+           walls[i].y + walls[i].height < player.y)) {
+            player.x = player.XBefore;
+            player.y = player.YBefore;
+=======
 wallCollision = function (object, type) {
 
     for (var i = 0; i < index; i++)
@@ -122,13 +143,14 @@ wallCollision = function (object, type) {
 
 
 
+>>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
         }
 }
 Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
-    xa = Math.round(scalePercentageX * x);
-    ya = Math.round(scalePercentageY * y);
-    widtha = Math.round(scalePercentageX * width);
-    heighta = Math.round(scalePercentageY * height);
+    x = Math.round(scalePercentageX * x);
+    y = Math.round(scalePercentageY * y);
+    width = Math.round(scalePercentageX * width);
+    height = Math.round(scalePercentageY * height);
     switch (direction) {
 
         case 'N0':
@@ -205,7 +227,6 @@ Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
             sheight = 260;
 
     }
-    //contextForeground.drawImage(img, x, y, width, height);
     contextForeground.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 
 }

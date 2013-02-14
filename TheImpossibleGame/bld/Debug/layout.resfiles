@@ -22,6 +22,7 @@ js\classes\enemy.js
 js\classes\player.js
 js\classes\wall.js
 js\maps\map1.js
+js\maps\map2.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js
 js\utils\drawing.js
