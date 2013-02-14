@@ -1,5 +1,5 @@
-"use strict";
 
+"use strict";
 var vx = 0;
 var vy = 0;
 var ax = 0;
@@ -7,7 +7,7 @@ var ay = 0;
 var level = 1;
 var player;
 var enemy;
-var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
+var bullet = new Bullet("obstacle", 30, 30, 10000);//the time is in ms
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -27,7 +27,6 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
-
     var twoPlayersHaveConnected = function (co) {
         console.log(co);
         // init
@@ -36,7 +35,6 @@ var onLoad = function () {
         var areaAction = new ActionArea(player2Img, 50, 300, 50, 50, "slow");
         areaAction.resizeDraw();
         //test
-
         startEnemy();
 
         keyListener();
@@ -50,14 +48,12 @@ var onLoad = function () {
 
             contextForeground.save()
 
-
             contextForeground.clearRect(0, 0,
             canvasForeground.width, canvasForeground.height);
 
             contextForeground.restore();
 
             resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-
 
 						bullet.testFired();
 
@@ -76,4 +72,12 @@ var onLoad = function () {
         twoPlayersHaveConnected(co)
     });
 };
+
+
+
+
+
+
+
+
 

@@ -13,6 +13,7 @@ function Player(id, width, height, posX, posY) {
     this.isLeft = false;
     this.isUp = false;
     this.isDown = false;
+
 }
 Player.prototype.move = function () {
 
@@ -93,22 +94,33 @@ Player.prototype.move = function () {
         this.step = 0;
 
     }
-    wallCollision();
+    wallCollision(player, "player");
     contextForeground.save();
     this.resizeDraw(this.img, this.x, this.y, this.width, this.height, this.direction + this.state);
     contextForeground.restore();
 
 }
 
-wallCollision = function () {
+
+wallCollision = function (object, type) {
 
     for (var i = 0; i < index; i++)
-        if (!(player.x + player.width < walls[i].x ||
-           walls[i].x + walls[i].width < player.x ||
-           player.y + player.height < walls[i].y ||
-           walls[i].y + walls[i].height < player.y)) {
-            player.x = player.XBefore;
-            player.y = player.YBefore;
+        if (!(object.x + object.width < walls[i].x ||
+           walls[i].x + walls[i].width < object.x ||
+           object.y + object.height < walls[i].y ||
+           walls[i].y + walls[i].height < object.y)) {
+
+            if (type == "player") {
+                object.x = player.XBefore;
+                object.y = player.YBefore;
+            }
+
+            if (type == "bullet") {
+                object.fired = false;
+                object.speedX = 0;
+                object.speedY = 0;
+            }
+
         }
 }
 Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
