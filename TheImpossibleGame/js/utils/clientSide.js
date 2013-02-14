@@ -6,7 +6,7 @@
 	
 
 var sendLocation = function () {
-    socket.emit('XY', { isUp: player.isUp, isDown: player.isDown, isLeft: player.isLeft, isRight:  player.isRight, playerName: player.playerName });
+    socket.emit('XY', { isUp: player.isUp, isDown: player.isDown, isLeft: player.isLeft, isRight:  player.isRight, playerName: player.playerName, x: player.x, y: player.y });
 };
 
 var sendingCoords = function () {
@@ -41,6 +41,8 @@ socket.on('XY', function (movement) {
         player2.isDown = movement.isDown;
         player2.isRight = movement.isRight;
         player2.isLeft = movement.isLeft;
+        player2.x = movement.x;
+        player2.y = movement.y;
     }
 });
 

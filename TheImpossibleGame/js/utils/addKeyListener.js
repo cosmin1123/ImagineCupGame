@@ -13,7 +13,12 @@ var keyListener = function () {
             player.isDown = true;
         }
         if (event.keyCode == 90) {
-        	bullet.isFired = true;
+
+        	if(bullet.cooldownEnded()){
+        		bullet.isFired = true;
+        		bullet.speedX = 0;
+        		bullet.speedY = 0;
+        	}
         }
         sendingCoords();
     }

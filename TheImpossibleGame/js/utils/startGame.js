@@ -5,7 +5,7 @@ var player;
 var player2;
 var enemy;
  var areaAction = new Array();
-var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
+var bullet = new Bullet("obstacle", 30, 30, 10000);//the time is in ms
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -29,13 +29,12 @@ var onLoad = function () {
     var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
-        player = new Player("player", 30, 30, 50, 50, currentPlayer);
         startEnemy();
 
         keyListener();
 
 
-        //setTimeout( function () { initMap(canvasBackground); }, 100);	
+        
 
         (function drawFrame() {
 

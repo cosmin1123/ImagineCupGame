@@ -4,7 +4,12 @@
 // length of a side (for square enemies)
 var contextForeground = document.getElementById('canvasForeground').getcontext;
 
-function Enemy(id, type, startX, startY, value, speed, height, width) {
+function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime) {
+		if(freezeTime == undefined)
+			this.freezeTime = 10000;//ms
+		else
+			this.freezeTime = freezeTime;
+		this.bulletHits = 0;	 
     this.img = document.getElementById(id);
     this.type = type;
     this.value = value;
@@ -15,6 +20,7 @@ function Enemy(id, type, startX, startY, value, speed, height, width) {
     this.startY = startY;
     this.height = height;
     this.width = width; 
+    this.mobUsualSpeed = speed;
     if (type == "vertical")
         this.endY = this.startY + this.value;
     if (type == "horizontal")
@@ -138,20 +144,35 @@ Enemy.prototype.draw = function () {
 	
     if(collision(this, player))
     	{    		
-    		playerDies();
+    		playerDies(player);
     		 socket.emit('playerDied', { dead: true});
     	} 
-    
+
+    var d= new Date();
+		var currentTime = d.getTime();
+
+	
     if(collision(this, bullet)){
         this.speed = 0;
         bullet.fired = false;
-     }
+        bullet.x = -10;
+        bullet.y = -10;
+        this.bulletHits = currentTime;
+    }
+    
+    //console.log(this.bulletHits);
+
+    if( (currentTime - this.bulletHits) > this.freezeTime){
+    	this.speed = this.mobUsualSpeed;
+    	console.log(currentTime);
+    }
+   
     contextForeground.restore();
 };
 
-function playerDies(){
-	player.x = player.startX;
-	player.y = player.startY;
+function playerDies(object){
+	object.x = object.startX;
+	object.y = object.startY;
 }
 
 function collision(c1, c2) {
