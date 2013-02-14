@@ -1,6 +1,6 @@
 "use strict";
 
-var level = 1;
+var level = 2;
 var player;
 var enemy;
  var areaAction = new Array();
