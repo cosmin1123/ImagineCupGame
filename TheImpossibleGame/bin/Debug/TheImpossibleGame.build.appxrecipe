@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\cake.png">
       <PackagePath>images\cake.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\door.png">
+      <PackagePath>images\door.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\fireball.png">
       <PackagePath>images\fireball.png</PackagePath>
     </AppxPackagedFile>

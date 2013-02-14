@@ -55,6 +55,7 @@
     </AppxManifest>
     <Content Include="images\brick_wall.png" />
     <Content Include="images\cake.png" />
+    <Content Include="images\door.png" />
     <Content Include="images\fireball.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\map.png" />

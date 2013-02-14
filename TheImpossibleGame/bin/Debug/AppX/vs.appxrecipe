@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-14T16:53:00.245</Modified>
+      <Modified>2013-02-14T18:23:08.900</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -27,6 +27,10 @@
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\cake.png">
       <PackagePath>images\cake.png</PackagePath>
       <Modified>2013-02-10T16:04:18.438</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\door.png">
+      <PackagePath>images\door.png</PackagePath>
+      <Modified>2013-02-14T18:22:34.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\fireball.png">
       <PackagePath>images\fireball.png</PackagePath>
@@ -43,7 +47,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map2.png">
       <PackagePath>images\map2.png</PackagePath>
-      <Modified>2013-02-14T16:51:22.759</Modified>
+      <Modified>2013-02-14T18:23:03.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player.png">
       <PackagePath>images\player.png</PackagePath>
@@ -142,7 +146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\startGame.js">
       <PackagePath>js\utils\startGame.js</PackagePath>
-      <Modified>2013-02-14T16:51:48.204</Modified>
+      <Modified>2013-02-14T17:52:30.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\utils.js">
       <PackagePath>js\utils\utils.js</PackagePath>
@@ -158,7 +162,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-14T16:53:00.175</Modified>
+      <Modified>2013-02-14T18:23:08.665</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
