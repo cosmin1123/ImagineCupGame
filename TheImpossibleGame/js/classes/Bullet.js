@@ -50,7 +50,6 @@ Bullet.prototype.fire = function () {
 		this.y += 8;
 	*/
 	this.resizeDraw();
-
 	if(this.speedX == 0 && this.speedY == 0){
 		if(player.direction.indexOf("N")  !== -1)
 			this.speedY = -8;

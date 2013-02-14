@@ -87,7 +87,7 @@ function initMap1(canvas) {
     wallVertical(context, 100, 0, 380, 20);
     wallVertical(context, 100, 460, 880, 20);
     wallHorizontal(context, 120, 340, 700, 20);
-    wallHorizontal(context, 120, 500, 700, 20);
+    wallHorizontal(context, 120, 500, 700, 20);http://stackoverflow.com/questions/2763006/change-the-current-branch-to-master-in-git
     wallVertical(context, 840, 160, 660, 20);
     wallHorizontal(context, 180, 230, 820, 20);
     wallHorizontal(context, 180, 620, 820, 20);
@@ -117,4 +117,10 @@ function initMap1(canvas) {
     wallHorizontal(context, 100, 700, 100, 20);
 
 }
-
+function initAreaAction1(){
+	areaAction = new Array()
+	areaAction[0] = new ActionArea(player2Img, 50, 300, 50, 50, "lvl");
+	areaAction[1] = new ActionArea(player2Img, 50, 250, 50, 50, "slow");
+  for(var i = 0; i < areaAction.length; i++)
+		areaAction[i].resizeDraw();
+}
