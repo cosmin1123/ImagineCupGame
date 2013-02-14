@@ -28,15 +28,6 @@ var onLoad = function () {
     var twoPlayersHaveConnected = function (co) {
         // init
         player = new Player("player", 30, 30, 50, 50);
-<<<<<<< HEAD
-        
-=======
-        //test
-        var areaAction = new ActionArea(player2Img, 50, 300, 50, 50, "slow");
-        areaAction.resizeDraw();
-        //test
-
->>>>>>> 51c76466abea9f72cdc8d51f24726287482142a5
         startEnemy();
 
         keyListener();
@@ -77,4 +68,5 @@ var onLoad = function () {
         twoPlayersHaveConnected(co)
     });
 };
+
 

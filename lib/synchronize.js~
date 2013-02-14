@@ -1,4 +1,4 @@
-var map1 = require('./map1.js');
+/*var map1 = require('./map1.js');
 var obj = require('./enemy.js');
 var enemyMap1 = map1.init();
 
@@ -20,7 +20,6 @@ var getEnemyMap = function(level){
 			for(i = 1; i < enemyMap1.length; i++){
 				returnMap[j++] = enemyMap1[i].x;
 				returnMap[j++] = enemyMap1[i].y;
-				console.log(returnMap[1]);
 				}
 				
 			return returnMap;
@@ -32,13 +31,17 @@ var startMoving = function(enemyMap){
 	}
 	return enemyMap;
 }
-
+*/
 exports.synchronize = function(socket){
-
-	socket.on('lvl', function (lvl) {
+	setInterval(function(){
+	
+		socket.broadcast.to(roomNumber).emit('moveEnemy', 1);
+		
+		}, 30);
+	/*socket.on('lvl', function (lvl) {
 		var enemyMap = getEnemyMap(lvl.level);
 		socket.broadcast.to(roomNumber).emit('map', enemyMap);
     socket.emit('map', enemyMap);
-  });
+  });*/
 }
 

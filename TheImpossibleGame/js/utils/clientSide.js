@@ -1,7 +1,7 @@
 
 	var receiveX = 50;
 	var receiveY = 50;
-	var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port	
+	var socket = io.connect("78.97.50.9:3000/");//replace this with server ip and port	
 	
 
 var sendLocation = function (x, y, playerName) {
@@ -11,14 +11,6 @@ var sendLocation = function (x, y, playerName) {
 var sendingCoords = function () {
     sendLocation(player.x, player.y, currentPlayer);
 };
-
-
-	socket.on('XY', function (coords) {
-  			if (coords.playerName !== currentPlayer) {
-    			 receiveX = coords.x;
-    			 receiveY = coords.y;
-    		}		
-		});
 		
 	var startEnemy = function () {
 
@@ -34,12 +26,12 @@ var sendingCoords = function () {
 		//    socket.emit('lvl', { level: 1 })}
 		//, 30);
 
-			setInterval(function () {
-				for (var i = 1; i < enemy.length; i++) {
-					enemy[i].move();
-				}
-			}, 15);
-		}	
+		//	setInterval(function () {
+		//		for (var i = 1; i < enemy.length; i++) {
+		//			enemy[i].move();
+		//		}
+		//	}, 15);
+	}	
 		
 
 socket.on('XY', function (coords) {
@@ -48,3 +40,10 @@ socket.on('XY', function (coords) {
         receiveY = coords.y;
     }
 });
+
+ socket.on('moveEnemy', function (co) {
+ 	console.log(co);
+ 	for (var i = 1; i < enemy.length; i++) {
+					enemy[i].move();
+				}
+ });
