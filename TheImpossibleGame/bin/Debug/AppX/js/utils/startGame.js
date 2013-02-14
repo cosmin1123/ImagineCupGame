@@ -1,8 +1,10 @@
 "use strict";
-var level = 2;
+
+var level = 1;
 var player;
 var enemy;
-var twoPlayersHaveConnected;
+ var areaAction = new Array();
+var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -22,10 +24,11 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
-    //var twoPlayersHaveConnected = function (co) {
-       
-        player = new Player("player", 80, 80, 50, 50);
 
+    var twoPlayersHaveConnected = function (co) {
+    		gameStarted = true;
+        // init
+        player = new Player("player", 30, 30, 50, 50);
         startEnemy();
 
         keyListener();
@@ -39,44 +42,32 @@ var onLoad = function () {
 
             contextForeground.save()
 
-            contextForeground.clearRect(0, 0, canvasForeground.width, canvasForeground.height);
+
+            contextForeground.clearRect(0, 0,
+            canvasForeground.width, canvasForeground.height);
 
             contextForeground.restore();
 
             resizeDraw(player2Img, receiveX, receiveY, 30, 30);
 
-            //for (var i = 1; i < enemy.length; i++)
-            //    enemy[i].draw();
+
+						bullet.testFired();
+
+            for (var i = 1; i < enemy.length; i++)
+                enemy[i].draw();
 
             player.move();
+            for(var i = 0; i < areaAction.length; i++)
+            	areaAction[i].areaCollision();
 
         }());
 
-    //};
+    };
 
-    //   socket.on('ready', function (co) {
-    //       console.log('aaaaaaaaaa');
-    //         twoPlayersHaveConnected(co)
-    //  });
+    socket.on('ready', function (co) {
+        console.log('aaaaaaaaaa');
+        twoPlayersHaveConnected(co)
+    });
 };
 
-var startEnemy = function () {
 
-    //socket.on('map', function (map) {
-    //		var j = 1;
-    //    for (var i = 1; i < enemy.length; i++) {
-    //        enemy[i].x = map[j++];d
-    //        enemy[i].y = map[j++];
-    //    }
-    //});
-
-    //setInterval(function () {
-    //    socket.emit('lvl', { level: 1 })}
-    //, 30);
-
-    //setInterval(function () {
-    //    for (var i = 1; i < enemy.length; i++) {
-    //        enemy[i].move();
-    //    }
-    //}, 15);
-}

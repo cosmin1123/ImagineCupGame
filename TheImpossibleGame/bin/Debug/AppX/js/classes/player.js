@@ -9,13 +9,11 @@ function Player(id, width, height, posX, posY) {
     this.state = 0;
     this.step = 0;
     this.direction = 'N';
-<<<<<<< HEAD
     this.isRight = false;
     this.isLeft = false;
     this.isUp = false;
     this.isDown = false;
-=======
->>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
+
 }
 Player.prototype.move = function () {
 
@@ -91,14 +89,7 @@ Player.prototype.move = function () {
                 }
         this.step++;
     }
-<<<<<<< HEAD
     if (!(this.isRight || this.isLeft || this.isUp || this.isDown)) {
-=======
-    //  if (isRight || isLeft || isUp || isDown)
-    //      sendingCoords();
-
-    if (!(isRight || isLeft || isUp || isDown)) {
->>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
         this.state = 0;
         this.step = 0;
 
@@ -110,17 +101,7 @@ Player.prototype.move = function () {
 
 }
 
-<<<<<<< HEAD
-wallCollision = function () {
 
-    for (var i = 0; i < index; i++)
-        if (!(player.x + player.width < walls[i].x ||
-           walls[i].x + walls[i].width < player.x ||
-           player.y + player.height < walls[i].y ||
-           walls[i].y + walls[i].height < player.y)) {
-            player.x = player.XBefore;
-            player.y = player.YBefore;
-=======
 wallCollision = function (object, type) {
 
     for (var i = 0; i < index; i++)
@@ -140,10 +121,6 @@ wallCollision = function (object, type) {
                 object.speedY = 0;
             }
 
-
-
-
->>>>>>> 729839eddf42b5dc50a9de0c92ebcf5f8ee0c520
         }
 }
 Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {

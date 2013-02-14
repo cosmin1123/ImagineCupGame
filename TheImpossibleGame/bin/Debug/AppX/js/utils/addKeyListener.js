@@ -12,6 +12,9 @@ var keyListener = function () {
         if (event.keyCode == 40) {
             player.isDown = true;
         }
+        if (event.keyCode == 90) {
+        	bullet.isFired = true;
+        }
         sendingCoords();
     }
   , false);
