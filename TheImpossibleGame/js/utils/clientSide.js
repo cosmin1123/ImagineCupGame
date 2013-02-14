@@ -1,6 +1,6 @@
 	var receiveX = 50;
 	var receiveY = 50;
-	var socket = io.connect("m0nsterrush.cloudapp.net:3000/");//replace this with server ip and port	
+	var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port	
 	
 
 	

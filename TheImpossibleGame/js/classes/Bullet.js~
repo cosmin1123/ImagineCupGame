@@ -60,7 +60,7 @@ Bullet.prototype.fire = function () {
 		if(lastPressed == "right")
 			this.speedX = +8;
 		if(lastPressed == "left")
-			this.speedx = -8;
+			this.speedX = -8;
 	}
 
 	this.x += this.speedX;
