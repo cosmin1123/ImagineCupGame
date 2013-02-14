@@ -1,5 +1,54 @@
-﻿function initEnemy1() {
- enemy = new Array;
+﻿function initMap1(canvas) {
+    var context = canvas.getContext('2d');
+
+    context.drawImage(document.getElementById("cake"), Math.round(scalePercentageX * 1520),
+    Math.round(scalePercentageY * 820),
+    Math.round(scalePercentageX * 50),
+    Math.round(scalePercentageY * 50));
+
+    //border walls
+    wallHorizontal(context, 0, 0, 1600, 20);
+    wallVertical(context, 0, 0, 900, 20);
+    wallHorizontal(context, 0, 880, 1600, 20);
+    wallVertical(context, 1580, 0, 880, 20);
+
+    //map walls
+    wallVertical(context, 100, 0, 380, 20);
+    wallVertical(context, 100, 460, 880, 20);
+    wallHorizontal(context, 120, 340, 700, 20);
+    wallHorizontal(context, 120, 500, 700, 20);
+    wallVertical(context, 840, 160, 660, 20);
+    wallHorizontal(context, 180, 230, 820, 20);
+    wallHorizontal(context, 180, 620, 820, 20);
+
+    wallVertical(context, 412, 640, 830, 20);
+    wallVertical(context, 160, 690, 880, 20);
+    wallVertical(context, 470, 740, 880, 20);
+    wallVertical(context, 520, 740, 880, 20);
+    wallVertical(context, 630, 680, 880, 20);
+
+    wallVertical(context, 740, 780, 880, 20);
+    wallVertical(context, 830, 780, 880, 20);
+    wallVertical(context, 920, 780, 880, 20);
+    wallVertical(context, 1010, 780, 880, 20);
+
+    wallVertical(context, 1030, 780, 880, 20);
+    wallVertical(context, 1120, 780, 880, 20);
+    wallVertical(context, 1210, 780, 880, 20);
+    wallVertical(context, 1300, 780, 880, 20);
+
+    wallHorizontal(context, 830, 780, 920, 20);
+    wallHorizontal(context, 1120, 780, 1210, 20);
+    wallHorizontal(context, 740, 660, 1200, 20);
+
+    wallVertical(context, 380, 20, 100, 20);
+
+    wallHorizontal(context, 100, 700, 100, 20);
+
+}
+
+function initEnemy1() {
+    enemy = new Array;
 
 
     enemy[1] = new Enemy("obstacle", "vertical", 140, 360, 120, 2, 20, 20);
@@ -67,54 +116,3 @@
 
     return enemy;
 }
-
-
-function initMap1(canvas) {
-    var context = canvas.getContext('2d');
-
-    context.drawImage(document.getElementById("cake"), Math.round(scalePercentageX * 1520),
-     Math.round(scalePercentageY * 820),
-     Math.round(scalePercentageX * 50),
-     Math.round(scalePercentageY * 50));
-
-    //border walls
-    wallHorizontal(context, 0, 0, 1600, 20);
-    wallVertical(context, 0, 0, 900, 20);
-    wallHorizontal(context, 0, 880, 1600, 20);
-    wallVertical(context, 1580, 0, 880, 20);
-
-    //map walls
-    wallVertical(context, 100, 0, 380, 20);
-    wallVertical(context, 100, 460, 880, 20);
-    wallHorizontal(context, 120, 340, 700, 20);
-    wallHorizontal(context, 120, 500, 700, 20);
-    wallVertical(context, 840, 160, 660, 20);
-    wallHorizontal(context, 180, 230, 820, 20);
-    wallHorizontal(context, 180, 620, 820, 20);
-
-    wallVertical(context, 412, 640, 830, 20);
-    wallVertical(context, 160, 690, 880, 20);
-    wallVertical(context, 470, 740, 880, 20);
-    wallVertical(context, 520, 740, 880, 20);
-    wallVertical(context, 630, 680, 880, 20);
-
-    wallVertical(context, 740, 780, 880, 20);
-    wallVertical(context, 830, 780, 880, 20);
-    wallVertical(context, 920, 780, 880, 20);
-    wallVertical(context, 1010, 780, 880, 20);
-
-    wallVertical(context, 1030, 780, 880, 20);
-    wallVertical(context, 1120, 780, 880, 20);
-    wallVertical(context, 1210, 780, 880, 20);
-    wallVertical(context, 1300, 780, 880, 20);
-
-    wallHorizontal(context, 830, 780, 920, 20);
-    wallHorizontal(context, 1120, 780, 1210, 20);
-    wallHorizontal(context, 740, 660, 1200, 20);
-
-    wallVertical(context, 380, 20, 100, 20);
-
-    wallHorizontal(context, 100, 700, 100, 20);
-
-}
-
