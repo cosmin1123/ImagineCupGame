@@ -52,7 +52,6 @@ Bullet.prototype.fire = function () {
 	this.resizeDraw();
 
 	if(this.speedX == 0 && this.speedY == 0){
-		console.log(lastPressed);
 		if(player.direction.indexOf("N")  !== -1)
 			this.speedY = -8;
 		if(player.direction.indexOf("S")  !== -1)

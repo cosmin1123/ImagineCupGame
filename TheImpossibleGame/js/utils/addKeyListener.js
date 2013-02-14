@@ -3,23 +3,17 @@ var isLeft = false;
 var isUp = false;
 var isDown = false;
 var isFired = false;
-var lastPressed = "down";
 
 var keyListener = function(){
 	window.addEventListener('keydown', function (event) {
-		console.log(lastPressed);
 		if(event.keyCode==39){
-			isRight=true;
-			lastPressed="right";}
+			isRight=true;}
 		if(event.keyCode==37){
-			isLeft=true;
-			lastPressed="left"}
+			isLeft=true;}
 		if(event.keyCode==38){
-			isUp=true;
-			lastPressed="up";}
+			isUp=true;}
 		if(event.keyCode==40){
 			isDown = true;
-			lastPressed="down"
 		}
 		if(event.keyCode==90)
 			isFired = true;

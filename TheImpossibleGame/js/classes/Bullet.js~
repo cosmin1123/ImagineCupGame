@@ -53,14 +53,14 @@ Bullet.prototype.fire = function () {
 
 	if(this.speedX == 0 && this.speedY == 0){
 		console.log(lastPressed);
-		if(lastPressed == "down")
-			this.speedY = 8;
-		if(lastPressed == "up")
+		if(player.direction.indexOf("N")  !== -1)
 			this.speedY = -8;
-		if(lastPressed == "right")
-			this.speedX = +8;
-		if(lastPressed == "left")
+		if(player.direction.indexOf("S")  !== -1)
+			this.speedY = 8;
+		if(player.direction.indexOf("V")  !== -1)
 			this.speedX = -8;
+		if(player.direction.indexOf("E")  !== -1)
+			this.speedX = 8;
 	}
 
 	this.x += this.speedX;
