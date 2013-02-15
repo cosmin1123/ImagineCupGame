@@ -178,7 +178,8 @@ Enemy.prototype.draw = function () {
     contextForeground.restore();
 };
 
-function playerDies(object){
+function playerDies(object) {
+    playSound("playerDiesSound");
 	object.x = object.startX;
 	object.y = object.startY;
 }

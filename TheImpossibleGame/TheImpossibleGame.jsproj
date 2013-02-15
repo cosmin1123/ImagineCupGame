@@ -91,6 +91,8 @@
     <Content Include="sounds\background.mp3" />
     <Content Include="sounds\phaser.wav" />
     <Content Include="sounds\phaser2.au" />
+    <Content Include="sounds\playerDiesSound.mp3" />
+    <Content Include="sounds\step.mp3" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

@@ -36,3 +36,5 @@ socket.io.js
 sounds\background.mp3
 sounds\phaser.wav
 sounds\phaser2.au
+sounds\playerDiesSound.mp3
+sounds\step.mp3

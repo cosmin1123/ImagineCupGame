@@ -30,11 +30,13 @@ Player.prototype.move = function () {
             if (this.state == 1 && this.step == 10) {
                 this.state = 2;
                 this.step = 0;
+                playSound("playerSteps");
             }
             else
                 if (this.step == 10) {
                     this.state = 1;
                     this.step = 0;
+                    playSound("playerSteps");
                 }
         this.step++;
     }
@@ -43,15 +45,18 @@ Player.prototype.move = function () {
         this.direction = 'V';
         if (this.state == 0)
             this.state = 1;
+
         else
             if (this.state == 1 && this.step == 10) {
                 this.state = 2;
                 this.step = 0;
+                playSound("playerSteps");
             }
             else
                 if (this.step == 10) {
                     this.state = 1;
                     this.step = 0;
+                    playSound("playerSteps");
                 }
         this.step++;
     }
@@ -64,11 +69,13 @@ Player.prototype.move = function () {
             if (this.state == 1 && this.step == 10) {
                 this.state = 2;
                 this.step = 0;
+                playSound("playerSteps");
             }
             else
                 if (this.step == 10) {
                     this.state = 1;
                     this.step = 0;
+                    playSound("playerSteps");
                 }
         this.step++;
     }
@@ -82,11 +89,13 @@ Player.prototype.move = function () {
             if (this.state == 1 && this.step == 10) {
                 this.state = 2;
                 this.step = 0;
+                playSound("playerSteps");
             }
             else
                 if (this.step == 10) {
                     this.state = 1;
                     this.step = 0;
+                    playSound("playerSteps");
                 }
         this.step++;
     }
