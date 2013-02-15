@@ -28,7 +28,11 @@ js\maps\map2.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js
 js\utils\drawing.js
+js\utils\playSounds.js
 js\utils\selectLevel.js
 js\utils\startGame.js
 js\utils\utils.js
 socket.io.js
+sounds\background.mp3
+sounds\phaser.wav
+sounds\phaser2.au

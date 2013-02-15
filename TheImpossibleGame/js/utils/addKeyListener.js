@@ -15,7 +15,7 @@ var keyListener = function () {
         if (event.keyCode == 90) {
 
         	if(bullet.cooldownEnded()){
-        		playSound("phaser.wav");
+        		playSound("bulletSound");
         		bullet.isFired = true;
         		bullet.speedX = 0;
         		bullet.speedY = 0;

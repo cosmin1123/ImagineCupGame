@@ -4,7 +4,12 @@
 // length of a side (for square enemies)
 var contextForeground = document.getElementById('canvasForeground').getcontext;
 
-function Enemy(id, type, startX, startY, value, speed, height, width) {
+function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime) {
+		if(freezeTime == undefined)
+			this.freezeTime = 10000;//ms
+		else
+			this.freezeTime = freezeTime;
+		this.bulletHits = 0;	 
     this.img = document.getElementById(id);
     this.type = type;
     this.value = value;
@@ -15,6 +20,7 @@ function Enemy(id, type, startX, startY, value, speed, height, width) {
     this.startY = startY;
     this.height = height;
     this.width = width; 
+    this.mobUsualSpeed = speed;
     if (type == "vertical")
         this.endY = this.startY + this.value;
     if (type == "horizontal")
@@ -40,8 +46,10 @@ Enemy.prototype.move = function () {
         else
             this.direction = -1;
         this.x += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX)
+        if (this.x == this.startX || this.x == this.endX){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "vertical") {
@@ -51,8 +59,10 @@ Enemy.prototype.move = function () {
         else
             this.direction = -1;
         this.y += this.speed * this.direction;
-        if (this.y == this.startY || this.y == this.endY)
+        if (this.y == this.startY || this.y == this.endY){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "diagonal") {
@@ -63,8 +73,10 @@ Enemy.prototype.move = function () {
             this.direction = -1;
         this.x += this.speed * this.direction;
         this.y += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX)
+        if (this.x == this.startX || this.x == this.endX){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "square") {
@@ -122,9 +134,11 @@ Enemy.prototype.move = function () {
         this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100 ;
         if( this.x > this.startX + this.value){
         	this.speed = this.speed * (-1);
+        	this.mobUsualSpeed = this.speed;
         }
         if( this.x < this.startX){
        		this.speed = this.speed * (-1);
+       		this.mobUsualSpeed = this.speed;
        	}
 
 
@@ -138,19 +152,35 @@ Enemy.prototype.draw = function () {
 	
     if(collision(this, player))
     	{    		
-    		playerDies();
+    		playerDies(player);
+    		 socket.emit('playerDied', { dead: true});
     	} 
-    
+
+    var d= new Date();
+		var currentTime = d.getTime();
+
+	
     if(collision(this, bullet)){
         this.speed = 0;
         bullet.fired = false;
-     }
+        bullet.x = -10;
+        bullet.y = -10;
+        this.bulletHits = currentTime;
+    }
+    
+    //console.log(this.bulletHits);
+
+    if( (currentTime - this.bulletHits) > this.freezeTime){
+    	this.speed = this.mobUsualSpeed;
+
+    }
+   
     contextForeground.restore();
 };
 
-function playerDies(){
-	player.x = 40;
-	player.y = 40;
+function playerDies(object){
+	object.x = object.startX;
+	object.y = object.startY;
 }
 
 function collision(c1, c2) {

@@ -13,7 +13,13 @@ var keyListener = function () {
             player.isDown = true;
         }
         if (event.keyCode == 90) {
-        	bullet.isFired = true;
+
+        	if(bullet.cooldownEnded()){
+        		playSound("bulletSound");
+        		bullet.isFired = true;
+        		bullet.speedX = 0;
+        		bullet.speedY = 0;
+        	}
         }
         sendingCoords();
     }
@@ -32,5 +38,6 @@ var keyListener = function () {
         if (event.keyCode == 40) {
             player.isDown = false;
         }
+        sendingCoords();
     }, false);
 }

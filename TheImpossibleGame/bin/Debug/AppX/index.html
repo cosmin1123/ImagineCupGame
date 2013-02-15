@@ -15,12 +15,14 @@
     <canvas id="canvasForeground" 
    style="position: absolute; left: 0; top: 0; z-index: 0;display:block">
    </canvas>
+
+    <audio id="bulletSound" src="sounds/phaser.wav" preload="auto"></audio>
+    <audio src="sounds/background.mp3" autoplay="" loop="">
     
-     
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player1_set.png" id = "player" style="display:none"/>
-    <img src="images/player2.png" id = "player2" style="display:none"/>
+    <img src="images/player2_set.png" id = "player2" style="display:none"/>
     <img src="images/brick_wall.png" id = "wall" style="display:none"/>
     <img src="images/cake.png" id ="cake" style="display:none"/>
     <img src="images/map2.png" id ="map" style="display:none" />
@@ -38,6 +40,7 @@
     <script src="./js/utils/addKeyListener.js"></script>  
     <script src="./js/utils/drawing.js"></script>
     <script src="./js/utils/clientSide.js"></script> 
+    <script src="./js/utils/playSounds.js"></script> 
     <script src="./js/utils/startGame.js"></script> 
 
     <script>window.onload = onLoad();</script>

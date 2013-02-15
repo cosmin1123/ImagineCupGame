@@ -83,10 +83,14 @@
     <Content Include="js\utils\addKeyListener.js" />
     <Content Include="js\utils\clientSide.js" />
     <Content Include="js\utils\drawing.js" />
+    <Content Include="js\utils\playSounds.js" />
     <Content Include="js\utils\selectLevel.js" />
     <Content Include="js\utils\startGame.js" />
     <Content Include="js\utils\utils.js" />
     <Content Include="socket.io.js" />
+    <Content Include="sounds\background.mp3" />
+    <Content Include="sounds\phaser.wav" />
+    <Content Include="sounds\phaser2.au" />
     <None Include="TheImpossibleGame_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

@@ -25,7 +25,6 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
-
     var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init

@@ -2,8 +2,9 @@
 
 var level = 2;
 var player;
+var player2;
 var enemy;
-var areaAction = new Array();
+ var areaAction = new Array();
 var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
@@ -24,17 +25,15 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
-
-    //var twoPlayersHaveConnected = function (co) {
+    var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
-        player = new Player("player", 80, 80, 50, 50);
         startEnemy();
 
         keyListener();
 
 
-        //setTimeout( function () { initMap(canvasBackground); }, 100);	
+        
 
         (function drawFrame() {
 
@@ -48,26 +47,25 @@ var onLoad = function () {
 
             contextForeground.restore();
 
-            resizeDraw(player2Img, receiveX, receiveY, 30, 30);
-
 
 						bullet.testFired();
 
-            //for (var i = 1; i < enemy.length; i++)
-            //    enemy[i].draw();
+            for (var i = 1; i < enemy.length; i++)
+                enemy[i].draw();
 
             player.move();
+            player2.move();
             for(var i = 0; i < areaAction.length; i++)
             	areaAction[i].areaCollision();
 
         }());
 
-    //};
+    };
 
-    //socket.on('ready', function (co) {
-    //    console.log('aaaaaaaaaa');
-    //    twoPlayersHaveConnected(co)
-    //});
+    socket.on('ready', function (co) {
+        console.log('aaaaaaaaaa');
+        twoPlayersHaveConnected(co)
+    });
 };
 
 

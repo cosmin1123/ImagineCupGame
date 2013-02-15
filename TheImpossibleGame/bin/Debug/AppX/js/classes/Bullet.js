@@ -51,20 +51,36 @@ Bullet.prototype.fire = function () {
 	if (isDown == true)
 		this.y += 8;
 	*/
-	this.resizeDraw();
+
+	console.log(player.direction);
 	if(this.speedX == 0 && this.speedY == 0){
-		if(player.direction.indexOf("N")  !== -1)
+		if(player.direction.indexOf("N")  !== -1){
 			this.speedY = -8;
-		if(player.direction.indexOf("S")  !== -1)
+			this.x += 6/8 * player.height;
+			this.y += 6/8 * player.width;
+			console.log(this.x);
+		}
+		if(player.direction.indexOf("S")  !== -1){
 			this.speedY = 8;
-		if(player.direction.indexOf("V")  !== -1)
+			this.x += 6/8 * player.height;
+			this.y += 6/8 * player.width;
+		}
+		if(player.direction.indexOf("V")  !== -1){
 			this.speedX = -8;
-		if(player.direction.indexOf("E")  !== -1)
+			this.x += 6/8 * player.height;
+			this.y += 5/8 * player.width;
+		}
+		if(player.direction.indexOf("E")  !== -1){
 			this.speedX = 8;
+		  this.x += 6/8 * player.height;
+			this.y += 5/8 * player.width;
+		}
 	}
 
 	this.x += this.speedX;
 	this.y += this.speedY;
+	this.isFired = false;
+	this.resizeDraw();
 	wallCollision(this, "bullet");
 	
 }

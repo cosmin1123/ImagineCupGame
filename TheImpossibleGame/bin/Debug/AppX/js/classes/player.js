@@ -1,4 +1,4 @@
-function Player(id, width, height, posX, posY) {
+function Player(id, width, height, posX, posY, name) {
     this.img = document.getElementById(id);
     this.x = posX;
     this.y = posY;
@@ -13,6 +13,7 @@ function Player(id, width, height, posX, posY) {
     this.isLeft = false;
     this.isUp = false;
     this.isDown = false;
+    this.playerName = name;
 
 }
 Player.prototype.move = function () {
@@ -94,7 +95,7 @@ Player.prototype.move = function () {
         this.step = 0;
 
     }
-    wallCollision(player, "player");
+    wallCollision(this, "player");
     contextForeground.save();
     this.resizeDraw(this.img, this.x, this.y, this.width, this.height, this.direction + this.state);
     contextForeground.restore();
@@ -111,8 +112,8 @@ wallCollision = function (object, type) {
            walls[i].y + walls[i].height < object.y)) {
 
             if (type == "player") {
-                object.x = player.XBefore;
-                object.y = player.YBefore;
+                object.x = object.XBefore;
+                object.y = object.YBefore;
             }
 
             if (type == "bullet") {
