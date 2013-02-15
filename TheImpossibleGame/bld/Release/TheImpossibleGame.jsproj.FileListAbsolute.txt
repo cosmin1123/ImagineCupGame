@@ -1,0 +1,13 @@
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Release\resources.pri
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Release\AppxManifest.xml
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Release\TheImpossibleGame.build.appxrecipe
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\priconfig.xml.intermediate
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\layout.resfiles.intermediate
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\resources.resfiles.intermediate
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\pri.resfiles.intermediate
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\priconfig.xml
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\layout.resfiles
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\resources.resfiles
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\pri.resfiles
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\LanguageQualifiers.txt
+C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Release\ProjectArchitectures.txt

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN-PTBF85A2TVM</Machine>
+    <WindowsUser>Cataaa</WindowsUser>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>BB5EF4A4B546F953EE081F9E32B458D7C8DC17B4F257CC84FDDAF30A73AB4824</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>0b430622-5ae2-42fb-9fea-bbae508bfacd_1.0.0.0_neutral__3jswjf6s6fzr4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>0b430622-5ae2-42fb-9fea-bbae508bfacd_3jswjf6s6fzr4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>0b430622-5ae2-42fb-9fea-bbae508bfacd</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=theod_000</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-15T20:35:58.411</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\brick_wall.png">
+      <PackagePath>images\brick_wall.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\cake.png">
+      <PackagePath>images\cake.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.438</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\door.png">
+      <PackagePath>images\door.png</PackagePath>
+      <Modified>2013-02-14T18:22:34.150</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\fireball.png">
+      <PackagePath>images\fireball.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.439</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-10T16:04:18.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map.png">
+      <PackagePath>images\map.png</PackagePath>
+      <Modified>2013-02-14T14:15:19.559</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map2.png">
+      <PackagePath>images\map2.png</PackagePath>
+      <Modified>2013-02-14T18:23:03.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map3.png">
+      <PackagePath>images\map3.png</PackagePath>
+      <Modified>2013-02-14T21:36:13.312</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map4.png">
+      <PackagePath>images\map4.png</PackagePath>
+      <Modified>2013-02-15T20:33:54.906</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player.png">
+      <PackagePath>images\player.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.442</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2.png">
+      <PackagePath>images\player2.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player2_set.png">
+      <PackagePath>images\player2_set.png</PackagePath>
+      <Modified>2013-02-10T17:20:12.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player1_set.png">
+      <PackagePath>images\player1_set.png</PackagePath>
+      <Modified>2013-02-10T13:16:02.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
+      <PackagePath>images\shuriken.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\zombie.png">
+      <PackagePath>images\zombie.png</PackagePath>
+      <Modified>2013-02-10T16:04:18.451</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-10T16:04:18.448</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-10T16:04:18.448</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-10T16:04:18.450</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\traktor.gif">
+      <PackagePath>images\traktor.gif</PackagePath>
+      <Modified>2013-02-10T16:04:18.450</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\actionArea.js">
+      <PackagePath>js\classes\actionArea.js</PackagePath>
+      <Modified>2013-02-14T15:45:18.857</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\Bullet.js">
+      <PackagePath>js\classes\Bullet.js</PackagePath>
+      <Modified>2013-02-15T18:23:43.288</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\drawWall.js">
+      <PackagePath>js\classes\drawWall.js</PackagePath>
+      <Modified>2013-02-10T16:04:18.460</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\enemy.js">
+      <PackagePath>js\classes\enemy.js</PackagePath>
+      <Modified>2013-02-15T20:28:37.294</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
+      <PackagePath>js\classes\player.js</PackagePath>
+      <Modified>2013-02-15T20:28:37.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\wall.js">
+      <PackagePath>js\classes\wall.js</PackagePath>
+      <Modified>2013-02-10T16:04:18.478</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map1.js">
+      <PackagePath>js\maps\map1.js</PackagePath>
+      <Modified>2013-02-14T16:06:28.954</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map2.js">
+      <PackagePath>js\maps\map2.js</PackagePath>
+      <Modified>2013-02-14T14:15:19.578</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\addKeyListener.js">
+      <PackagePath>js\utils\addKeyListener.js</PackagePath>
+      <Modified>2013-02-15T20:28:37.297</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\clientSide.js">
+      <PackagePath>js\utils\clientSide.js</PackagePath>
+      <Modified>2013-02-15T18:23:43.313</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\drawing.js">
+      <PackagePath>js\utils\drawing.js</PackagePath>
+      <Modified>2013-02-14T14:15:19.582</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\playSounds.js">
+      <PackagePath>js\utils\playSounds.js</PackagePath>
+      <Modified>2013-02-15T20:28:37.300</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\selectLevel.js">
+      <PackagePath>js\utils\selectLevel.js</PackagePath>
+      <Modified>2013-02-15T18:23:43.315</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\startGame.js">
+      <PackagePath>js\utils\startGame.js</PackagePath>
+      <Modified>2013-02-15T20:28:37.301</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\utils.js">
+      <PackagePath>js\utils\utils.js</PackagePath>
+      <Modified>2013-02-12T09:39:04.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\socket.io.js">
+      <PackagePath>socket.io.js</PackagePath>
+      <Modified>2013-02-10T16:04:18.496</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2013-02-15T20:28:37.291</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\sounds\background.mp3">
+      <PackagePath>sounds\background.mp3</PackagePath>
+      <Modified>2013-02-15T20:28:37.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\sounds\playerDiesSound.mp3">
+      <PackagePath>sounds\playerDiesSound.mp3</PackagePath>
+      <Modified>2013-02-15T20:28:37.342</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\sounds\step.mp3">
+      <PackagePath>sounds\step.mp3</PackagePath>
+      <Modified>2013-02-15T20:28:37.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\sounds\phaser.wav">
+      <PackagePath>sounds\phaser.wav</PackagePath>
+      <Modified>2013-02-15T20:28:37.337</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\sounds\phaser2.au">
+      <PackagePath>sounds\phaser2.au</PackagePath>
+      <Modified>2013-02-15T20:28:37.340</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-02-15T20:35:58.328</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
