@@ -34,7 +34,7 @@ var onLoad = function () {
         keyListener();
 
 
-        //setTimeout( function () { initMap(canvasBackground); }, 100);	
+        
 
         (function drawFrame() {
 

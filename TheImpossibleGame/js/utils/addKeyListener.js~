@@ -14,7 +14,7 @@ var keyListener = function () {
         }
         if (event.keyCode == 90) {
 
-        	if(!bullet.fired && bullet.cooldownEnded){
+        	if(bullet.cooldownEnded()){
         		bullet.isFired = true;
         		bullet.speedX = 0;
         		bullet.speedY = 0;
