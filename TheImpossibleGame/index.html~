@@ -16,7 +16,10 @@
    style="position: absolute; left: 0; top: 0; z-index: 0;display:block">
    </canvas>
     
-     <spam id = "playerSound"
+    <audio loop = "loop" autoplay = "autoplay">
+    	<source src="sounds/background.ogg" type="audio/ogg"> 
+		</audio>
+    <spam id = "playerSound"> </spam>
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player1_set.png" id = "player" style="display:none"/>
