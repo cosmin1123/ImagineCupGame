@@ -5,11 +5,12 @@ images\fireball.png
 images\logo.png
 images\map.png
 images\map2.png
+images\map3.png
+images\map4.png
 images\player.png
 images\player1_set.png
 images\player2.png
 images\player2_set.png
-images\potato.jpg
 images\shuriken.png
 images\smalllogo.png
 images\splashscreen.png
@@ -25,6 +26,7 @@ js\classes\player.js
 js\classes\wall.js
 js\maps\map1.js
 js\maps\map2.js
+js\maps\specialMap.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js
 js\utils\drawing.js

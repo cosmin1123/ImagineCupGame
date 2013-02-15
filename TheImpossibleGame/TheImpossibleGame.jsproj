@@ -80,6 +80,7 @@
     <Content Include="js\classes\wall.js" />
     <Content Include="index.html" />
     <Content Include="js\maps\map1.js" />
+    <Content Include="js\maps\specialMap.js" />
     <Content Include="js\maps\map2.js" />
     <Content Include="js\utils\addKeyListener.js" />
     <Content Include="js\utils\clientSide.js" />

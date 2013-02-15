@@ -114,7 +114,7 @@ Player.prototype.move = function () {
 
 wallCollision = function (object, type) {
 
-    for (var i = 0; i < index; i++)
+    for (var i = 0; i < walls.length; i++)
         if (!(object.x + object.width < walls[i].x ||
            walls[i].x + walls[i].width < object.x ||
            object.y + object.height < walls[i].y ||

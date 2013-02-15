@@ -1,6 +1,6 @@
 "use strict";
 
-var level = 2;
+var level = 1;
 var player;
 var player2;
 var enemy;
