@@ -35,7 +35,5 @@ function initMap1(canvas) {
 }
 function initAreaAction1(){
 	areaAction = new Array()
-	areaAction[0] = new ActionArea(player2Img, 1590, 670, 2, 50, "lvl");
-  for(var i = 0; i < areaAction.length; i++)
-		areaAction[i].resizeDraw();
+	areaAction[0] = new ActionArea(1590, 670, 2, 50, "lvl");
 }

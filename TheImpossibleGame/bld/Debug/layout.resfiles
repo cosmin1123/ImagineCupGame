@@ -26,6 +26,7 @@ js\classes\player.js
 js\classes\wall.js
 js\maps\map1.js
 js\maps\map2.js
+js\maps\map3.js
 js\maps\specialMap.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js

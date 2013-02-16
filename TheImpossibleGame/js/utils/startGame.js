@@ -1,5 +1,4 @@
 "use strict";
-
 var level = 1;
 var player;
 var player2;
