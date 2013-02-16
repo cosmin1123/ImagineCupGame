@@ -8,7 +8,7 @@ var selectLevel = function(level){
   console.log(level);
 	if(level == 1){
     
-		player = new Player("player", 80, 80, 50, 450, currentPlayer);
+		player = new Player("player", 10, 10, 50, 450, currentPlayer);
 		player2 = new Player("player2", 80, 80, 50, 450, currentPlayer);
 	//	initAreaAction1();
 		setTimeout( function () { initMap1(canvasBackground); }, 200);	

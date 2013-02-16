@@ -17,9 +17,9 @@ function initMap1(canvas) {
     walls[2] = new Wall(1602, 0, 2, 900);
     walls[3] = new Wall(0, 902, 1600, 2);
 
-    walls[4] = new Wall(115, 50, 170, 330);//the care
+    walls[4] = new Wall(115, 50, 170, 330);//the car
     walls[5] = new Wall(335, 0, 30, 450);
-    walls[6] = new Wall(335, 500, 310, 8);
+    walls[6] = new Wall(320, 480, 345, 30);
 }
 function initAreaAction1(){
 	areaAction = new Array()

@@ -21,6 +21,10 @@ var keyListener = function () {
         		bullet.speedY = 0;
         	}
         }
+        if (event.keyCode == 88) {
+            console.log(player.x)
+            console.log(player.y);
+        }
         sendingCoords();
     }
   , false);
