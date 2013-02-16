@@ -23,7 +23,7 @@ var selectLevel = function(level){
 	} 
 	
 	if(level == 3){
-		player = new Player("player", 10, 10, 50, 50, currentPlayer);
+	    player = new Player("player", 80, 80, 50, 50, currentPlayer);
 		player2 = new Player("player2", 30, 30, 50, 50, null);
 		setTimeout( function () { initMap3(canvasBackground); }, 100);	
 		enemy = initEnemy3();
