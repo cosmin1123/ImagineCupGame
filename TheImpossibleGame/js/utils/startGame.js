@@ -1,5 +1,5 @@
 "use strict";
-var level = 1;
+var level = 0;
 var player;
 var player2;
 var enemy;
@@ -24,7 +24,7 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
 
- //   var twoPlayersHaveConnected = function (co) {
+    var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
         startEnemy();
@@ -59,12 +59,12 @@ var onLoad = function () {
 
         }());
 
-   /* };
+    };
 
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
-    });*/
+    });
 };
 
 

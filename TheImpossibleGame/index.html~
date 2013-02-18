@@ -15,18 +15,22 @@
     <canvas id="canvasForeground" 
    style="position: absolute; left: 0; top: 0; z-index: 0;display:block">
    </canvas>
+
+    <audio id="bulletSound" src="sounds/phaser.wav" preload="auto"></audio>
+    <audio id="playerSteps" src="sounds/step.mp3" preload="auto"></audio>
+    <audio id="playerDiesSound" src="sounds/playerDiesSound.mp3" preload="auto"></audio>
+    <audio src="sounds/background.mp3" autoplay="" loop=""></audio>
+
     
-    <audio loop = "loop" autoplay = "autoplay">
-    	<source src="sounds/background.ogg" type="audio/ogg"> 
-		</audio>
-    <spam id = "playerSound"> </spam>
     <img src="images/fireball.png" id = "obstacle" style="display:none"/>
     <img src="images/shuriken.png" id = "obstacle2" style="display:none"/>
     <img src="images/player1_set.png" id = "player" style="display:none"/>
     <img src="images/player2_set.png" id = "player2" style="display:none"/>
     <img src="images/brick_wall.png" id = "wall" style="display:none"/>
     <img src="images/cake.png" id ="cake" style="display:none"/>
-    <img src="images/map2.png" id ="map" style="display:none" />
+    <img src="images/map.png" id ="map" style="display:none" />
+    <img src="images/map2.png" id ="map2" style="display:none" />
+    <img src="images/map3.png" id ="map3" style="display:none" />
     <script src="js/utils/utils.js"></script>
     <script src="./js/classes/player.js"></script>
     <script src="./js/classes/enemy.js"></script>
@@ -36,6 +40,7 @@
     <script src="./js/classes/Bullet.js"></script> 
     <script src="./js/maps/map1.js"></script>
     <script src="./js/maps/map2.js"></script>
+     <script src="./js/maps/map3.js"></script>
     <script src="socket.io.js"></script>   
     <script src="./js/utils/selectLevel.js"></script>
     <script src="./js/utils/addKeyListener.js"></script>  
