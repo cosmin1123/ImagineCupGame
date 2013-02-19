@@ -1,4 +1,4 @@
-function Player(id, width, height, posX, posY, name) {
+function Player(id, width, height, posX, posY, name, life) {
     this.img = document.getElementById(id);
     this.x = posX;
     this.y = posY;
@@ -14,6 +14,9 @@ function Player(id, width, height, posX, posY, name) {
     this.isUp = false;
     this.isDown = false;
     this.playerName = name;
+    this.life = life
+    if(this.life == undefined)
+    	this.life = 5;
 
 }
 Player.prototype.move = function () {
@@ -214,6 +217,7 @@ Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
             sheight = 260;
 
     }
-    contextForeground.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 
+
+    contextForeground.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 }

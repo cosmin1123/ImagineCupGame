@@ -2,6 +2,7 @@ images\brick_wall.png
 images\cake.png
 images\door.png
 images\fireball.png
+images\life.png
 images\logo.png
 images\map.png
 images\map2.png
@@ -34,6 +35,7 @@ js\utils\drawing.js
 js\utils\playSounds.js
 js\utils\selectLevel.js
 js\utils\startGame.js
+js\utils\statusBar.js
 js\utils\utils.js
 socket.io.js
 sounds\background.mp3
