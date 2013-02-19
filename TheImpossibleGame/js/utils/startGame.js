@@ -1,5 +1,5 @@
 "use strict";
-var level = 0;
+var level = 1;
 var player;
 var player2;
 var enemy;
@@ -11,7 +11,7 @@ var player2Img = document.getElementById('player2');
 var contextForeground = canvasForeground.getContext('2d');
 var contextBackground = canvasBackground.getContext('2d');
 var scalePercentageX = window.innerWidth / 1600;
-var scalePercentageY = window.innerHeight / 900;
+var scalePercentageY = (window.innerHeight - window.innerHeight * 0.03) / 900;
 var currentPlayer = 'player' + Math.round(Math.random() * 1000);
 
 
@@ -23,7 +23,8 @@ var onLoad = function () {
     canvasForeground.height = 900 * scalePercentageY;
 
     selectLevel(level);//function is in selectLevel.js
-
+    initStartBar();
+		createStatusBar();
     var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
@@ -56,7 +57,8 @@ var onLoad = function () {
             player2.move();
             for(var i = 0; i < areaAction.length; i++)
             	areaAction[i].areaCollision();
-
+						
+						createStatusBar();
         }());
 
     };
