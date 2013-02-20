@@ -57,6 +57,7 @@
     <Content Include="images\cake.png" />
     <Content Include="images\door.png" />
     <Content Include="images\fireball.png" />
+    <Content Include="images\life.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\map.png" />
     <Content Include="images\map2.png" />
@@ -89,6 +90,7 @@
     <Content Include="js\utils\playSounds.js" />
     <Content Include="js\utils\selectLevel.js" />
     <Content Include="js\utils\startGame.js" />
+    <Content Include="js\utils\statusBar.js" />
     <Content Include="js\utils\utils.js" />
     <Content Include="socket.io.js" />
     <Content Include="sounds\background.mp3" />

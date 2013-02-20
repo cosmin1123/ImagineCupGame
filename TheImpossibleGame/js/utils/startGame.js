@@ -1,5 +1,5 @@
 "use strict";
-var level = 1;
+var level = 0;
 var player;
 var player2;
 var enemy;
@@ -62,11 +62,16 @@ var onLoad = function () {
         }());
 
     };
+
 /*
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
     });
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 785b23f1ba7340eb2556c5a2e3d67980815299f1
 };*/
 
 

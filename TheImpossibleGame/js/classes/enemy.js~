@@ -46,8 +46,10 @@ Enemy.prototype.move = function () {
         else
             this.direction = -1;
         this.x += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX)
+        if (this.x == this.startX || this.x == this.endX){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "vertical") {
@@ -57,8 +59,10 @@ Enemy.prototype.move = function () {
         else
             this.direction = -1;
         this.y += this.speed * this.direction;
-        if (this.y == this.startY || this.y == this.endY)
+        if (this.y == this.startY || this.y == this.endY){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "diagonal") {
@@ -69,8 +73,10 @@ Enemy.prototype.move = function () {
             this.direction = -1;
         this.x += this.speed * this.direction;
         this.y += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX)
+        if (this.x == this.startX || this.x == this.endX){
             this.speed *= (-1);
+            this.mobUsualSpeed = this.speed;
+        }
     }
 
     if (this.type == "square") {
@@ -128,9 +134,11 @@ Enemy.prototype.move = function () {
         this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100 ;
         if( this.x > this.startX + this.value){
         	this.speed = this.speed * (-1);
+        	this.mobUsualSpeed = this.speed;
         }
         if( this.x < this.startX){
        		this.speed = this.speed * (-1);
+       		this.mobUsualSpeed = this.speed;
        	}
 
 
@@ -151,28 +159,31 @@ Enemy.prototype.draw = function () {
     var d= new Date();
 		var currentTime = d.getTime();
 
-	
-    if(collision(this, bullet)){
-        this.speed = 0;
-        bullet.fired = false;
-        bullet.x = -10;
-        bullet.y = -10;
-        this.bulletHits = currentTime;
-    }
+		for(var i = 0; i < bullets.length; i++)	
+		  if(collision(this, bullets[i])){
+		      this.speed = 0;
+		      bullets[i].fired = false;
+		      bullets[i].x = -10;
+		      bullets[i].y = -10;
+		      this.bulletHits = currentTime;
+		      bullets.splice(i, 1);
+		  }
     
     //console.log(this.bulletHits);
 
     if( (currentTime - this.bulletHits) > this.freezeTime){
     	this.speed = this.mobUsualSpeed;
-    	console.log(currentTime);
+
     }
    
     contextForeground.restore();
 };
 
-function playerDies(object){
+function playerDies(object) {
+    playSound("playerDiesSound");
 	object.x = object.startX;
 	object.y = object.startY;
+	player.life--;
 }
 
 function collision(c1, c2) {

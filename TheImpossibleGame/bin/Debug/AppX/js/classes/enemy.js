@@ -182,6 +182,7 @@ function playerDies(object) {
     playSound("playerDiesSound");
 	object.x = object.startX;
 	object.y = object.startY;
+	player.life--;
 }
 
 function collision(c1, c2) {

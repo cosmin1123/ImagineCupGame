@@ -14,7 +14,7 @@ function initMap1(canvas) {
     context.drawImage(document.getElementById("map"), 0, 0, canvas.width, canvas.height);
     walls[0] = new Wall(-2, 0, 2, 900);
     walls[1] = new Wall(0, -2, 1600, 2);
-    walls[2] = new Wall(1602, 0, 2, 900);
+    walls[2] = new Wall(1602, 0, 2, 600);
     walls[3] = new Wall(0, 902, 1600, 2);
 
     walls[4] = new Wall(115, 50, 170, 330);//the car
@@ -35,5 +35,5 @@ function initMap1(canvas) {
 }
 function initAreaAction1(){
 	areaAction = new Array()
-	areaAction[0] = new ActionArea(1590, 670, 2, 50, "lvl");
+	areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
 }

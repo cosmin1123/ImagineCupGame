@@ -159,14 +159,16 @@ Enemy.prototype.draw = function () {
     var d= new Date();
 		var currentTime = d.getTime();
 
-	
-    if(collision(this, bullet)){
-        this.speed = 0;
-        bullet.fired = false;
-        bullet.x = -10;
-        bullet.y = -10;
-        this.bulletHits = currentTime;
-    }
+		for(var i = 0; i < bullets.length; i++)	
+		  if(collision(this, bullets[i])){
+		      this.speed = 0;
+		      bullets[i].fired = false;
+		      bullets[i].x = -10;
+		      bullets[i].y = -10;
+		      this.bulletHits = currentTime;
+		      bullets.splice(i, 1);
+		      console.log(bullets.length);
+		  }
     
     //console.log(this.bulletHits);
 
@@ -182,6 +184,7 @@ function playerDies(object) {
     playSound("playerDiesSound");
 	object.x = object.startX;
 	object.y = object.startY;
+	player.life--;
 }
 
 function collision(c1, c2) {
