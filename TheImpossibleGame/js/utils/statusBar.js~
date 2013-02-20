@@ -1,5 +1,4 @@
 	var statusBarOccupied = 0;
-
 	var canvasStatusBar = document.getElementById('statusBar');
 	var lifeImg = document.getElementById("life");
 	
@@ -16,7 +15,7 @@
 	function createStatusBar(){
 	
 		drawHearts(lifeImg, canvasStatusBar)
-		weaponCooldown(canvasStatusBar, bullet);
+		weaponCooldown(canvasStatusBar, bullets[bullets.length -1]);
 	}
 	
 	function drawHearts(img, canvasStatusBar){
@@ -57,12 +56,17 @@
 		
 		var d = new Date();
 		var time = d.getTime();
-		var fillProcent = (time - object.firedTime)/ object.cooldown;
+		var fillProcent;
+		if( bullets.length != 0
+			fillProcent = (time - object.firedTime)/ cooldown;
+		else
+			fillProcent = 1;
+			
 		if(fillProcent > 1)
 			fillProcent = 1;
 		context.lineWidth = 5;
 		context.strokeStyle = "blue";
     context.strokeRect(statusBarOccupied, 0, canvasStatusBar.width * 0.1, canvasStatusBar.height );   
     context.fillStyle = "white"; 
-    context.fillRect(statusBarOccupied + 3, 3,((canvasStatusBar.width - 3)* 0.1)*fillProcent, canvasStatusBar.height - 3);   
+    context.fillRect(statusBarOccupied + 3, 3,(canvasStatusBar.width * 0.1)*fillProcent - 5, canvasStatusBar.height - 3);   
 	}

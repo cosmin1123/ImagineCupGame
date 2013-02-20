@@ -132,6 +132,8 @@ wallCollision = function (object, type) {
                 object.fired = false;
                 object.speedX = 0;
                 object.speedY = 0;
+                var position = bullets.indexOf(object);
+                bullets.splice(position, 1);
             }
 
         }

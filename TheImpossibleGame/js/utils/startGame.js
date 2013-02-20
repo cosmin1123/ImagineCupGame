@@ -3,8 +3,8 @@ var level = 1;
 var player;
 var player2;
 var enemy;
- var areaAction = new Array();
-var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
+var areaAction = new Array();
+var bullets = new Array();
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -25,7 +25,7 @@ var onLoad = function () {
     selectLevel(level);//function is in selectLevel.js
     initStartBar();
 		createStatusBar();
-    var twoPlayersHaveConnected = function (co) {
+ //   var twoPlayersHaveConnected = function (co) {
     		gameStarted = true;
         // init
         startEnemy();
@@ -47,8 +47,8 @@ var onLoad = function () {
 
             contextForeground.restore();
 
-
-						bullet.testFired();
+            for (var i = 0; i < bullets.length; i++)
+							bullets[i].testFired();
 
             for (var i = 1; i < enemy.length; i++)
                 enemy[i].draw();
@@ -62,11 +62,11 @@ var onLoad = function () {
         }());
 
     };
-
+/*
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
     });
-};
+};*/
 
 

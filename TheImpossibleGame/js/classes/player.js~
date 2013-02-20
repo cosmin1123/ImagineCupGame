@@ -132,6 +132,8 @@ wallCollision = function (object, type) {
                 object.fired = false;
                 object.speedX = 0;
                 object.speedY = 0;
+                var position = bullets.indexOf(object);
+                bullets.splice(position, 1);
             }
 
         }
@@ -217,5 +219,7 @@ Player.prototype.resizeDraw = function (img, x, y, width, height, direction) {
             sheight = 260;
 
     }
-		contextForeground.fillRect(this.x,this.y,this.width/2, this.height/2);
+
+
+    contextForeground.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 }

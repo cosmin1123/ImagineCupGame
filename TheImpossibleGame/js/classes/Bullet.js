@@ -1,4 +1,5 @@
-function Bullet(id, height, width, cooldown) {
+var cooldown = 100;// cooldownTime;
+function Bullet(id, height, width) {
  	this.x = 0;
  	this.y = 0;
   this.img = document.getElementById(id);
@@ -7,14 +8,13 @@ function Bullet(id, height, width, cooldown) {
 	this.fired = false;
 	this.firedTime = 0;
 	this.isFired = false;
-	this.cooldown = cooldown;
 	this.speedX = 0;
 	this.speedY = 0;
 }
 
 Bullet.prototype.testFired = function () {
 
-	if(this.isFired && this.cooldownEnded()){
+	if(this.isFired && cooldownEnded(this)){
 
 		this.fired = true;
 		this.startBulletCooldown();
@@ -33,10 +33,10 @@ Bullet.prototype.startBulletCooldown = function () {
 	this.firedTime = d.getTime();
 }
 
-Bullet.prototype.cooldownEnded = function () {
+cooldownEnded = function (object) {
 	var d = new Date();
 	var currentTime = d.getTime()
-	if(this.cooldown < (currentTime - this.firedTime))
+	if(bullets.length == 0 || cooldown < (currentTime - object.firedTime) )
 		return true;
 	
 }
