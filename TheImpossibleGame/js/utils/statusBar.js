@@ -33,7 +33,7 @@
 		var x = 0, y = 0;
 		for( i = 0; i < player.life; i++){
 			contextStatusBar.drawImage(img, x, y, width/90, height);
-			x += width/100;
+			x += width/80;
 		}
 		statusBarOccupied = x + width/90;
 	}
@@ -64,6 +64,9 @@
 			
 		if(fillProcent > 1)
 			fillProcent = 1;
+		img = document.getElementById("obstacle");
+		context.drawImage(img, statusBarOccupied, 0,canvasStatusBar.width * 0.01 , canvasStatusBar.height);
+		statusBarOccupied += canvasStatusBar.width * 0.02;
 		context.lineWidth = 5;
 		context.strokeStyle = "blue";
     context.strokeRect(statusBarOccupied, 0, canvasStatusBar.width * 0.1, canvasStatusBar.height );   
