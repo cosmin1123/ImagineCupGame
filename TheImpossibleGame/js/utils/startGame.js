@@ -1,5 +1,5 @@
 "use strict";
-var level = 0;
+var level = 1;
 var player;
 var player2;
 var enemy;
@@ -50,9 +50,10 @@ var onLoad = function () {
             for (var i = 0; i < bullets.length; i++)
 							bullets[i].testFired();
 
-            for (var i = 1; i < enemy.length; i++)
+            for (var i = 1; i < enemy.length; i++) {
+                enemy[i].move();
                 enemy[i].draw();
-
+            }
             player.move();
             player2.move();
             for(var i = 0; i < areaAction.length; i++)

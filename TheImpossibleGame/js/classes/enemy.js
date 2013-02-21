@@ -13,6 +13,8 @@ function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime
     this.img = document.getElementById(id);
     this.type = type;
     this.value = value;
+    this.oldX = startX;
+    this.oldY = startY;
     this.x = startX;
     this.y = startY;
     this.speed = speed;
@@ -33,12 +35,17 @@ function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime
     if (type == "sinus") {
         this.sector = 1;
     }
-    contextForeground.save();
-    resizeDraw(this.img, this.x, this.y, this.width, this.height);
-    contextForeground.restore();
+    //contextForeground.save();
+    //resizeDraw(this.img, this.x, this.y, this.width, this.height);
+    //contextForeground.restore();
 }
 
 Enemy.prototype.move = function () {
+    if (this.speed != 0) {
+        this.oldX = this.x;
+        this.oldY = this.y;
+    }
+
     if (this.type == "horizontal") {
 
         if (this.startX <= this.endX)
@@ -146,10 +153,9 @@ Enemy.prototype.move = function () {
 }
 
 Enemy.prototype.draw = function () {
-    contextForeground.save();
-	resizeDraw(this.img, this.x, this.y, this.width, this.height);
-
-	
+    //contextForeground.save();
+    this.drawImage();
+    //contextForeground.restore();
     if(collision(this, player))
     	{    		
     		playerDies(player);
@@ -177,8 +183,35 @@ Enemy.prototype.draw = function () {
 
     }
    
-    contextForeground.restore();
+    
 };
+
+Enemy.prototype.drawImage = function () {
+    contextForeground.save();
+    this.x = Math.round(scalePercentageX * this.x);
+    this.y = Math.round(scalePercentageY * this.y);
+    this.width = Math.round(scalePercentageX * this.width);
+    this.height = Math.round(scalePercentageY * this.height);
+    if (this.oldX < this.x && this.oldY < this.y)
+        contextForeground.drawImage(this.img, 375, 0, 375, 355, this.x, this.y, this.width, this.height);
+    else
+        if (this.oldX > this.x && this.oldY > this.y)
+            contextForeground.drawImage(this.img, 0, 0, 375, 355, this.x, this.y, this.width, this.height);
+        else
+            if (this.oldX < this.x)
+                contextForeground.drawImage(this.img, 770, 0, 385, 355, this.x, this.y, this.width, this.height); //right
+            else
+                if (this.oldX > this.x)
+                    contextForeground.drawImage(this.img, 1170, 0, 385, 355, this.x, this.y, this.width, this.height); //left
+                else
+                    if (this.oldY > this.y)
+                        contextForeground.drawImage(this.img, 0, 0, 365, 355, this.x, this.y, this.width, this.height); //up
+                    else
+                        if (this.oldY < this.y)
+                            contextForeground.drawImage(this.img, 375, 0, 375, 355, this.x, this.y, this.width, this.height); //down
+
+    contextForeground.restore();
+}
 
 function playerDies(object) {
     playSound("playerDiesSound");

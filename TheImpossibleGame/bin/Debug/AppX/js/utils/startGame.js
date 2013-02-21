@@ -1,10 +1,10 @@
 "use strict";
-var level = 0;
+var level = 1;
 var player;
 var player2;
 var enemy;
- var areaAction = new Array();
-var bullet = new Bullet("obstacle", 30, 30, 1000);//the time is in ms
+var areaAction = new Array();
+var bullets = new Array();
 var canvasForeground = document.getElementById('canvasForeground');
 var canvasBackground = document.getElementById('canvasBackground');
 var player2Img = document.getElementById('player2');
@@ -47,12 +47,13 @@ var onLoad = function () {
 
             contextForeground.restore();
 
+            for (var i = 0; i < bullets.length; i++)
+							bullets[i].testFired();
 
-						bullet.testFired();
-
-            for (var i = 1; i < enemy.length; i++)
+            for (var i = 1; i < enemy.length; i++) {
+                enemy[i].move();
                 enemy[i].draw();
-
+            }
             player.move();
             player2.move();
             for(var i = 0; i < areaAction.length; i++)
@@ -61,13 +62,17 @@ var onLoad = function () {
 						createStatusBar();
         }());
 
-      };
+    };
+
 /*
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
     });
+<<<<<<< HEAD
+=======
     
+>>>>>>> 785b23f1ba7340eb2556c5a2e3d67980815299f1
 };*/
 
 

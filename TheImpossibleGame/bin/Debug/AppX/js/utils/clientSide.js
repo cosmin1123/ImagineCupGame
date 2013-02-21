@@ -51,18 +51,18 @@ socket.on('playerDied', function (deadState) {
  	 		playerDies(player2);
  });
 
- socket.on('moveEnemy', function (co) {
- 		var timesCalled = 0;
- 	 	if(gameStarted){
-	 	 var interval =	setInterval( function () { 	
-	 			for (var i = 1; i < enemy.length; i++) {
-							enemy[i].move();
-				}
-				timesCalled++;
-			if( timesCalled == 6)
-				clearInterval(interval);
-			}, 20);
+ //socket.on('moveEnemy', function (co) {
+ //		var timesCalled = 0;
+ //	 	if(gameStarted){
+ //    	 var interval =	setInterval( function () { 	
+ //    			for (var i = 1; i < enemy.length; i++) {
+ //   						enemy[i].move();
+ //   			}
+ //   			timesCalled++;
+ //   		if( timesCalled == 6)
+ //   			clearInterval(interval);
+ //   		}, 20);
 
 	 	
-		}
- });
+ //   	}
+ //});

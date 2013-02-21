@@ -1,7 +1,7 @@
 function initEnemy1() {
     enemy = new Array;
-
-
+    enemy[1] = new Enemy("monster1", "vertical", 250, 100, 600, 5, 150, 150);
+    enemy[2] = new Enemy("monster2", "horizontal", 400, 100, 600, 5, 150, 150);
   
     return enemy;
 }
