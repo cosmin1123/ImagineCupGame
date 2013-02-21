@@ -167,6 +167,7 @@ Enemy.prototype.draw = function () {
 		      bullets[i].y = -10;
 		      this.bulletHits = currentTime;
 		      bullets.splice(i, 1);
+		      console.log(bullets.length);
 		  }
     
     //console.log(this.bulletHits);

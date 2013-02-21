@@ -1,4 +1,7 @@
-function playSound(soundfile) {
- document.getElementById("playerSound").innerHTML=
- "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
- }
+function playSound(sound) {
+		document.getElementById(sound).src = "";
+		document.getElementById(sound).src = "sounds/phaser.wav";
+    document.getElementById(sound).play();
+}
+
+

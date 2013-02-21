@@ -133,7 +133,9 @@ wallCollision = function (object, type) {
                 object.speedX = 0;
                 object.speedY = 0;
                 var position = bullets.indexOf(object);
-                bullets.splice(position, 1);
+                if(position != -1)
+                	bullets.splice(position, 1);
+                console.log(position);
             }
 
         }
