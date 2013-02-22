@@ -30,7 +30,7 @@
 		
 		var height = canvasStatusBar.height;
 		var width = canvasStatusBar.width;
-		var x = 0, y = 0;
+		var x = 20, y = 0;
 		for( i = 0; i < player.life; i++){
 			contextStatusBar.drawImage(img, x, y, width/90, height);
 			x += width/80;
@@ -59,11 +59,17 @@
 		if(fillProcent > 1)
 			fillProcent = 1;
 		img = document.getElementById("bullet");
-		context.drawImage(img, statusBarOccupied, 0,canvasStatusBar.width * 0.01 , canvasStatusBar.height);
+		
+		context.drawImage(this.img, 0, 0, 252, 355, statusBarOccupied +
+		canvasStatusBar.width * 0.005, 0,canvasStatusBar.width * 0.01 , canvasStatusBar.height);
+		
 		statusBarOccupied += canvasStatusBar.width * 0.02;
 		context.lineWidth = 5;
 		context.strokeStyle = "blue";
-    context.strokeRect(statusBarOccupied, 0, canvasStatusBar.width * 0.1, canvasStatusBar.height );   
+    context.strokeRect(statusBarOccupied, 0, canvasStatusBar.width * 0.1, 
+    canvasStatusBar.height ); 
+      
     context.fillStyle = "white"; 
-    context.fillRect(statusBarOccupied + 3, 3,(canvasStatusBar.width * 0.1)*fillProcent - 5, canvasStatusBar.height - 3);   
+    context.fillRect(statusBarOccupied + 3, 3,(canvasStatusBar.width * 0.1)*
+    fillProcent - 5, canvasStatusBar.height - 3);   
 	}

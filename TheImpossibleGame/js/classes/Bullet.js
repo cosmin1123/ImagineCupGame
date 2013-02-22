@@ -10,6 +10,7 @@ function Bullet(id, height, width) {
 	this.isFired = false;
 	this.speedX = 0;
 	this.speedY = 0;
+	this.direction = player.direction;
 }
 
 Bullet.prototype.testFired = function () {
@@ -86,10 +87,20 @@ Bullet.prototype.fire = function () {
 }
 
 Bullet.prototype.resizeDraw = function () {
-
-	contextForeground.drawImage(this.img, Math.round(scalePercentageX * this.x),    
-   Math.round(scalePercentageY * this.y),
-   Math.round(scalePercentageX * this.width),
-   Math.round(scalePercentageY * this.height));
+    var x = Math.round(scalePercentageX * this.x);
+    var y = Math.round(scalePercentageY * this.y);
+    var width = Math.round(scalePercentageX * this.width);
+    var height = Math.round(scalePercentageY * this.height);
+		if (this.direction == 'N')
+		    contextForeground.drawImage(this.img, 0, 0, 252, 355, x, y, width, height);
+		    
+		if (this.direction == 'S')
+		    contextForeground.drawImage(this.img, 300, 0, 252, 355, x, y, width, height);
+		    
+		if (this.direction == 'V')
+		    contextForeground.drawImage(this.img, 612, 0, 348, 355, x, y, width, height);
+		    
+		if (this.direction == 'E')
+		    contextForeground.drawImage(this.img, 980, 0, 339, 355, x, y, width, height);
 }
 
