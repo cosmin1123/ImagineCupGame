@@ -17,7 +17,7 @@ var keyListener = function () {
         	if(cooldownEnded(bullets[bullets.length - 1])){
         	
         		playSound("bulletSound");
-        		var bullet = new Bullet("obstacle", 30, 30);//time is in ms
+        		var bullet = new Bullet("bullet", 30, 30);//time is in ms
         		bullet.isFired = true;
         		bullet.speedX = 0;
         		bullet.speedY = 0;

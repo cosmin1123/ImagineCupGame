@@ -39,16 +39,10 @@
 	}
 	
 	function colorStatusBar(canvas){
-			var context = canvas.getContext('2d');
-      context.rect(0, 0, canvas.width, canvas.height);
-      // add linear gradient
-      var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-      // light blue
-      grd.addColorStop(0, '#111111');   
-      // dark blue
-      grd.addColorStop(1, '#AAAAAA');
-      context.fillStyle = grd;
-      context.fill();
+		var context = canvas.getContext('2d');
+		img = document.getElementById("statusBar");
+		console.log(img);
+		context.drawImage(img, 0, 0,canvasStatusBar.width, canvasStatusBar.height);
 	}
 	
 	function weaponCooldown(canvasStatusBar, object){
@@ -64,9 +58,9 @@
 			
 		if(fillProcent > 1)
 			fillProcent = 1;
-		img = document.getElementById("obstacle");
+		img = document.getElementById("bullet");
 		context.drawImage(img, statusBarOccupied, 0,canvasStatusBar.width * 0.01 , canvasStatusBar.height);
-		statusBarOccupied += canvasStatusBar.width * 0.01;
+		statusBarOccupied += canvasStatusBar.width * 0.02;
 		context.lineWidth = 5;
 		context.strokeStyle = "blue";
     context.strokeRect(statusBarOccupied, 0, canvasStatusBar.width * 0.1, canvasStatusBar.height );   

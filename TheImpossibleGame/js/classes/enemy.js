@@ -188,27 +188,29 @@ Enemy.prototype.draw = function () {
 
 Enemy.prototype.drawImage = function () {
     contextForeground.save();
-    this.x = Math.round(scalePercentageX * this.x);
-    this.y = Math.round(scalePercentageY * this.y);
-    this.width = Math.round(scalePercentageX * this.width);
-    this.height = Math.round(scalePercentageY * this.height);
+	  console.log(scalePercentageY * this.height);
+    var x = Math.round(scalePercentageX * this.x);
+    var y = Math.round(scalePercentageY * this.y);
+    var width = Math.round(scalePercentageX * this.width);
+    var height = Math.round(scalePercentageY * this.height);
+
     if (this.oldX < this.x && this.oldY < this.y)
-        contextForeground.drawImage(this.img, 375, 0, 375, 355, this.x, this.y, this.width, this.height);
+        contextForeground.drawImage(this.img, 375, 0, 375, 355, x, y, width, height);
     else
         if (this.oldX > this.x && this.oldY > this.y)
-            contextForeground.drawImage(this.img, 0, 0, 375, 355, this.x, this.y, this.width, this.height);
+            contextForeground.drawImage(this.img, 0, 0, 375, 355, x, y, width, height);
         else
             if (this.oldX < this.x)
-                contextForeground.drawImage(this.img, 770, 0, 385, 355, this.x, this.y, this.width, this.height); //right
+                contextForeground.drawImage(this.img, 770, 0, 385, 355, x, y, width, height); //right
             else
                 if (this.oldX > this.x)
-                    contextForeground.drawImage(this.img, 1170, 0, 385, 355, this.x, this.y, this.width, this.height); //left
+                    contextForeground.drawImage(this.img, 1170, 0, 385, 355, x, y, width, height); //left
                 else
                     if (this.oldY > this.y)
-                        contextForeground.drawImage(this.img, 0, 0, 365, 355, this.x, this.y, this.width, this.height); //up
+                        contextForeground.drawImage(this.img, 0, 0, 365, 355, x, y, width, height); //up
                     else
                         if (this.oldY < this.y)
-                            contextForeground.drawImage(this.img, 375, 0, 375, 355, this.x, this.y, this.width, this.height); //down
+                            contextForeground.drawImage(this.img, 375, 0, 375, 355, x, y, width, height); //down
 
     contextForeground.restore();
 }
