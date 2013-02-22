@@ -37,7 +37,7 @@ function initMap3(canvas) {
     //the hard part
     walls[i++] = new Wall(338, 416, 20, 82);
     walls[i++] = new Wall(362, 394, 24, 84);
-   
+
 
 
 }

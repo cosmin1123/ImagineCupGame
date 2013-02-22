@@ -5,11 +5,11 @@
 var contextForeground = document.getElementById('canvasForeground').getcontext;
 
 function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime) {
-		if(freezeTime == undefined)
-			this.freezeTime = 10000;//ms
-		else
-			this.freezeTime = freezeTime;
-		this.bulletHits = 0;	 
+    if (freezeTime == undefined)
+        this.freezeTime = 10000;//ms
+    else
+        this.freezeTime = freezeTime;
+    this.bulletHits = 0;
     this.img = document.getElementById(id);
     this.type = type;
     this.value = value;
@@ -21,7 +21,7 @@ function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime
     this.startX = startX;
     this.startY = startY;
     this.height = height;
-    this.width = width; 
+    this.width = width;
     this.mobUsualSpeed = speed;
     if (type == "vertical")
         this.endY = this.startY + this.value;
@@ -53,41 +53,41 @@ Enemy.prototype.move = function () {
         else
             this.direction = -1;
         this.x += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX){
+        if (this.x == this.startX || this.x == this.endX) {
             this.speed *= (-1);
             this.mobUsualSpeed = this.speed;
         }
     }
 
     if (this.type == "vertical") {
- 	 
+
         if (this.startY <= this.endY)
             this.direction = 1;
         else
             this.direction = -1;
         this.y += this.speed * this.direction;
-        if (this.y == this.startY || this.y == this.endY){
+        if (this.y == this.startY || this.y == this.endY) {
             this.speed *= (-1);
             this.mobUsualSpeed = this.speed;
         }
     }
 
     if (this.type == "diagonal") {
-	 
+
         if (this.startX <= this.endX)
             this.direction = 1;
         else
             this.direction = -1;
         this.x += this.speed * this.direction;
         this.y += this.speed * this.direction;
-        if (this.x == this.startX || this.x == this.endX){
+        if (this.x == this.startX || this.x == this.endX) {
             this.speed *= (-1);
             this.mobUsualSpeed = this.speed;
         }
     }
 
     if (this.type == "square") {
-    	  
+
         if (this.side == 1)
             this.x += this.speed;
         if (this.side == 2)
@@ -125,7 +125,7 @@ Enemy.prototype.move = function () {
             this.x += this.speed;
             this.y -= this.speed;
         }
-        if (this.x == this.startX + this.value/2 && this.y == this.startY + this.value/2)
+        if (this.x == this.startX + this.value / 2 && this.y == this.startY + this.value / 2)
             this.side = 2;
         if (this.x == this.endX && this.y == this.endY)
             this.side = 3;
@@ -136,17 +136,17 @@ Enemy.prototype.move = function () {
     }
 
     if (this.type == "sinus") {
-    
+
         this.x += this.speed;
-        this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100 ;
-        if( this.x > this.startX + this.value){
-        	this.speed = this.speed * (-1);
-        	this.mobUsualSpeed = this.speed;
+        this.y = this.startY + Math.sin(2 * Math.PI * (this.x / 50)) * 100;
+        if (this.x > this.startX + this.value) {
+            this.speed = this.speed * (-1);
+            this.mobUsualSpeed = this.speed;
         }
-        if( this.x < this.startX){
-       		this.speed = this.speed * (-1);
-       		this.mobUsualSpeed = this.speed;
-       	}
+        if (this.x < this.startX) {
+            this.speed = this.speed * (-1);
+            this.mobUsualSpeed = this.speed;
+        }
 
 
     };
@@ -156,39 +156,38 @@ Enemy.prototype.draw = function () {
     //contextForeground.save();
     this.drawImage();
     //contextForeground.restore();
-    if(collision(this, player))
-    	{    		
-    		playerDies(player);
-    		 socket.emit('playerDied', { dead: true});
-    	} 
+    if (collision(this, player)) {
+        playerDies(player);
+        socket.emit('playerDied', { dead: true });
+    }
 
-    var d= new Date();
-		var currentTime = d.getTime();
+    var d = new Date();
+    var currentTime = d.getTime();
 
-		for(var i = 0; i < bullets.length; i++)	
-		  if(collision(this, bullets[i])){
-		      this.speed = 0;
-		      bullets[i].fired = false;
-		      bullets[i].x = -10;
-		      bullets[i].y = -10;
-		      this.bulletHits = currentTime;
-		      bullets.splice(i, 1);
-		      console.log(bullets);
-		  }
-    
+    for (var i = 0; i < bullets.length; i++)
+        if (collision(this, bullets[i])) {
+            this.speed = 0;
+            bullets[i].fired = false;
+            bullets[i].x = -10;
+            bullets[i].y = -10;
+            this.bulletHits = currentTime;
+            bullets.splice(i, 1);
+            console.log(bullets);
+        }
+
     //console.log(this.bulletHits);
 
-    if( (currentTime - this.bulletHits) > this.freezeTime){
-    	this.speed = this.mobUsualSpeed;
+    if ((currentTime - this.bulletHits) > this.freezeTime) {
+        this.speed = this.mobUsualSpeed;
 
     }
-   
-    
+
+
 };
 
 Enemy.prototype.drawImage = function () {
     contextForeground.save();
-	  console.log(scalePercentageY * this.height);
+    console.log(scalePercentageY * this.height);
     var x = Math.round(scalePercentageX * this.x);
     var y = Math.round(scalePercentageY * this.y);
     var width = Math.round(scalePercentageX * this.width);
@@ -217,15 +216,15 @@ Enemy.prototype.drawImage = function () {
 
 function playerDies(object) {
     playSound("playerDiesSound");
-	object.x = object.startX;
-	object.y = object.startY;
-	player.life--;
+    object.x = object.startX;
+    object.y = object.startY;
+    player.life--;
 }
 
 function collision(c1, c2) {
-	var dx = c1.x + c1.width/2 - (c2.x + c2.width/2);
-	var dy = c1.y + c1.height/2- (c2.y + c2.height/2);
-	var dist = c1.width/2 + c2.width/2;
+    var dx = c1.x + c1.width / 2 - (c2.x + c2.width / 2);
+    var dy = c1.y + c1.height / 2 - (c2.y + c2.height / 2);
+    var dist = c1.width / 2 + c2.width / 2;
 
-	return Math.sqrt(dx*dx + dy*dy) <= dist 
+    return Math.sqrt(dx * dx + dy * dy) <= dist
 }

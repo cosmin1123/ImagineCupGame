@@ -24,45 +24,45 @@ var onLoad = function () {
 
     selectLevel(level);//function is in selectLevel.js
     initStartBar();
-		createStatusBar();
- //   var twoPlayersHaveConnected = function (co) {
-    		gameStarted = true;
-        // init
-        startEnemy();
+    createStatusBar();
+    //   var twoPlayersHaveConnected = function (co) {
+    gameStarted = true;
+    // init
+    startEnemy();
 
-        keyListener();
-
-
-        
-
-        (function drawFrame() {
-
-            window.requestAnimationFrame(drawFrame, canvasForeground);
-
-            contextForeground.save()
+    keyListener();
 
 
-            contextForeground.clearRect(0, 0,
-            canvasForeground.width, canvasForeground.height);
 
-            contextForeground.restore();
 
-            for (var i = 0; i < bullets.length; i++)
-							bullets[i].testFired();
+    (function drawFrame() {
 
-            for (var i = 1; i < enemy.length; i++) {
-                enemy[i].move();
-                enemy[i].draw();
-            }
-            player.move();
-            player2.move();
-            for(var i = 0; i < areaAction.length; i++)
-            	areaAction[i].areaCollision();
-						
-						createStatusBar();
-        }());
+        window.requestAnimationFrame(drawFrame, canvasForeground);
 
-    };
+        contextForeground.save()
+
+
+        contextForeground.clearRect(0, 0,
+        canvasForeground.width, canvasForeground.height);
+
+        contextForeground.restore();
+
+        for (var i = 0; i < bullets.length; i++)
+            bullets[i].testFired();
+
+        for (var i = 1; i < enemy.length; i++) {
+            enemy[i].move();
+            enemy[i].draw();
+        }
+        player.move();
+        player2.move();
+        for (var i = 0; i < areaAction.length; i++)
+            areaAction[i].areaCollision();
+
+        createStatusBar();
+    }());
+
+};
 
 /*
     socket.on('ready', function (co) {

@@ -1,5 +1,5 @@
 ﻿function Wall(posX, posY, width, height) {
-    
+
     this.x = posX;
     this.y = posY;
     this.width = width;

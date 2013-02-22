@@ -2,7 +2,7 @@ function initEnemy1() {
     enemy = new Array;
     enemy[1] = new Enemy("monster1", "vertical", 250, 100, 600, 5, 150, 150);
     enemy[2] = new Enemy("monster2", "horizontal", 400, 100, 600, 5, 150, 150);
-  
+
     return enemy;
 }
 
@@ -33,7 +33,7 @@ function initMap1(canvas) {
     walls[17] = new Wall(1005, 375, 40, 240);
 
 }
-function initAreaAction1(){
-	areaAction = new Array()
-	areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
+function initAreaAction1() {
+    areaAction = new Array()
+    areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
 }

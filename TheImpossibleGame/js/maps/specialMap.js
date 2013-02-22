@@ -71,7 +71,7 @@ function initEnemySpecial() {
 
 function initMapSpecial(canvas) {
     var context = canvas.getContext('2d');
-		walls = new Array();
+    walls = new Array();
     context.drawImage(document.getElementById("cake"), Math.round(scalePercentageX * 1520),
      Math.round(scalePercentageY * 820),
      Math.round(scalePercentageX * 50),
@@ -117,9 +117,9 @@ function initMapSpecial(canvas) {
     wallHorizontal(context, 100, 700, 100, 20);
 
 }
-function initAreaActionSpecial(){
-	areaAction = new Array()
-	/*areaAction[0] = new ActionArea(player2Img, 50, 300, 50, 50, "lvl");
+function initAreaActionSpecial() {
+    areaAction = new Array()
+    /*areaAction[0] = new ActionArea(player2Img, 50, 300, 50, 50, "lvl");
 	areaAction[1] = new ActionArea(player2Img, 50, 250, 50, 50, "slow");
   for(var i = 0; i < areaAction.length; i++)
 		areaAction[i].resizeDraw();*/

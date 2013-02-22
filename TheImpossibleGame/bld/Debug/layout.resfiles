@@ -1,4 +1,5 @@
 images\brick_wall.png
+images\bullet.png
 images\cake.png
 images\door.png
 images\fireball.png
@@ -19,6 +20,7 @@ images\player2_set.png
 images\shuriken.png
 images\smalllogo.png
 images\splashscreen.png
+images\statusBar.png
 images\storelogo.png
 images\traktor.gif
 images\zombie.png

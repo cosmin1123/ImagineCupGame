@@ -15,8 +15,8 @@ function Player(id, width, height, posX, posY, name, life) {
     this.isDown = false;
     this.playerName = name;
     this.life = life
-    if(this.life == undefined)
-    	this.life = 5;
+    if (this.life == undefined)
+        this.life = 5;
 
 }
 Player.prototype.move = function () {
@@ -133,8 +133,8 @@ wallCollision = function (object, type) {
                 object.speedX = 0;
                 object.speedY = 0;
                 var position = bullets.indexOf(object);
-                if(position != -1)
-                	bullets.splice(position, 1);
+                if (position != -1)
+                    bullets.splice(position, 1);
                 console.log(position);
             }
 

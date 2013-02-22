@@ -54,6 +54,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="images\brick_wall.png" />
+    <Content Include="images\bullet.png" />
     <Content Include="images\cake.png" />
     <Content Include="images\door.png" />
     <Content Include="images\fireball.png" />
@@ -72,6 +73,7 @@
     <Content Include="images\player2_set.png" />
     <Content Include="images\player1_set.png" />
     <Content Include="images\shuriken.png" />
+    <Content Include="images\statusBar.png" />
     <Content Include="images\traktor.gif" />
     <Content Include="images\zombie.png" />
     <Content Include="images\smalllogo.png" />
