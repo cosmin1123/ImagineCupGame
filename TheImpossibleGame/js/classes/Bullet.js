@@ -53,13 +53,13 @@ Bullet.prototype.fire = function () {
             this.y += 8;
         */
 
-    console.log(player.direction);
+    
     if (this.speedX == 0 && this.speedY == 0) {
         if (player.direction.indexOf("N") !== -1) {
             this.speedY = -8;
             this.x += 6 / 8 * player.height;
             this.y += 6 / 8 * player.width;
-            console.log(this.x);
+            
         }
         if (player.direction.indexOf("S") !== -1) {
             this.speedY = 8;
@@ -98,9 +98,9 @@ Bullet.prototype.resizeDraw = function () {
         contextForeground.drawImage(this.img, 300, 0, 252, 355, x, y, width, height);
 
     if (this.direction == 'V')
-        contextForeground.drawImage(this.img, 612, 0, 348, 355, x, y, width, height);
+        contextForeground.drawImage(this.img, 612, 45, 348, 250, x, y, width, height);
 
     if (this.direction == 'E')
-        contextForeground.drawImage(this.img, 980, 0, 339, 355, x, y, width, height);
+        contextForeground.drawImage(this.img, 980, 45, 339, 250, x, y, width, height);
 }
 

@@ -172,7 +172,7 @@ Enemy.prototype.draw = function () {
             bullets[i].y = -10;
             this.bulletHits = currentTime;
             bullets.splice(i, 1);
-            console.log(bullets);
+            
         }
 
     //console.log(this.bulletHits);
@@ -187,7 +187,7 @@ Enemy.prototype.draw = function () {
 
 Enemy.prototype.drawImage = function () {
     contextForeground.save();
-    console.log(scalePercentageY * this.height);
+    
     var x = Math.round(scalePercentageX * this.x);
     var y = Math.round(scalePercentageY * this.y);
     var width = Math.round(scalePercentageX * this.width);

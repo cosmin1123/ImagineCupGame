@@ -9,7 +9,7 @@ function initStartBar() {
     canvasStatusBar.style.left = "0px";
     canvasStatusBar.style.top = canvasForeground.height + "px";
     canvasStatusBar.style.position = "absolute";
-    console.log(canvasStatusBar.height);
+
 }
 
 function createStatusBar() {
@@ -30,9 +30,9 @@ function drawHearts(img, canvasStatusBar) {
 
     var height = canvasStatusBar.height;
     var width = canvasStatusBar.width;
-    var x = 20, y = 0;
+    var x = 20, y = 3;
     for (i = 0; i < player.life; i++) {
-        contextStatusBar.drawImage(img, x, y, width / 90, height);
+        contextStatusBar.drawImage(img, x, y, width/90 +2, height-5);
         x += width / 80;
     }
     statusBarOccupied = x + width / 90;
@@ -41,7 +41,6 @@ function drawHearts(img, canvasStatusBar) {
 function colorStatusBar(canvas) {
     var context = canvas.getContext('2d');
     img = document.getElementById("statusBarBackground");
-    console.log(img);
     context.drawImage(img, 0, 0, canvasStatusBar.width, canvasStatusBar.height);
 }
 
@@ -61,7 +60,7 @@ function weaponCooldown(canvasStatusBar, object) {
     img = document.getElementById("bullet");
 
     context.drawImage(this.img, 0, 0, 252, 355, statusBarOccupied +
-    canvasStatusBar.width * 0.005, 0, canvasStatusBar.width * 0.01, canvasStatusBar.height);
+   canvasStatusBar.width * 0.005, 0, canvasStatusBar.width * 0.01, canvasStatusBar.height);
 
     statusBarOccupied += canvasStatusBar.width * 0.02;
     context.lineWidth = 5;

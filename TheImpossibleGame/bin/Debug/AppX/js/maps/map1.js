@@ -1,8 +1,11 @@
 function initEnemy1() {
     enemy = new Array;
-    enemy[1] = new Enemy("monster1", "vertical", 250, 100, 600, 5, 150, 150);
-    enemy[2] = new Enemy("monster2", "horizontal", 400, 100, 600, 5, 150, 150);
-
+    enemy[1] = new Enemy("monster5", "horizontal", 250, 100, 600, 5, 70, 70);
+    enemy[2] = new Enemy("monster6", "horizontal", 400, 100, 600, 5, 70, 70);
+    enemy[3] = new Enemy("monster1", "horizontal", 250, 500, 600, 5, 70, 70);
+    enemy[4] = new Enemy("monster2", "horizontal", 400, 700, 600, 5, 70, 70);
+    enemy[5] = new Enemy("monster3", "vertical", 250, 100, 500, 5, 70, 70);
+    enemy[6] = new Enemy("monster4", "vertical", 1000, 700, -600, 5, 70, 70);
     return enemy;
 }
 

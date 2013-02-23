@@ -68,6 +68,8 @@
     <Content Include="images\monster2.png" />
     <Content Include="images\monster3.png" />
     <Content Include="images\monster4.png" />
+    <Content Include="images\monster5.png" />
+    <Content Include="images\monster6.png" />
     <Content Include="images\player.png" />
     <Content Include="images\player2.png" />
     <Content Include="images\player2_set.png" />
