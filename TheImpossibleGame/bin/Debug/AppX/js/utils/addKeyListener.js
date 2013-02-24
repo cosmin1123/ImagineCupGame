@@ -28,7 +28,13 @@ var keyListener = function () {
             console.log(player.x)
             console.log(player.y);
         }
-        sendingCoords();
+
+        if (event.keyCode == 27) {
+            gamePaused = true;
+            canvasMenu.style.display = "block";
+        }
+        if(options == 1)
+            sendingCoords();
     }
   , false);
 
