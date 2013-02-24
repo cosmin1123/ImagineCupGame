@@ -95,8 +95,8 @@ var selectedOption = function (options) {
             multiplayerMode();
         }
         else {
-            unpauseGame();
             gamePaused = false;
+            unpauseGame();
         }
     }
 
