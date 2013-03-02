@@ -1,5 +1,6 @@
 var receiveX = 50;
 var receiveY = 50;
+var playerList = new Array();
 var gameStarted = false;
 var socket = io.connect("10.13.37.27:3000/");//replace this with server ip and port	
 var prevMessage;
@@ -20,7 +21,8 @@ function sendName(playerName) {
 
 function receivedPlayerList() {
     socket.on("newPlayer", function (list) {
-        updateList(list);
+        playerList = list;
+        updateList();
         
     });
 }
@@ -69,6 +71,9 @@ socket.on('playerDied', function (deadState) {
 
 function updateList(list) {
     var x = document.getElementById("lobbySelect");
+
+    if (list == undefined)
+        list = playerList;
 
     if (x == null) return;
     if (x.options == null) return;
