@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select Gaming Partner</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: gameFont;
+            src: url('fonts/menu.ttf'); /* IE9+ */
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: gameFont;
+        }
+
+        html, body, #lobbyDiv, #lobbyDiv textarea {
+            position: absolute;
+            height: 95%;
+            width: 90%;
+            opacity: 0.8;
+            float: left;
+        }
+
+        #lobbySelect {
+            position: absolute;
+            margin-top: 0px;
+            height: 100%;
+            width: 17.69%;
+            float: right;
+            opacity: 0.8;
+            left: 104.5%;
+            top: 0px;
+        }
+    </style>
+</head>
+<body style="background-image: url('images/menuBackground.jpg')">
+    <textarea id="lobbyChat" rows="1" cols="1" readonly disabled style="width: 103.64%; height: 90%;"></textarea>
+
+
+    <select size="4" id="lobbySelect">
+
+    </select>
+    <textarea id="lobbyWrite" rows="1" cols="1" style="width: 103.64%; height: 18.91%;">asdasd</textarea>
+
+
+    <div id="divPlayerName" style="position: absolute; top: 35%; left: 45%; right: 35%; width: 30%; height: 30%;">
+
+        <div style="position: relative; top: 45%; text-align: center;">
+            Enter username:
+            <input id="userName" type="text" name="FirstName" 
+               value="Mickey" style="width: 100%; height: 100%; margin-top: 5%"><br>
+
+            <button id="btn" onclick="okClick();" style="position: relative; margin-top: 5%;">OK</button>
+        </div>
+    </div>
+</body>
+<script src="socket.io.js"></script>
+<script src="./js/utils/clientSide.js"></script>
+<script>
+    var playerName;
+    function onLoad() {
+
+
+        document.getElementById("lobbyWrite").disabled = true;
+
+        addListeners();
+        receiveMessage();
+        receivedPlayerList();
+
+
+    }
+
+    function okClick() {
+        document.getElementById("divPlayerName").style.visibility = "none";
+        playerName = document.getElementById("userName").value;
+        document.getElementById("divPlayerName").style.visibility = "hidden";
+        sendName(playerName);
+        document.getElementById("lobbyWrite").disabled = false;
+    }
+
+    function addListeners() {
+        document.getElementById("userName").addEventListener('keydown', function (event) {
+            if (event.keyCode == 13) {
+                document.getElementById("divPlayerName").style.visibility = "hidden";
+                playerName = document.getElementById("userName").value;
+                sendName(playerName);
+                document.getElementById("lobbyWrite").disabled = false;
+            }
+        });
+
+        document.getElementById("lobbyWrite").addEventListener('keydown', function (event) {
+            if (event.keyCode == 13) {
+               
+                var message = document.getElementById("lobbyWrite").value;
+
+                sendTextMessage(message);
+                
+            }
+        });
+    }
+ 
+    window.onLoad(onLoad());
+</script>
+</html>
+

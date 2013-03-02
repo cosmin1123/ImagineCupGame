@@ -1,8 +1,7 @@
-
 var receiveX = 50;
 var receiveY = 50;
 var gameStarted = false;
-var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port	
+var socket = io.connect("10.13.37.27:3000/");//replace this with server ip and port	
 
 
 var sendLocation = function () {
@@ -12,6 +11,18 @@ var sendLocation = function () {
 var sendingCoords = function () {
     sendLocation();
 };
+
+function sendName(playerName) {
+    socket.emit('playerName', {playerName: playerName });
+
+};
+
+function receivedPlayerList() {
+    socket.on("newPlayer", function (list) {
+        updateList(list);
+        
+    });
+}
 
 var startEnemy = function () {
 
@@ -54,3 +65,24 @@ socket.on('playerDied', function (deadState) {
 
 //   	}
 //});
+
+function updateList(list) {
+    var x = document.getElementById("lobbySelect");
+
+    if (x == null) return;
+    if (x.options == null) return;
+    x.options.length = 0;	 // That's it!
+
+    for (var i in list) {
+        var option = document.createElement("option");
+        option.text = list[i];
+
+        try {
+            // for IE earlier than version 8
+            x.add(option, x.options[null]);
+        }
+        catch (e) {
+            x.add(option, null);
+        }
+    }
+}
