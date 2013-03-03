@@ -1,5 +1,5 @@
 var sync = require('./synchronize.js');
-
+var playerList = new Array()
 var joinRoom = (function () {
     numClients = 0;
     numRooms = 0;
@@ -37,18 +37,40 @@ var onNewPlayerConnected = function (socket) {
     socket.on('playerDied', function (deadState) {
         socket.broadcast.to(socket.room).emit('playerDied', deadState);
     });
-
+    
+    socket.on('playerName', function(playerName) {
+    	socket.playerName = playerName.playerName;
+    	if(playerList.indexOf(playerName.playerName) == -1){
+				playerList.push(playerName.playerName);
+				io.sockets.emit('newPlayer', playerList);
+			}
+			
+    });
+    
+   socket.on('playerMessage', function(message){
+    		io.sockets.emit('message', message);
+    });
 
 };
 
 
 exports.bind = function (io) {
     // Socket.io configuration.
- //   sync.initEnemy();
 		setInterval(function(){
 					io.sockets.emit('moveEnemy', 1);
-			}, 105);
+			}, 140);
+			
     io.sockets.on('connection', function(socket){
     	onNewPlayerConnected(socket);
+    	socket.on('disconnect', function () {
+    		 var i = playerList.indexOf(socket.playerName)
+    		 playerList.splice(i, 1);
+    		 				io.sockets.emit('newPlayer', playerList);
+   		});
     });
+    
+    
+
+    
+    
 };

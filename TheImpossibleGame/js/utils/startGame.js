@@ -25,7 +25,7 @@ var onLoad = function () {
     selectLevel(level);//function is in selectLevel.js
     initStartBar();
     createStatusBar();
-    //   var twoPlayersHaveConnected = function (co) {
+    var twoPlayersHaveConnected = function (co) {
     gameStarted = true;
     // init
     startEnemy();
@@ -64,15 +64,12 @@ var onLoad = function () {
 
 };
 
-/*
+
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
     });
-<<<<<<< HEAD
-=======
-    
->>>>>>> 785b23f1ba7340eb2556c5a2e3d67980815299f1
-};*/
+
+};
 
 
