@@ -2,7 +2,7 @@ var receiveX = 50;
 var receiveY = 50;
 var playerList = new Array();
 var gameStarted = false;
-var socket = io.connect("10.13.37.27:3000/");//replace this with server ip and port	
+var socket = io.connect("10.30.255.7:3000/");//replace this with server ip and port	
 var prevMessage;
 
 
@@ -101,8 +101,8 @@ function sendTextMessage(textMessage) {
 function receiveMessage() {
     socket.on('message', function (message) {
         console.log(message);
-        if (message.textMessage != prevMessage) {
-            document.getElementById("lobbyChat").innerHTML += message.playerName + ": " + message.textMessage + "\n";
+        if (message.textMessage != prevMessage && message.textMessage != "") {
+            document.getElementById("lobbyChat").innerHTML += message.playerName + ": " + message.textMessage ;
             prevMessage = message.textMessage;
         }
     });

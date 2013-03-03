@@ -69,10 +69,9 @@
 <script>
     var playerName;
     function onLoad() {
-
-
-        document.getElementById("lobbyWrite").disabled = true;
         addListeners();
+        document.getElementById("lobbyWrite").disabled = true;
+
         receiveMessage();
         receivedPlayerList();
 
@@ -100,11 +99,13 @@
             }
         });
 
-        document.getElementById("lobbyWrite").addEventListener('keydown', function (event) {
+        document.getElementById("lobbyWrite").addEventListener('keyup', function (event) {
+            console.log("as");
             if (event.keyCode == 13) {
 
                 var message = document.getElementById("lobbyWrite").value;
-
+                console.log(message);
+                document.getElementById("lobbyWrite").value = "";
                 sendTextMessage(message);
 
             }
