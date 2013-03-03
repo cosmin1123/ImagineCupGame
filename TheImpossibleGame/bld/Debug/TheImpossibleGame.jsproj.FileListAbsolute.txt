@@ -10,10 +10,6 @@ C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\Proj
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\TheImpossibleGame.build.appxrecipe
-C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\priconfig.xml.intermediate
-C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\layout.resfiles.intermediate
-C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\resources.resfiles.intermediate
-C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\pri.resfiles.intermediate
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\priconfig.xml
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\layout.resfiles
 C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\resources.resfiles
@@ -24,3 +20,7 @@ C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\pric
 C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\layout.resfiles.intermediate
 C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\resources.resfiles.intermediate
 C:\Users\Cataaa\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\pri.resfiles.intermediate
+C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\priconfig.xml.intermediate
+C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\layout.resfiles.intermediate
+C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\resources.resfiles.intermediate
+C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bld\Debug\pri.resfiles.intermediate

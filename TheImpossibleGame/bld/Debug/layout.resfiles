@@ -1,3 +1,4 @@
+fonts\menu.ttf
 images\brick_wall.png
 images\bullet.png
 images\cake.png
@@ -9,6 +10,7 @@ images\map.png
 images\map2.png
 images\map3.png
 images\map4.png
+images\menuBackground.jpg
 images\monster1.png
 images\monster2.png
 images\monster3.png
@@ -40,9 +42,11 @@ js\maps\specialMap.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js
 js\utils\drawing.js
+js\utils\menu.js
 js\utils\playSounds.js
 js\utils\selectLevel.js
 js\utils\startGame.js
+js\utils\startSingleGame.js
 js\utils\statusBar.js
 js\utils\utils.js
 socket.io.js

@@ -53,6 +53,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="fonts\menu.ttf" />
     <Content Include="images\brick_wall.png" />
     <Content Include="images\bullet.png" />
     <Content Include="images\cake.png" />
@@ -64,6 +65,7 @@
     <Content Include="images\map2.png" />
     <Content Include="images\map3.png" />
     <Content Include="images\map4.png" />
+    <Content Include="images\menuBackground.jpg" />
     <Content Include="images\monster1.png" />
     <Content Include="images\monster2.png" />
     <Content Include="images\monster3.png" />
@@ -95,9 +97,11 @@
     <Content Include="js\utils\addKeyListener.js" />
     <Content Include="js\utils\clientSide.js" />
     <Content Include="js\utils\drawing.js" />
+    <Content Include="js\utils\menu.js" />
     <Content Include="js\utils\playSounds.js" />
     <Content Include="js\utils\selectLevel.js" />
     <Content Include="js\utils\startGame.js" />
+    <Content Include="js\utils\startSingleGame.js" />
     <Content Include="js\utils\statusBar.js" />
     <Content Include="js\utils\utils.js" />
     <Content Include="socket.io.js" />

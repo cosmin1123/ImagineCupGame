@@ -1,14 +1,20 @@
 <!doctype html>
 <html>
+<style>
+    @font-face {
+        font-family: gameFont;
+        src: url('fonts/menu.ttf'); /* IE9+ */
+    }
+</style>
 <head>
     <meta charset="utf-8">
     <title>The Impossible Game</title>
 </head>
 
-<body style="background-color: black; margin: 0">
+<body style="margin: 0">
 
     <canvas id="canvasBackground"
-        style="position: absolute; left: 0; top: 0; z-index: 0; background-color: black; display: block"></canvas>
+        style="position: absolute; left: 0; top: 0; z-index: 0; background-color: white; display: block"></canvas>
 
     <canvas id="canvasForeground"
         style="position: absolute; left: 0; top: 0; z-index: 0; display: block"></canvas>
@@ -16,12 +22,15 @@
     <canvas id="statusBar"
         style="position: absolute; left: 0; top: 0; z-index: 0; display: block"></canvas>
 
+    <canvas id="canvasMenu"
+        style="position: absolute; left: 0; top: 0; z-index: 0; display: block;"></canvas>
+
     <audio id="bulletSound" src="sounds/phaser.wav" preload="auto"></audio>
     <audio id="playerSteps" src="sounds/step.mp3" preload="auto"></audio>
     <audio id="playerDiesSound" src="sounds/playerDiesSound.mp3" preload="auto"></audio>
     <audio src="sounds/background.mp3" autoplay="" loop=""></audio>
 
-
+    <img src="images/menuBackground.jpg" id="menuBackground" style="display: none" />
     <img src="images/fireball.png" id="obstacle" style="display: none" />
     <img src="images/bullet.png" id="bullet" style="display: none" />
     <img src="images/statusBar.png" id="statusBarBackground" style="display: none" />
@@ -59,8 +68,10 @@
     <script src="./js/utils/playSounds.js"></script>
     <script src="./js/utils/statusBar.js"></script>
     <script src="./js/utils/startGame.js"></script>
+    <script src="./js/utils/startSingleGame.js"></script>
+    <script src="./js/utils/menu.js"></script>
 
-    <script>window.onload = onLoad();</script>
+    <script>window.onload = showMenu();</script>
 
 
 </body>

@@ -1,8 +1,9 @@
-
 var receiveX = 50;
 var receiveY = 50;
+var playerList = new Array();
 var gameStarted = false;
-var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and port	
+var socket = io.connect("10.13.37.27:3000/");//replace this with server ip and port	
+var prevMessage;
 
 
 var sendLocation = function () {
@@ -13,25 +14,26 @@ var sendingCoords = function () {
     sendLocation();
 };
 
+function sendName(playerName) {
+    socket.emit('playerName', {playerName: playerName });
+
+};
+
+function receivedPlayerList() {
+    socket.on("newPlayer", function (list) {
+        playerList = list;
+        updateList();
+        
+    });
+}
+
 var startEnemy = function () {
 
-    //socket.on('map', function (map) {
-    //		var j = 1;
-    //    for (var i = 1; i < enemy.length; i++) {
-    //        enemy[i].x = map[j++];
-    //        enemy[i].y = map[j++];
-    //    }
-    //});
-
-    //setInterval(function () {
-    //    socket.emit('lvl', { level: 1 })}
-    //, 30);
-
-    //	setInterval(function () {
-    //		for (var i = 1; i < enemy.length; i++) {
-    //			enemy[i].move();
-    //		}
-    //	}, 15);
+    	setInterval(function () {
+    		for (var i = 1; i < enemy.length; i++) {
+    			enemy[i].move();
+    		}
+    	}, 15);
 }
 
 
@@ -66,3 +68,42 @@ socket.on('playerDied', function (deadState) {
 
 //   	}
 //});
+
+function updateList(list) {
+    var x = document.getElementById("lobbySelect");
+
+    if (list == undefined)
+        list = playerList;
+
+    if (x == null) return;
+    if (x.options == null) return;
+    x.options.length = 0;	 // That's it!
+
+    for (var i in list) {
+        var option = document.createElement("option");
+        option.text = list[i];
+
+        try {
+            // for IE earlier than version 8
+            x.add(option, x.options[null]);
+        }
+        catch (e) {
+            x.add(option, null);
+        }
+    }
+}
+
+function sendTextMessage(textMessage) {
+    console.log(textMessage);
+    socket.emit('playerMessage', { playerName: playerName, textMessage: textMessage });
+}
+
+function receiveMessage() {
+    socket.on('message', function (message) {
+        console.log(message);
+        if (message.textMessage != prevMessage) {
+            document.getElementById("lobbyChat").innerHTML += message.playerName + ": " + message.textMessage + "\n";
+            prevMessage = message.textMessage;
+        }
+    });
+}

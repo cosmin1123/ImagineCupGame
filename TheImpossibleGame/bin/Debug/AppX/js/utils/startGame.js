@@ -1,5 +1,5 @@
 "use strict";
-var level = 1;
+var level = 3;
 var player;
 var player2;
 var enemy;
@@ -15,8 +15,9 @@ var scalePercentageY = (window.innerHeight - window.innerHeight * 0.03) / 900;
 var currentPlayer = 'player' + Math.round(Math.random() * 1000);
 
 
-var onLoad = function () {
-
+var multiplayerMode = function () {
+    console.log("aaaaa");
+    window.onkeydown = function () { };
     canvasBackground.width = 1600 * scalePercentageX;
     canvasBackground.height = 900 * scalePercentageY;
     canvasForeground.width = 1600 * scalePercentageX;
@@ -28,41 +29,41 @@ var onLoad = function () {
     //   var twoPlayersHaveConnected = function (co) {
     gameStarted = true;
     // init
-    startEnemy();
+    unpauseGame = function () {
 
-    keyListener();
+        keyListener();
 
+        (function drawFrame() {
+            if (!gamePaused) {
+                window.requestAnimationFrame(drawFrame, canvasForeground);
 
-
-
-    (function drawFrame() {
-
-        window.requestAnimationFrame(drawFrame, canvasForeground);
-
-        contextForeground.save()
+                contextForeground.save()
 
 
-        contextForeground.clearRect(0, 0,
-        canvasForeground.width, canvasForeground.height);
+                contextForeground.clearRect(0, 0,
+                canvasForeground.width, canvasForeground.height);
 
-        contextForeground.restore();
+                contextForeground.restore();
 
-        for (var i = 0; i < bullets.length; i++)
-            bullets[i].testFired();
+                for (var i = 0; i < bullets.length; i++)
+                    bullets[i].testFired();
 
-        for (var i = 1; i < enemy.length; i++) {
-            enemy[i].move();
-            enemy[i].draw();
-        }
-        player.move();
-        player2.move();
-        for (var i = 0; i < areaAction.length; i++)
-            areaAction[i].areaCollision();
+                for (var i = 1; i < enemy.length; i++) {
+                    enemy[i].move();//rand de comentat cand pornim server
+                    enemy[i].draw();
+                }
+                player.move();
+                player2.move();
+                for (var i = 0; i < areaAction.length; i++)
+                    areaAction[i].areaCollision();
 
-        createStatusBar();
-    }());
+                createStatusBar();
+            }
+        }());
 
-};
+    };
+    unpauseGame();
+}
 
 /*
     socket.on('ready', function (co) {
