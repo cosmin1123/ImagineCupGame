@@ -2,7 +2,8 @@ var receiveX = 50;
 var receiveY = 50;
 var playerList = new Array();
 var gameStarted = false;
-var socket = io.connect("10.30.255.7:3000/");//replace this with server ip and port	
+
+var socket = io.connect("127.0.0.1:3000/");//replace this with server ip and 
 var prevMessage;
 
 
@@ -99,11 +100,40 @@ function sendTextMessage(textMessage) {
 }
 
 function receiveMessage() {
-    socket.on('message', function (message) {
+   	socket.on('message', function (message) {
         console.log(message);
         if (message.textMessage != prevMessage && message.textMessage != "") {
             document.getElementById("lobbyChat").innerHTML += message.playerName + ": " + message.textMessage ;
             prevMessage = message.textMessage;
         }
     });
+}
+
+function inviteTeamMate(teamMate, pName){
+    socket.emit('invite', {playerName: pName, teamMate: teamMate });
+}
+
+function teamMateBuzz(){
+	socket.on('invitation', function (resp) {
+		document.getElementById("playerInviteName").innerHTML = "Player " + resp.playerName + " invites you to play a game. Do you accept?";
+		document.getElementById("PlayerInvite").style.visibility = "";
+		   
+	});
+}
+
+function teamMateResponse(){
+	socket.on('inviteResponse', function (resp) {
+    	if (resp.validity)
+    	    createRoom(resp.teamMate, resp.playerName)
+    	else
+    		showRefusal(resp.teamMate);
+});
+}
+
+function createRoom(teamMate, playerName){
+	
+}
+
+function showRefusal(teamMate){
+
 }

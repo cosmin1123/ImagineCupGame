@@ -42,7 +42,7 @@
 
     <select size="4" id="lobbySelect">
     </select>
-    <textarea id="lobbyWrite" rows="1" cols="1" style="width: 103.64%; height: 18.91%;">asdasd</textarea>
+    <textarea id="lobbyWrite" rows="1" cols="1" style="width: 103.64%; height: 18.91%;"></textarea>
 
 
     <div id="divPlayerName" style="position: absolute; top: 35%; left: 45%; right: 35%; width: 30%; height: 30%;">
@@ -56,12 +56,26 @@
         </div>
     </div>
 
-    <button style="position: absolute; top: 105%; left: 105%; width: 15%;">
+    <button style="position: absolute; top: 105%; left: 105%; width: 15%;" onclick = "teamUp();">
         TeamUp
         
     </button>
     <input id="searchField" type="text"
         value="Search" style="width: 15%; position: absolute; top: 100%; left: 105%">
+        
+           
+           <div id="PlayerInvite" style="position: absolute; top: 35%; left: 45%; right: 35%; width: 30%; height: 30%;">
+
+        <div  style="position: relative; top: 45%; text-align: center;">
+            <div id = "playerInviteName">Player invite here</div>
+          <br>
+
+            <button id="btn" onclick="okClick();" style="position: relative; margin-top: 5%;">Accept</button>
+            <button id="btn" onclick="okClick();" style="position: relative; margin-top: 5%;">Cancel</button>
+        </div>
+    </div>
+
+
     <br>
 </body>
 <script src="socket.io.js"></script>
@@ -69,11 +83,15 @@
 <script>
     var playerName;
     function onLoad() {
+		document.getElementById("PlayerInvite").style.visibility = "hidden";
+
         addListeners();
         document.getElementById("lobbyWrite").disabled = true;
 
         receiveMessage();
         receivedPlayerList();
+        teamMateBuzz();
+        teamMateResponse();
 
     }
 
@@ -88,6 +106,13 @@
         sendName(playerName);
         document.getElementById("lobbyWrite").disabled = false;
     }
+
+		function teamUp(){
+			var teamMate = document.getElementById("lobbySelect").value;
+			if(teamMate != playerName){
+				inviteTeamMate(teamMate, playerName);
+			}
+		}
 
     function addListeners() {
         document.getElementById("userName").addEventListener('keydown', function (event) {
@@ -107,10 +132,14 @@
                 console.log(message);
                 document.getElementById("lobbyWrite").value = "";
                 sendTextMessage(message);
-
             }
         });
-
+         document.getElementById("lobbyWrite").addEventListener('keyup', function (event) {
+            if (event.keyCode == 13) {
+                document.getElementById("lobbyWrite").value = "";
+                }
+         });
+         
         document.getElementById("searchField").addEventListener('keyup', function (event) {
             var list = new Array();
             var j = 0;

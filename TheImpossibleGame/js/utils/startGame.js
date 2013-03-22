@@ -16,7 +16,7 @@ var currentPlayer = 'player' + Math.round(Math.random() * 1000);
 
 
 var multiplayerMode = function () {
-    console.log("aaaaa");
+    console.log(player);
     window.onkeydown = function () { };
     canvasBackground.width = 1600 * scalePercentageX;
     canvasBackground.height = 900 * scalePercentageY;
