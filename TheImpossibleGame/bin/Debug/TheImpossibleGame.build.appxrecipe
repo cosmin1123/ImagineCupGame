@@ -16,6 +16,10 @@
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\fonts\menu.ttf">
       <PackagePath>fonts\menu.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\bigLogo.png">
+      <PackagePath>images\bigLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\brick_wall.png">
       <PackagePath>images\brick_wall.png</PackagePath>
     </AppxPackagedFile>
@@ -33,7 +37,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map.png">
       <PackagePath>images\map.png</PackagePath>
@@ -77,8 +80,15 @@
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\player1_set.png">
       <PackagePath>images\player1_set.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\portal.png">
+      <PackagePath>images\portal.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
       <PackagePath>images\shuriken.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\statusBar.png">
       <PackagePath>images\statusBar.png</PackagePath>
@@ -93,16 +103,15 @@
       <PackagePath>images\smalllogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.png">
-      <PackagePath>images\splashscreen.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\menuBackground.jpg">
       <PackagePath>images\menuBackground.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.jpg">
+      <PackagePath>images\splashscreen.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\traktor.gif">
       <PackagePath>images\traktor.gif</PackagePath>
@@ -130,6 +139,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map3.js">
       <PackagePath>js\maps\map3.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map4.js">
+      <PackagePath>js\maps\map4.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\specialMap.js">
       <PackagePath>js\maps\specialMap.js</PackagePath>

@@ -39,8 +39,6 @@ function initMap1(canvas) {
     walls[16] = new Wall(1566, 760, 24, 140);
     walls[17] = new Wall(1005, 375, 40, 240);
 
-     for (i = 0; i < walls.length; i++)
-         rectangle(context,walls[i].x, walls[i].y, walls[i].width, walls[i].height);
 }
 
 function initAreaAction1() {

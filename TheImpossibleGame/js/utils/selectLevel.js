@@ -26,10 +26,11 @@ var selectLevel = function (level) {
     }
 
     if (level == 2) {
-        player = new Player("player", 80, 80, 50, 50, currentPlayer);
+        player = new Player("player", 80, 80, 50, 674, currentPlayer);
+        initAreaAction2();
         player2 = new Player("player2", 80, 80, 50, 50, null);
         setTimeout(function () { initMap2(canvasBackground); }, 200);
-        enemy = initEnemy1();
+        enemy = initEnemy2();
     }
 
     if (level == 3) {
@@ -38,6 +39,14 @@ var selectLevel = function (level) {
         setTimeout(function () { initMap3(canvasBackground); }, 100);
         enemy = initEnemy3();
         initAreaAction3();
+    }
+
+    if (level == 4) {
+        player = new Player("player", 80, 80, 50, 50, currentPlayer);
+        player2 = new Player("player2", 30, 30, 50, 50, null);
+        setTimeout(function () { initMap4(canvasBackground); }, 100);
+        enemy = initEnemy4();
+        initAreaAction4();
     }
 
 }

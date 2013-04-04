@@ -5,7 +5,7 @@
     <WindowsUser>theod_000</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>BB5EF4A4B546F953EE081F9E32B458D7C8DC17B4F257CC84FDDAF30A73AB4824</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>394CA6FB8610990FAE3D857DEB4B4DE2C9A358BCD58C02BE054297E45D1304FF</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0b430622-5ae2-42fb-9fea-bbae508bfacd_1.0.0.0_neutral__3jswjf6s6fzr4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0b430622-5ae2-42fb-9fea-bbae508bfacd_3jswjf6s6fzr4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0b430622-5ae2-42fb-9fea-bbae508bfacd</RegisteredPackageID>
@@ -16,13 +16,18 @@
     <AppXManifest Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-04T14:54:29.585</Modified>
+      <Modified>2013-04-04T18:40:33.305</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\fonts\menu.ttf">
       <PackagePath>fonts\menu.ttf</PackagePath>
       <Modified>2002-04-04T19:58:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\bigLogo.png">
+      <PackagePath>images\bigLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-04T18:36:12.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\brick_wall.png">
       <PackagePath>images\brick_wall.png</PackagePath>
@@ -46,8 +51,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-04T16:04:17.202</Modified>
+      <Modified>2013-04-04T18:26:56.759</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\map.png">
       <PackagePath>images\map.png</PackagePath>
@@ -105,9 +109,18 @@
       <PackagePath>images\player1_set.png</PackagePath>
       <Modified>2013-02-22T22:08:19.168</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\portal.png">
+      <PackagePath>images\portal.png</PackagePath>
+      <Modified>2013-04-04T18:04:09.519</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\shuriken.png">
       <PackagePath>images\shuriken.png</PackagePath>
       <Modified>2013-02-22T22:08:19.177</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-04T18:33:27.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\statusBar.png">
       <PackagePath>images\statusBar.png</PackagePath>
@@ -126,11 +139,6 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-02-22T22:08:19.179</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.png">
-      <PackagePath>images\splashscreen.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-22T22:08:19.180</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -138,6 +146,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\menuBackground.jpg">
       <PackagePath>images\menuBackground.jpg</PackagePath>
+      <Modified>2013-02-23T14:15:45.150</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\splashscreen.jpg">
+      <PackagePath>images\splashscreen.jpg</PackagePath>
       <Modified>2013-02-23T14:15:45.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\images\traktor.gif">
@@ -162,7 +174,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\player.js">
       <PackagePath>js\classes\player.js</PackagePath>
-      <Modified>2013-04-04T16:16:59.346</Modified>
+      <Modified>2013-04-04T17:20:39.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\classes\wall.js">
       <PackagePath>js\classes\wall.js</PackagePath>
@@ -170,11 +182,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map1.js">
       <PackagePath>js\maps\map1.js</PackagePath>
-      <Modified>2013-04-04T16:17:02.994</Modified>
+      <Modified>2013-04-04T17:18:44.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map3.js">
       <PackagePath>js\maps\map3.js</PackagePath>
-      <Modified>2013-02-22T22:08:19.259</Modified>
+      <Modified>2013-04-04T18:41:54.379</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map4.js">
+      <PackagePath>js\maps\map4.js</PackagePath>
+      <Modified>2013-04-04T18:42:16.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\specialMap.js">
       <PackagePath>js\maps\specialMap.js</PackagePath>
@@ -182,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\maps\map2.js">
       <PackagePath>js\maps\map2.js</PackagePath>
-      <Modified>2013-02-22T22:08:19.256</Modified>
+      <Modified>2013-04-04T18:42:03.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\addKeyListener.js">
       <PackagePath>js\utils\addKeyListener.js</PackagePath>
@@ -194,11 +210,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\drawing.js">
       <PackagePath>js\utils\drawing.js</PackagePath>
-      <Modified>2013-02-22T22:08:19.285</Modified>
+      <Modified>2013-04-04T17:08:05.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\menu.js">
       <PackagePath>js\utils\menu.js</PackagePath>
-      <Modified>2013-04-04T16:17:03.816</Modified>
+      <Modified>2013-04-04T17:34:59.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\playSounds.js">
       <PackagePath>js\utils\playSounds.js</PackagePath>
@@ -206,7 +222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\selectLevel.js">
       <PackagePath>js\utils\selectLevel.js</PackagePath>
-      <Modified>2013-04-04T16:17:00.521</Modified>
+      <Modified>2013-04-04T17:17:07.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\startGame.js">
       <PackagePath>js\utils\startGame.js</PackagePath>
@@ -230,7 +246,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2013-04-04T16:31:35.529</Modified>
+      <Modified>2013-04-04T18:04:53.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\multiplayerSelectPage.html">
       <PackagePath>multiplayerSelectPage.html</PackagePath>
@@ -258,7 +274,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-04-04T16:04:17.155</Modified>
+      <Modified>2013-04-04T18:40:33.237</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

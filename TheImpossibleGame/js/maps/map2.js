@@ -16,13 +16,18 @@
 function initMap2(canvas) {
     var context = canvas.getContext('2d');
     context.drawImage(document.getElementById("map2"), 0, 0, canvas.width, canvas.height);
-
+    walls = new Array();
     //context.drawImage(document.getElementById("map"), 100, 100, 200, 200);
     //context.drawImage(document.getElementById("map"), 700, 900, 200, -200);
     
-    walls[0] = new Wall(0, 0, 20, 900);
+    walls[0] = new Wall(0, 0, 20, 630);
+    walls[12] = new Wall(0, 830, 20, 900);
+
     walls[1] = new Wall(0, 0, 1600, 20);
-    walls[2] = new Wall(1580, 0, 20, 900);
+
+    walls[2] = new Wall(1580, 0, 20, 40);
+    walls[13] = new Wall(1580, 240, 20, 900);
+
     walls[3] = new Wall(0, 880, 1600, 20);
     walls[4] = new Wall(125, 133, 303, 78);
     walls[5] = new Wall(1040, 123, 310, 84);
@@ -33,9 +38,11 @@ function initMap2(canvas) {
     walls[10] = new Wall(590, 25, 15, 437);
     walls[11] = new Wall(921, 445, 15, 437);
 
-    for (i = 0; i < walls.length; i++)
-        rectangle(context,walls[i].x, walls[i].y, walls[i].width, walls[i].height);
 }
 
 
-
+function initAreaAction2() {
+    areaAction = new Array()
+    areaAction[0] = new ActionArea(1640, 0, 20, 300, "lvl");
+    areaAction[1] = new ActionArea(-40, 630, 2, 100, "lvl", 1);
+}

@@ -10,3 +10,10 @@ function resizeDrawWall(img, x, y, width, height) {
     scalePercentageY * y, scalePercentageX * width,
     scalePercentageY * height);
 }
+function rectangle(context, x, y, width, height) {
+    context.strokeStyle = '#f00';
+    context.strokeRect(Math.round(scalePercentageX * x),
+    Math.round(scalePercentageY * y),
+    Math.round(scalePercentageX * width),
+    Math.round(scalePercentageY * height));
+}

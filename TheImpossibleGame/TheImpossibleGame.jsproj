@@ -54,6 +54,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="fonts\menu.ttf" />
+    <Content Include="images\bigLogo.png" />
     <Content Include="images\brick_wall.png" />
     <Content Include="images\bullet.png" />
     <Content Include="images\door.png" />
@@ -75,13 +76,15 @@
     <Content Include="images\player2.png" />
     <Content Include="images\player2_set.png" />
     <Content Include="images\player1_set.png" />
+    <Content Include="images\portal.png" />
     <Content Include="images\shuriken.png" />
+    <Content Include="images\splashscreen.jpg" />
+    <Content Include="images\splashscreen.png" />
     <Content Include="images\statusBar.png" />
     <Content Include="images\traktor.gif" />
     <Content Include="images\win.png" />
     <Content Include="images\zombie.png" />
     <Content Include="images\smalllogo.png" />
-    <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\classes\actionArea.js" />
     <Content Include="js\classes\Bullet.js" />
@@ -92,6 +95,7 @@
     <Content Include="index.html" />
     <Content Include="js\maps\map1.js" />
     <Content Include="js\maps\map3.js" />
+    <Content Include="js\maps\map4.js" />
     <Content Include="js\maps\specialMap.js" />
     <Content Include="js\maps\map2.js" />
     <Content Include="js\utils\addKeyListener.js" />

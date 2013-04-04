@@ -1,4 +1,4 @@
-level = 1;
+level = 4;
 function Player(id, width, height, posX, posY, name, life) {
     this.img = document.getElementById(id);
     this.x = posX;

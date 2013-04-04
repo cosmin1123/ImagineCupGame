@@ -55,9 +55,6 @@ function initMap3(canvas) {
     walls[i++] = new Wall(338, 416, 20, 82);
     walls[i++] = new Wall(362, 394, 24, 84);
 
-     for (i = 0; i < walls.length; i++)
-         rectangle(context,walls[i].x, walls[i].y, walls[i].width, walls[i].height);
-
 }
 function initAreaAction3() {
     areaAction = new Array()

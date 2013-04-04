@@ -1,5 +1,5 @@
 ﻿var options = 0;
-var noOfMeniuOptions = 4;
+var noOfMeniuOptions = 3;
 var canvasMenu = document.getElementById("canvasMenu");
 var menuBackground = document.getElementById("menuBackground");
 var menuScalePercentageX = window.innerWidth / 1600;
@@ -23,26 +23,26 @@ var drawMainMenu = function () {
     context.drawImage(menuBackground, 0, 0, canvasMenu.width, canvasMenu.height);
 
     var colorSingle = "orange";
-    var colorMulti = "orange";
+   // var colorMulti = "orange";
     var colorOptions = "orange";
     var colorQuit = "orange";
 
     if (options == 0)
         colorSingle = "green";
+   // if (options == 1)
+     //   colorMulti = "green";
     if (options == 1)
-        colorMulti = "green";
-    if (options == 2)
         colorOptions = "green";
-    if (options == 3)
+    if (options == 2)
         colorQuit = "green";
 
     context.font = "30px gameFont";
     context.fillStyle = colorSingle;
     context.fillText("Single player", canvasMenu.width * 1.9 / 5,
    canvasMenu.height / 4);
-    context.fillStyle = colorMulti;
-    context.fillText("Multiplayer", canvasMenu.width * 1.9 / 5,
-canvasMenu.height / 2.4);
+    //context.fillStyle = colorMulti;
+   // context.fillText("Multiplayer", canvasMenu.width * 1.9 / 5,
+//canvasMenu.height / 2.4);
     context.fillStyle = colorOptions;
     context.fillText("Options", canvasMenu.width * 2 / 5,
 canvasMenu.height / 1.7);
@@ -57,7 +57,7 @@ var addMenuEventListener = function () {
     window.addEventListener('keydown', function (event) {
         if (gamePaused || ok) {
             if (event.keyCode == 13) {
-                console.log(gamePaused);
+                
                 selectedOption(options);
             }
             if (event.keyCode == 38) {
@@ -78,12 +78,17 @@ var selectedOption = function (options) {
     canvasMenu.style.display = "none";
     if (options == 0) {
         if (!gamePaused) {
+
+
             gamePaused = false;
             ok = false;
+            console.log("aici1" + gamePaused)
             singlePlayerMode();
         }
         else {
+
             gamePaused = false;
+            console.log("aici2: " + gamePaused)
             unpauseGame();
         }
     }
@@ -93,7 +98,8 @@ var selectedOption = function (options) {
         if (!gamePaused) {
             gamePaused = false;
             ok = false;
-            multiplayerMode();
+            singlePlayerMode();
+            //multiplayerMode();
         }
         else {
             gamePaused = false;
@@ -102,7 +108,7 @@ var selectedOption = function (options) {
     }
 
     var e = new Error("Succes close");
-    if (options == 3)
+    if (options == 2)
         MSApp.terminateApp(e);
 
 }

@@ -1,4 +1,5 @@
 fonts\menu.ttf
+images\bigLogo.png
 images\brick_wall.png
 images\bullet.png
 images\door.png
@@ -20,8 +21,10 @@ images\player.png
 images\player1_set.png
 images\player2.png
 images\player2_set.png
+images\portal.png
 images\shuriken.png
 images\smalllogo.png
+images\splashscreen.jpg
 images\splashscreen.png
 images\statusBar.png
 images\storelogo.png
@@ -38,6 +41,7 @@ js\classes\wall.js
 js\maps\map1.js
 js\maps\map2.js
 js\maps\map3.js
+js\maps\map4.js
 js\maps\specialMap.js
 js\utils\addKeyListener.js
 js\utils\clientSide.js
