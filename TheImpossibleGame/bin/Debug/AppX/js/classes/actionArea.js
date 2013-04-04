@@ -35,7 +35,7 @@ function showWin() {
     player.y = -250;
     var winEvent = document.getElementById("event");
     var eventImage = document.getElementById("win");
-    winEvent.innerHTML = "&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp You Win!!!<br /><br /> Press ESC";
+    winEvent.innerHTML = "";
     winEvent.style.display = "block";
     eventImage.style.display = "block";
     level = 1;
