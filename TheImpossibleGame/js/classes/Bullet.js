@@ -1,4 +1,4 @@
-var cooldown = 100;// cooldownTime;
+var cooldown = 500;// cooldownTime;
 function Bullet(id, height, width) {
     this.x = 0;
     this.y = 0;

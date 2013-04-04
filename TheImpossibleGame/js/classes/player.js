@@ -1,4 +1,4 @@
-level = 4;
+level = 1;
 function Player(id, width, height, posX, posY, name, life) {
     this.img = document.getElementById(id);
     this.x = posX;
@@ -17,7 +17,7 @@ function Player(id, width, height, posX, posY, name, life) {
     this.playerName = name;
     this.life = life
     if (this.life == undefined)
-        this.life = 5;
+        this.life = 9;
 
 }
 Player.prototype.move = function () {
