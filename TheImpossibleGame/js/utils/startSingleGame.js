@@ -1,5 +1,5 @@
 ﻿var unpauseGame = function () { };
-
+player = new Player("player", 80, 80, 50, 450, currentPlayer);
 var singlePlayerMode = function () {
 
     canvasBackground.width = 1600 * scalePercentageX;
