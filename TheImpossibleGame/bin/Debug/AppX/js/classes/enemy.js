@@ -6,7 +6,7 @@ var contextForeground = document.getElementById('canvasForeground').getcontext;
 
 function Enemy(id, type, startX, startY, value, speed, height, width, freezeTime) {
     if (freezeTime == undefined)
-        this.freezeTime = 10000;//ms
+        this.freezeTime = Math.floor(Math.random() * 10000) + 1000;//ms
     else
         this.freezeTime = freezeTime;
     this.bulletHits = 0;
