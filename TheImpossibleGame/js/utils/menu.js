@@ -1,5 +1,5 @@
 ﻿var options = 0;
-var noOfMeniuOptions = 3;
+var noOfMeniuOptions = 2;
 var canvasMenu = document.getElementById("canvasMenu");
 var menuBackground = document.getElementById("menuBackground");
 var menuScalePercentageX = window.innerWidth / 1600;
@@ -24,16 +24,18 @@ var drawMainMenu = function () {
 
     var colorSingle = "orange";
    // var colorMulti = "orange";
-    var colorOptions = "orange";
+  //  var colorOptions = "orange";
     var colorQuit = "orange";
 
     if (options == 0)
         colorSingle = "green";
    // if (options == 1)
-     //   colorMulti = "green";
+    //   colorMulti = "green";
+    /*
     if (options == 1)
         colorOptions = "green";
-    if (options == 2)
+    */
+  if (options == 1)
         colorQuit = "green";
 
     context.font = "30px gameFont";
@@ -43,9 +45,9 @@ var drawMainMenu = function () {
     //context.fillStyle = colorMulti;
    // context.fillText("Multiplayer", canvasMenu.width * 1.9 / 5,
 //canvasMenu.height / 2.4);
-    context.fillStyle = colorOptions;
-    context.fillText("Options", canvasMenu.width * 2 / 5,
-canvasMenu.height / 1.7);
+  //  context.fillStyle = colorOptions;
+ //   context.fillText("Options", canvasMenu.width * 2 / 5,
+//canvasMenu.height / 1.7);
     context.fillStyle = colorQuit;
     context.fillText("Quit", canvasMenu.width * 2.05 / 5,
 canvasMenu.height / 1.2);
@@ -93,7 +95,7 @@ var selectedOption = function (options) {
         }
     }
 
-
+/*
     if (options == 1) {
         if (!gamePaused) {
             gamePaused = false;
@@ -106,9 +108,9 @@ var selectedOption = function (options) {
             unpauseGame();
         }
     }
-
+*/
     var e = new Error("Succes close");
-    if (options == 2)
+    if (options == 1)
         MSApp.terminateApp(e);
 
 }
