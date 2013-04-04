@@ -3,7 +3,9 @@ var receiveY = 50;
 var playerList = new Array();
 var gameStarted = false;
 
+
 var socket = io.connect("10.5.4.204:3000/");//replace this with server ip and 
+
 var prevMessage;
 
 
