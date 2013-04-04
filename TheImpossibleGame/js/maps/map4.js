@@ -44,12 +44,12 @@ function initMap4(canvas) {
     walls[15] = new Wall(40, 727, 135, 125);
     walls[16] = new Wall(163, 660, 65, 105);
     walls[17] = new Wall(190, 790, 60, 105);
-    context.drawImage(document.getElementById("portal"), canvas.width * 0.92, canvas.height * 0.06, canvas.height/8, canvas.width/8);
+    context.drawImage(document.getElementById("portal"), canvas.width * 0.70, canvas.height * 0.06, canvas.width / 3, canvas.height / 3);
 
 }
 
 function initAreaAction4() {
     areaAction = new Array()
     areaAction[0] = new ActionArea(-40, 25, 4, 180, "lvl", 3);
-    areaAction[1] = new ActionArea(1510, 120, 20, 140, "win");
+    areaAction[1] = new ActionArea(1350, 200, 20, 20, "win");
 }
