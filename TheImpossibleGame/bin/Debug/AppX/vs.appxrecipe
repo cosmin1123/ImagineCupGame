@@ -190,7 +190,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\clientSide.js">
       <PackagePath>js\utils\clientSide.js</PackagePath>
+<<<<<<< HEAD
       <Modified>2013-04-04T16:16:55.540</Modified>
+=======
+      <Modified>2013-03-02T21:16:55.507</Modified>
+>>>>>>> 6f5f5594aebc89dbfc7fb52e64d3042600d3242c
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\theod_000\Documents\GitHub\ImagineCupGame\TheImpossibleGame\js\utils\drawing.js">
       <PackagePath>js\utils\drawing.js</PackagePath>
