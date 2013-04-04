@@ -2,14 +2,9 @@ var receiveX = 50;
 var receiveY = 50;
 var playerList = new Array();
 var gameStarted = false;
-<<<<<<< HEAD
-
 
 var socket = io.connect("10.5.4.204:3000/");//replace this with server ip and 
 
-=======
-var socket = io.connect("10.13.37.27:3000/");//replace this with server ip and port	
->>>>>>> 6f5f5594aebc89dbfc7fb52e64d3042600d3242c
 var prevMessage;
 
 
@@ -106,7 +101,6 @@ function sendTextMessage(textMessage) {
 }
 
 function receiveMessage() {
-<<<<<<< HEAD
    	socket.on('message', function (message) {
         console.log(message);
         if (message.textMessage != prevMessage && message.textMessage != "") {
@@ -144,13 +138,3 @@ function createRoom(teamMate, playerName){
 function showRefusal(teamMate){
 
 }
-=======
-    socket.on('message', function (message) {
-        console.log(message);
-        if (message.textMessage != prevMessage) {
-            document.getElementById("lobbyChat").innerHTML += message.playerName + ": " + message.textMessage + "\n";
-            prevMessage = message.textMessage;
-        }
-    });
-}
->>>>>>> 6f5f5594aebc89dbfc7fb52e64d3042600d3242c
