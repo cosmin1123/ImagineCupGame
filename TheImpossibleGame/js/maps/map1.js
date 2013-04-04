@@ -1,18 +1,22 @@
 function initEnemy1() {
     enemy = new Array;
-    enemy[1] = new Enemy("monster5", "horizontal", 250, 100, 600, 5, 70, 70);
-    enemy[2] = new Enemy("monster6", "horizontal", 400, 100, 600, 5, 70, 70);
-    enemy[3] = new Enemy("monster1", "horizontal", 250, 500, 600, 5, 70, 70);
-    enemy[4] = new Enemy("monster2", "horizontal", 400, 700, 600, 5, 70, 70);
-    enemy[5] = new Enemy("monster3", "vertical", 250, 100, 500, 5, 70, 70);
-    enemy[6] = new Enemy("monster4", "vertical", 1000, 700, -600, 5, 70, 70);
+    enemy[1] = new Enemy("monster1", "horizontal", 300, 530, 600, 5, 80, 80);
+    enemy[2] = new Enemy("monster1", "vertical", 900, 250, 580, 5, 80, 80);
+    enemy[3] = new Enemy("monster1", "diagonal", 900, 250, 580, 5, 80, 80);
+    enemy[4] = new Enemy("monster1", "square", 400, 20, 330, 5, 80, 80);
+    enemy[5] = new Enemy("monster1", "horizontal", 400, 680, 760, 5, 60, 60);
+    enemy[6] = new Enemy("monster1", "horizontal", 1160, 760, -760, 5, 60, 60);
+    enemy[7] = new Enemy("monster1", "horizontal", 400, 840, 760, 5, 60, 60);
+    enemy[8] = new Enemy("monster1", "vertical", 1420, 20, 800, 5, 60, 60);
+    enemy[9] = new Enemy("monster1", "vertical", 1420, 20, 800, 5, 60, 60);
+
     return enemy;
 }
 
 
 function initMap1(canvas) {
     var context = canvas.getContext('2d');
-    walls = new Array();
+
     var context = canvas.getContext('2d');
     context.drawImage(document.getElementById("map"), 0, 0, canvas.width, canvas.height);
     walls[0] = new Wall(-2, 0, 2, 900);
@@ -35,9 +39,11 @@ function initMap1(canvas) {
     walls[16] = new Wall(1566, 760, 24, 140);
     walls[17] = new Wall(1005, 375, 40, 240);
 
+     for (i = 0; i < walls.length; i++)
+         rectangle(context,walls[i].x, walls[i].y, walls[i].width, walls[i].height);
 }
+
 function initAreaAction1() {
     areaAction = new Array()
-    //areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
-    areaAction[0] = new ActionArea(1640, 670, 2, 50, "win");
+    areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
 }
