@@ -1,7 +1,6 @@
 fonts\menu.ttf
 images\brick_wall.png
 images\bullet.png
-images\cake.png
 images\door.png
 images\fireball.png
 images\life.png
@@ -27,6 +26,7 @@ images\splashscreen.png
 images\statusBar.png
 images\storelogo.png
 images\traktor.gif
+images\win.png
 images\zombie.png
 index.html
 js\classes\actionArea.js
@@ -49,6 +49,7 @@ js\utils\startGame.js
 js\utils\startSingleGame.js
 js\utils\statusBar.js
 js\utils\utils.js
+multiplayerSelectPage.html
 socket.io.js
 sounds\background.mp3
 sounds\phaser.wav

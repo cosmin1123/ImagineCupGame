@@ -56,7 +56,6 @@
     <Content Include="fonts\menu.ttf" />
     <Content Include="images\brick_wall.png" />
     <Content Include="images\bullet.png" />
-    <Content Include="images\cake.png" />
     <Content Include="images\door.png" />
     <Content Include="images\fireball.png" />
     <Content Include="images\life.png" />
@@ -79,6 +78,7 @@
     <Content Include="images\shuriken.png" />
     <Content Include="images\statusBar.png" />
     <Content Include="images\traktor.gif" />
+    <Content Include="images\win.png" />
     <Content Include="images\zombie.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
@@ -104,6 +104,7 @@
     <Content Include="js\utils\startSingleGame.js" />
     <Content Include="js\utils\statusBar.js" />
     <Content Include="js\utils\utils.js" />
+    <Content Include="multiplayerSelectPage.html" />
     <Content Include="socket.io.js" />
     <Content Include="sounds\background.mp3" />
     <Content Include="sounds\phaser.wav" />

@@ -18,6 +18,7 @@ var showMenu = function () {
 }
 
 var drawMainMenu = function () {
+
     var context = canvasMenu.getContext('2d');
     context.drawImage(menuBackground, 0, 0, canvasMenu.width, canvasMenu.height);
 

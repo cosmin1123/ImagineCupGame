@@ -1,5 +1,4 @@
 "use strict";
-var level = 3;
 var player;
 var player2;
 var enemy;
@@ -16,7 +15,7 @@ var currentPlayer = 'player' + Math.round(Math.random() * 1000);
 
 
 var multiplayerMode = function () {
-    console.log("aaaaa");
+    console.log(player);
     window.onkeydown = function () { };
     canvasBackground.width = 1600 * scalePercentageX;
     canvasBackground.height = 900 * scalePercentageY;
@@ -26,7 +25,7 @@ var multiplayerMode = function () {
     selectLevel(level);//function is in selectLevel.js
     initStartBar();
     createStatusBar();
-    //   var twoPlayersHaveConnected = function (co) {
+    var twoPlayersHaveConnected = function (co) {
     gameStarted = true;
     // init
     unpauseGame = function () {
@@ -65,15 +64,12 @@ var multiplayerMode = function () {
     unpauseGame();
 }
 
-/*
+
     socket.on('ready', function (co) {
         console.log('aaaaaaaaaa');
         twoPlayersHaveConnected(co)
     });
-<<<<<<< HEAD
-=======
-    
->>>>>>> 785b23f1ba7340eb2556c5a2e3d67980815299f1
-};*/
+
+};
 
 

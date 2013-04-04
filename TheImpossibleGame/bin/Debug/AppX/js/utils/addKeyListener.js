@@ -30,9 +30,18 @@ var keyListener = function () {
         }
 
         if (event.keyCode == 27) {
+            var winEvent = document.getElementById("event");
+            var eventImage = document.getElementById("win");
+            var loseImage = document.getElementById("lose");
+           
+            winEvent.style.display = "none";
+            eventImage.style.display = "none";
+            loseImage.style.display = "none";
+            console.log("DONe");
             gamePaused = true;
             canvasMenu.style.display = "block";
         }
+        console.log(event.keyCode);
         if(options == 1)
             sendingCoords();
     }

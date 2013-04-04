@@ -22,11 +22,20 @@ var singlePlayerMode = function () {
 
         (function drawFrame() {
             if (!gamePaused) {
+                if (level != levelChanged) {
+                    gamePaused = true;
+                    selectLevel(level);
+                    levelChanged = level;
+                }
+
                 window.requestAnimationFrame(drawFrame, canvasForeground);
 
                 contextForeground.save()
 
-
+                if (player.life == 0) {
+                    showLose();
+                    gamePaused = true;
+                }
                 contextForeground.clearRect(0, 0,
                 canvasForeground.width, canvasForeground.height);
 

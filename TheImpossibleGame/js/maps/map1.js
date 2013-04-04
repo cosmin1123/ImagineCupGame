@@ -12,7 +12,7 @@ function initEnemy1() {
 
 function initMap1(canvas) {
     var context = canvas.getContext('2d');
-
+    walls = new Array();
     var context = canvas.getContext('2d');
     context.drawImage(document.getElementById("map"), 0, 0, canvas.width, canvas.height);
     walls[0] = new Wall(-2, 0, 2, 900);
@@ -38,5 +38,6 @@ function initMap1(canvas) {
 }
 function initAreaAction1() {
     areaAction = new Array()
-    areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
+    //areaAction[0] = new ActionArea(1640, 670, 2, 50, "lvl");
+    areaAction[0] = new ActionArea(1640, 670, 2, 50, "win");
 }
